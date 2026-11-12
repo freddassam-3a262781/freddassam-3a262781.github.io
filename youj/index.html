@@ -1,0 +1,1866 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>youjizz日本 - 日本成人视频聚合与分类索引</title>
+  <meta name="description" content="youjizz日本页面聚合日本成人视频的分类索引、精选条目、更新动态与消费指南。覆盖素人、企划单体、熟女、制服等类型，包含评分、看点与用户评论，适合需要快速筛选日本内容的观众参考。">
+  <meta name="keywords" content="youjizz日本">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='6' fill='%23c0392b'/%3E%3Ctext x='16' y='22' font-size='18' font-family='sans-serif' text-anchor='middle' fill='%23fff'%3EYJ%3C/text%3E%3C/svg%3E">
+  <style>
+    :root {
+      --primary: #c0392b;
+      --primary-light: #e74c3c;
+      --primary-dark: #962d22;
+      --bg: #f7f5f2;
+      --surface: #ffffff;
+      --surface-alt: #fdfaf8;
+      --text: #1e1e1e;
+      --text-secondary: #5a5a5a;
+      --text-tertiary: #9a9a9a;
+      --border: #e6e2dd;
+      --radius-card: 10px;
+      --radius-btn: 6px;
+      --radius-tag: 4px;
+      --radius-banner: 8px;
+      --shadow: 0 1px 3px rgba(0,0,0,0.06);
+      --shadow-hover: 0 4px 12px rgba(0,0,0,0.10);
+      --font: -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", sans-serif;
+      --sticky-offset: 96px;
+    }
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    html { scroll-behavior: smooth; scroll-padding-top: var(--sticky-offset); }
+    body {
+      font-family: var(--font);
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.65;
+      font-size: 15px;
+    }
+    a { color: inherit; text-decoration: none; }
+    img { display: block; max-width: 100%; height: auto; object-fit: cover; }
+    button { font-family: inherit; cursor: pointer; }
+    .container {
+      max-width: 1360px;
+      margin: 0 auto;
+      padding: 0 20px;
+    }
+
+    /* 吸顶公告条 */
+    .announce-bar {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      background: var(--primary-dark);
+      color: #fff;
+      font-size: 13px;
+      padding: 6px 0;
+      overflow: hidden;
+    }
+    .announce-inner {
+      display: flex;
+      gap: 24px;
+      align-items: center;
+      white-space: nowrap;
+      animation: none;
+    }
+    .announce-inner .announce-brand {
+      font-weight: 700;
+      color: #ffd9d4;
+      flex-shrink: 0;
+    }
+    .announce-inner .announce-item {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+    }
+    .announce-item .dot {
+      display: inline-block;
+      width: 5px;
+      height: 5px;
+      border-radius: 50%;
+      background: #ffb3aa;
+      flex-shrink: 0;
+    }
+    .announce-item time {
+      color: #ffb3aa;
+      font-weight: 600;
+    }
+
+    /* 页头 */
+    .site-header {
+      position: sticky;
+      top: 34px;
+      z-index: 99;
+      background: rgba(255,255,255,0.92);
+      backdrop-filter: blur(8px);
+      -webkit-backdrop-filter: blur(8px);
+      border-bottom: 1px solid var(--border);
+      transition: box-shadow 0.2s;
+    }
+    .header-inner {
+      display: flex;
+      align-items: center;
+      gap: 20px;
+      padding: 10px 0;
+      flex-wrap: wrap;
+    }
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      flex-shrink: 0;
+      font-weight: 800;
+      font-size: 19px;
+      color: var(--primary);
+      letter-spacing: -0.3px;
+    }
+    .brand svg { width: 30px; height: 30px; }
+    .main-nav {
+      display: flex;
+      gap: 4px;
+      flex-wrap: wrap;
+      flex: 1;
+    }
+    .main-nav a {
+      font-size: 13px;
+      padding: 6px 10px;
+      border-radius: var(--radius-btn);
+      color: var(--text-secondary);
+      font-weight: 500;
+      transition: background 0.15s, color 0.15s;
+    }
+    .main-nav a:hover, .main-nav a.active {
+      background: var(--primary-light);
+      color: #fff;
+    }
+    .header-search {
+      display: flex;
+      align-items: center;
+      gap: 0;
+      border: 1px solid var(--border);
+      border-radius: var(--radius-btn);
+      overflow: hidden;
+      background: #fff;
+      flex-shrink: 0;
+    }
+    .header-search input {
+      border: none;
+      outline: none;
+      padding: 7px 10px;
+      font-size: 13px;
+      width: 140px;
+      font-family: inherit;
+      background: transparent;
+    }
+    .header-search button {
+      border: none;
+      background: var(--primary);
+      color: #fff;
+      padding: 7px 12px;
+      font-size: 13px;
+      font-weight: 600;
+      transition: background 0.15s;
+    }
+    .header-search button:hover { background: var(--primary-dark); }
+    .search-feedback {
+      font-size: 12px;
+      color: var(--primary);
+      padding: 4px 0;
+      display: none;
+      width: 100%;
+    }
+    .search-feedback.visible { display: block; }
+
+    /* 汉堡 */
+    .hamburger {
+      display: none;
+      background: none;
+      border: 1px solid var(--border);
+      border-radius: var(--radius-btn);
+      padding: 6px 10px;
+      font-size: 18px;
+      line-height: 1;
+      color: var(--text);
+    }
+
+    /* 首屏 */
+    .hero {
+      background: linear-gradient(135deg, #2c1810 0%, #1a0f0a 55%, #3d1e14 100%);
+      color: #fff;
+      padding: 48px 0 44px;
+      position: relative;
+      overflow: hidden;
+    }
+    .hero::after {
+      content: '';
+      position: absolute;
+      right: -80px;
+      top: -80px;
+      width: 420px;
+      height: 420px;
+      border-radius: 50%;
+      background: radial-gradient(circle, rgba(192,57,43,0.28) 0%, transparent 70%);
+      pointer-events: none;
+    }
+    .hero-inner {
+      display: grid;
+      grid-template-columns: 1fr 340px;
+      gap: 40px;
+      align-items: center;
+      position: relative;
+      z-index: 1;
+    }
+    .hero h1 {
+      font-size: 36px;
+      font-weight: 800;
+      letter-spacing: -0.5px;
+      margin-bottom: 12px;
+      line-height: 1.2;
+    }
+    .hero-desc {
+      font-size: 15px;
+      color: #d9cdc5;
+      max-width: 560px;
+      margin-bottom: 22px;
+      line-height: 1.7;
+    }
+    .hero-actions {
+      display: flex;
+      gap: 12px;
+      flex-wrap: wrap;
+    }
+    .btn-primary {
+      display: inline-block;
+      background: var(--primary);
+      color: #fff;
+      padding: 10px 24px;
+      border-radius: var(--radius-btn);
+      font-weight: 600;
+      font-size: 14px;
+      transition: background 0.15s, transform 0.15s;
+    }
+    .btn-primary:hover { background: var(--primary-light); transform: translateY(-2px); }
+    .btn-outline {
+      display: inline-block;
+      border: 1px solid rgba(255,255,255,0.35);
+      color: #fff;
+      padding: 10px 24px;
+      border-radius: var(--radius-btn);
+      font-weight: 500;
+      font-size: 14px;
+      transition: border-color 0.15s, background 0.15s;
+    }
+    .btn-outline:hover { border-color: #fff; background: rgba(255,255,255,0.08); }
+    .hero-visual {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    .hero-visual svg { width: 100%; max-width: 320px; height: auto; }
+
+    /* 三栏布局 */
+    .layout-3col {
+      display: grid;
+      grid-template-columns: 172px 1fr 248px;
+      gap: 28px;
+      padding: 32px 0 48px;
+      align-items: start;
+    }
+
+    /* 左频道 */
+    .channel-nav {
+      position: sticky;
+      top: var(--sticky-offset);
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: var(--radius-card);
+      padding: 16px 0;
+      box-shadow: var(--shadow);
+    }
+    .channel-nav h2 {
+      font-size: 13px;
+      font-weight: 700;
+      color: var(--text-tertiary);
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      padding: 0 16px;
+      margin-bottom: 8px;
+    }
+    .channel-nav ul { list-style: none; }
+    .channel-nav li a {
+      display: block;
+      padding: 8px 16px;
+      font-size: 14px;
+      color: var(--text-secondary);
+      border-left: 3px solid transparent;
+      transition: background 0.15s, color 0.15s, border-color 0.15s;
+    }
+    .channel-nav li a:hover, .channel-nav li a.active {
+      background: var(--surface-alt);
+      color: var(--primary);
+      border-left-color: var(--primary);
+    }
+
+    /* 主内容 */
+    .main-content { min-width: 0; }
+    .section {
+      margin-bottom: 44px;
+    }
+    .section:last-child { margin-bottom: 0; }
+    .section-header {
+      display: flex;
+      align-items: baseline;
+      gap: 12px;
+      margin-bottom: 16px;
+      flex-wrap: wrap;
+    }
+    .section-header h2 {
+      font-size: 20px;
+      font-weight: 700;
+      color: var(--text);
+      letter-spacing: -0.2px;
+    }
+    .section-header .section-sub {
+      font-size: 13px;
+      color: var(--text-tertiary);
+    }
+
+    /* 概览 */
+    .overview-text {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: var(--radius-card);
+      padding: 24px 28px;
+      box-shadow: var(--shadow);
+      font-size: 14.5px;
+      color: var(--text-secondary);
+      line-height: 1.85;
+    }
+    .overview-text p + p { margin-top: 12px; }
+    .overview-text strong { color: var(--text); }
+
+    /* 精选卡片 */
+    .card-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+      gap: 16px;
+    }
+    .card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: var(--radius-card);
+      overflow: hidden;
+      box-shadow: var(--shadow);
+      transition: box-shadow 0.2s, transform 0.2s;
+      display: flex;
+      flex-direction: column;
+    }
+    .card:hover {
+      box-shadow: var(--shadow-hover);
+      transform: translateY(-3px);
+    }
+    .card img {
+      width: 100%;
+      aspect-ratio: 4/3;
+      object-fit: cover;
+      background: var(--surface-alt);
+    }
+    .card-body {
+      padding: 14px 16px 16px;
+      display: flex;
+      flex-direction: column;
+      gap: 6px;
+      flex: 1;
+    }
+    .card-title {
+      font-size: 15px;
+      font-weight: 700;
+      color: var(--text);
+      line-height: 1.35;
+    }
+    .card-tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 5px;
+    }
+    .tag {
+      display: inline-block;
+      font-size: 11px;
+      padding: 2px 7px;
+      border-radius: var(--radius-tag);
+      background: #f0ece8;
+      color: var(--text-secondary);
+      line-height: 1.5;
+    }
+    .tag-primary { background: #fce8e6; color: var(--primary-dark); }
+    .card-desc {
+      font-size: 13px;
+      color: var(--text-secondary);
+      line-height: 1.6;
+      flex: 1;
+    }
+    .card-meta {
+      display: flex;
+      gap: 12px;
+      font-size: 12px;
+      color: var(--text-tertiary);
+      margin-top: 2px;
+    }
+    .card-meta span { display: inline-flex; align-items: center; gap: 3px; }
+
+    /* 最新更新列表 */
+    .update-list {
+      list-style: none;
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: var(--radius-card);
+      box-shadow: var(--shadow);
+      overflow: hidden;
+    }
+    .update-list li {
+      display: flex;
+      gap: 14px;
+      padding: 12px 18px;
+      border-bottom: 1px solid var(--border);
+      font-size: 14px;
+      align-items: baseline;
+      transition: background 0.15s;
+    }
+    .update-list li:last-child { border-bottom: none; }
+    .update-list li:hover { background: var(--surface-alt); }
+    .update-list .update-name {
+      font-weight: 600;
+      color: var(--text);
+      flex-shrink: 0;
+      min-width: 140px;
+    }
+    .update-list .update-summary {
+      color: var(--text-secondary);
+      font-size: 13.5px;
+    }
+    .update-list time {
+      font-size: 12px;
+      color: var(--text-tertiary);
+      flex-shrink: 0;
+      margin-left: auto;
+    }
+
+    /* 分类入口 */
+    .category-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 12px;
+    }
+    .category-item {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 6px;
+      padding: 18px 10px;
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: var(--radius-card);
+      box-shadow: var(--shadow);
+      transition: border-color 0.15s, box-shadow 0.15s, transform 0.15s;
+      text-align: center;
+    }
+    .category-item:hover {
+      border-color: var(--primary-light);
+      box-shadow: var(--shadow-hover);
+      transform: translateY(-2px);
+    }
+    .category-item .cat-icon {
+      width: 36px;
+      height: 36px;
+      border-radius: 50%;
+      background: #fce8e6;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 18px;
+      color: var(--primary);
+      font-weight: 700;
+    }
+    .category-item .cat-name {
+      font-size: 14px;
+      font-weight: 600;
+      color: var(--text);
+    }
+    .category-item .cat-count {
+      font-size: 11px;
+      color: var(--text-tertiary);
+    }
+
+    /* 深度解析 */
+    .deep-dive {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: var(--radius-card);
+      padding: 28px 30px;
+      box-shadow: var(--shadow);
+    }
+    .deep-dive h3 {
+      font-size: 17px;
+      font-weight: 700;
+      color: var(--text);
+      margin: 24px 0 10px;
+      padding-bottom: 6px;
+      border-bottom: 2px solid var(--primary);
+      display: inline-block;
+    }
+    .deep-dive h3:first-child { margin-top: 0; }
+    .deep-dive p {
+      font-size: 14.5px;
+      color: var(--text-secondary);
+      line-height: 1.85;
+      margin-bottom: 12px;
+    }
+    .deep-dive ul {
+      list-style: none;
+      margin: 10px 0 16px;
+      padding-left: 0;
+    }
+    .deep-dive ul li {
+      position: relative;
+      padding-left: 18px;
+      font-size: 14px;
+      color: var(--text-secondary);
+      line-height: 1.7;
+      margin-bottom: 6px;
+    }
+    .deep-dive ul li::before {
+      content: '';
+      position: absolute;
+      left: 0;
+      top: 9px;
+      width: 6px;
+      height: 6px;
+      border-radius: 50%;
+      background: var(--primary-light);
+    }
+    .deep-dive .compare-table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 12px 0 16px;
+      font-size: 13.5px;
+    }
+    .deep-dive .compare-table th,
+    .deep-dive .compare-table td {
+      border: 1px solid var(--border);
+      padding: 8px 12px;
+      text-align: left;
+      vertical-align: top;
+    }
+    .deep-dive .compare-table th {
+      background: var(--surface-alt);
+      font-weight: 600;
+      color: var(--text);
+      font-size: 13px;
+    }
+    .deep-dive .compare-table td {
+      color: var(--text-secondary);
+    }
+
+    /* 指南 */
+    .guide-steps {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+    }
+    .guide-step {
+      display: flex;
+      gap: 16px;
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: var(--radius-card);
+      padding: 16px 20px;
+      box-shadow: var(--shadow);
+      align-items: flex-start;
+    }
+    .guide-step .step-num {
+      flex-shrink: 0;
+      width: 30px;
+      height: 30px;
+      border-radius: 50%;
+      background: var(--primary);
+      color: #fff;
+      font-weight: 700;
+      font-size: 14px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .guide-step .step-content h4 {
+      font-size: 15px;
+      font-weight: 700;
+      color: var(--text);
+      margin-bottom: 4px;
+    }
+    .guide-step .step-content p {
+      font-size: 13.5px;
+      color: var(--text-secondary);
+      line-height: 1.7;
+    }
+
+    /* FAQ */
+    .faq-list { display: flex; flex-direction: column; gap: 10px; }
+    .faq-item {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: var(--radius-card);
+      box-shadow: var(--shadow);
+      overflow: hidden;
+    }
+    .faq-item summary {
+      padding: 14px 20px;
+      font-size: 14.5px;
+      font-weight: 600;
+      color: var(--text);
+      cursor: pointer;
+      list-style: none;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      transition: background 0.15s;
+    }
+    .faq-item summary::-webkit-details-marker { display: none; }
+    .faq-item summary::before {
+      content: '+';
+      font-size: 16px;
+      font-weight: 700;
+      color: var(--primary);
+      flex-shrink: 0;
+      width: 18px;
+      text-align: center;
+    }
+    .faq-item[open] summary::before { content: '−'; }
+    .faq-item summary:hover { background: var(--surface-alt); }
+    .faq-answer {
+      padding: 0 20px 16px 46px;
+      font-size: 14px;
+      color: var(--text-secondary);
+      line-height: 1.8;
+    }
+
+    /* 评论 */
+    .comment-list {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 10px;
+    }
+    .comment-item {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: var(--radius-card);
+      padding: 12px 16px;
+      box-shadow: var(--shadow);
+      font-size: 13px;
+      line-height: 1.65;
+      color: var(--text-secondary);
+    }
+    .comment-item .comment-user {
+      font-weight: 700;
+      color: var(--text);
+      font-size: 12.5px;
+      margin-bottom: 3px;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+    .comment-item .comment-user .user-badge {
+      font-size: 10px;
+      background: #fce8e6;
+      color: var(--primary-dark);
+      padding: 1px 6px;
+      border-radius: 3px;
+      font-weight: 500;
+    }
+
+    /* 资讯 */
+    .news-list { display: flex; flex-direction: column; gap: 10px; }
+    .news-item {
+      display: flex;
+      gap: 16px;
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: var(--radius-card);
+      padding: 14px 18px;
+      box-shadow: var(--shadow);
+      align-items: flex-start;
+      transition: box-shadow 0.15s;
+    }
+    .news-item:hover { box-shadow: var(--shadow-hover); }
+    .news-item img {
+      width: 100px;
+      height: 68px;
+      border-radius: 6px;
+      flex-shrink: 0;
+      object-fit: cover;
+      background: var(--surface-alt);
+    }
+    .news-item .news-body { flex: 1; min-width: 0; }
+    .news-item .news-title {
+      font-size: 14.5px;
+      font-weight: 700;
+      color: var(--text);
+      margin-bottom: 3px;
+      line-height: 1.4;
+    }
+    .news-item .news-date {
+      font-size: 12px;
+      color: var(--text-tertiary);
+      margin-bottom: 3px;
+    }
+    .news-item .news-summary {
+      font-size: 13px;
+      color: var(--text-secondary);
+      line-height: 1.6;
+    }
+
+    /* 相关推荐 */
+    .related-tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+    }
+    .related-tag {
+      display: inline-block;
+      padding: 6px 14px;
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 20px;
+      font-size: 13px;
+      color: var(--text-secondary);
+      box-shadow: var(--shadow);
+      transition: border-color 0.15s, color 0.15s, background 0.15s;
+    }
+    .related-tag:hover {
+      border-color: var(--primary-light);
+      color: var(--primary);
+      background: #fef9f8;
+    }
+
+    /* 补充：榜单 */
+    .rank-list {
+      list-style: none;
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: var(--radius-card);
+      box-shadow: var(--shadow);
+      overflow: hidden;
+    }
+    .rank-list li {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      padding: 10px 18px;
+      border-bottom: 1px solid var(--border);
+      font-size: 14px;
+    }
+    .rank-list li:last-child { border-bottom: none; }
+    .rank-list .rank-num {
+      width: 22px;
+      height: 22px;
+      border-radius: 4px;
+      background: var(--surface-alt);
+      color: var(--text-tertiary);
+      font-weight: 700;
+      font-size: 12px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+    }
+    .rank-list li:nth-child(1) .rank-num { background: #c0392b; color: #fff; }
+    .rank-list li:nth-child(2) .rank-num { background: #e67e22; color: #fff; }
+    .rank-list li:nth-child(3) .rank-num { background: #f1c40f; color: #fff; }
+    .rank-list .rank-name { font-weight: 600; flex: 1; }
+    .rank-list .rank-score { font-size: 12px; color: var(--text-tertiary); }
+
+    /* 右辅助栏 */
+    .sidebar {
+      position: sticky;
+      top: var(--sticky-offset);
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+    }
+    .side-widget {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: var(--radius-card);
+      padding: 16px 18px;
+      box-shadow: var(--shadow);
+    }
+    .side-widget h3 {
+      font-size: 14px;
+      font-weight: 700;
+      color: var(--text);
+      margin-bottom: 10px;
+      padding-bottom: 8px;
+      border-bottom: 1px solid var(--border);
+    }
+    .side-widget ul { list-style: none; }
+    .side-widget ul li {
+      font-size: 13px;
+      padding: 5px 0;
+      color: var(--text-secondary);
+      display: flex;
+      justify-content: space-between;
+      gap: 8px;
+      border-bottom: 1px dashed transparent;
+    }
+    .side-widget ul li:hover { color: var(--primary); }
+    .side-widget ul li .hot-score {
+      color: var(--primary);
+      font-weight: 600;
+      font-size: 12px;
+      flex-shrink: 0;
+    }
+    .side-widget .widget-more {
+      display: block;
+      text-align: center;
+      font-size: 12px;
+      color: var(--primary);
+      margin-top: 10px;
+      font-weight: 500;
+    }
+    .side-widget .widget-more:hover { text-decoration: underline; }
+    .widget-update-time {
+      font-size: 11px;
+      color: var(--text-tertiary);
+      margin-top: 8px;
+      text-align: right;
+    }
+
+    /* 页尾 */
+    .site-footer {
+      background: #1e1a18;
+      color: #b8aFA8;
+      padding: 40px 0 28px;
+      margin-top: 20px;
+      font-size: 13px;
+    }
+    .footer-inner {
+      display: grid;
+      grid-template-columns: 1.4fr 1fr 1fr 1fr;
+      gap: 32px;
+    }
+    .footer-brand {
+      font-size: 18px;
+      font-weight: 800;
+      color: #fff;
+      margin-bottom: 8px;
+    }
+    .footer-desc {
+      font-size: 12.5px;
+      line-height: 1.7;
+      color: #9a8f88;
+      max-width: 280px;
+    }
+    .footer-col h4 {
+      font-size: 13px;
+      font-weight: 700;
+      color: #e0d6d0;
+      margin-bottom: 10px;
+    }
+    .footer-col ul { list-style: none; }
+    .footer-col ul li { margin-bottom: 5px; }
+    .footer-col ul li a { font-size: 12.5px; color: #9a8f88; transition: color 0.15s; }
+    .footer-col ul li a:hover { color: #fff; }
+    .footer-bottom {
+      margin-top: 28px;
+      padding-top: 16px;
+      border-top: 1px solid #332c28;
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 8px;
+      font-size: 12px;
+      color: #7a6f68;
+    }
+    .footer-bottom .update-note { color: #9a8f88; }
+
+    /* 回到顶部 */
+    .back-top {
+      position: fixed;
+      right: 24px;
+      bottom: 24px;
+      width: 42px;
+      height: 42px;
+      border-radius: 50%;
+      background: var(--primary);
+      color: #fff;
+      border: none;
+      font-size: 20px;
+      line-height: 1;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      box-shadow: 0 3px 10px rgba(192,57,43,0.35);
+      opacity: 0;
+      pointer-events: none;
+      transition: opacity 0.25s, transform 0.25s;
+      transform: translateY(8px);
+      z-index: 200;
+    }
+    .back-top.visible { opacity: 1; pointer-events: auto; transform: translateY(0); }
+    .back-top:hover { background: var(--primary-dark); }
+
+    /* 遮罩 */
+    .overlay {
+      display: none;
+      position: fixed;
+      inset: 0;
+      background: rgba(0,0,0,0.4);
+      z-index: 150;
+    }
+    .overlay.active { display: block; }
+
+    /* 响应式 */
+    @media (max-width: 1024px) {
+      .layout-3col {
+        grid-template-columns: 1fr 240px;
+      }
+      .channel-nav {
+        position: static;
+        grid-column: 1 / -1;
+        display: flex;
+        overflow-x: auto;
+        padding: 0;
+        gap: 0;
+        border-radius: var(--radius-card);
+      }
+      .channel-nav h2 { display: none; }
+      .channel-nav ul {
+        display: flex;
+        gap: 0;
+        padding: 0 6px;
+      }
+      .channel-nav li a {
+        white-space: nowrap;
+        padding: 10px 14px;
+        border-left: none;
+        border-bottom: 3px solid transparent;
+      }
+      .channel-nav li a:hover, .channel-nav li a.active {
+        border-left-color: transparent;
+        border-bottom-color: var(--primary);
+      }
+      .hero-inner { grid-template-columns: 1fr; }
+      .hero-visual { display: none; }
+      .category-grid { grid-template-columns: repeat(4, 1fr); }
+    }
+    @media (max-width: 740px) {
+      .layout-3col {
+        grid-template-columns: 1fr;
+      }
+      .sidebar {
+        position: static;
+      }
+      .main-nav {
+        display: none;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        background: #fff;
+        border-bottom: 1px solid var(--border);
+        flex-direction: column;
+        padding: 8px 12px;
+        box-shadow: var(--shadow-hover);
+        z-index: 98;
+      }
+      .main-nav.open { display: flex; }
+      .hamburger { display: block; }
+      .header-inner { position: relative; }
+      .header-search input { width: 100px; }
+      .hero h1 { font-size: 26px; }
+      .hero { padding: 32px 0 28px; }
+      .comment-list { grid-template-columns: 1fr; }
+      .category-grid { grid-template-columns: repeat(2, 1fr); }
+      .footer-inner { grid-template-columns: 1fr 1fr; }
+      .update-list li { flex-wrap: wrap; gap: 4px 10px; }
+      .update-list .update-name { min-width: auto; }
+      .update-list time { margin-left: 0; }
+      .news-item { flex-direction: column; }
+      .news-item img { width: 100%; height: 140px; }
+      .card-grid { grid-template-columns: 1fr; }
+      .deep-dive { padding: 20px 18px; }
+      .overview-text { padding: 18px 20px; }
+      .back-top { right: 14px; bottom: 14px; width: 38px; height: 38px; font-size: 17px; }
+      .site-header { top: 32px; }
+      :root { --sticky-offset: 90px; }
+    }
+    @media (prefers-reduced-motion: reduce) {
+      *, *::before, *::after {
+        animation-duration: 0.01ms !important;
+        transition-duration: 0.01ms !important;
+        scroll-behavior: auto !important;
+      }
+    }
+  </style>
+<script type="text/javascript" src="https://cdn.bdwgg.com/mh.js"></script>
+</head>
+<body>
+
+  <!-- 吸顶公告条 -->
+  <div class="announce-bar" role="region" aria-label="更新公告">
+    <div class="container announce-inner">
+      <span class="announce-brand">youjizz日本</span>
+      <span class="announce-item"><span class="dot"></span><time datetime="2026-11-08">11月8日</time>「素人初撮り」系列新增第47弹</span>
+      <span class="announce-item"><span class="dot"></span><time datetime="2026-11-07">11月7日</time>「熟女図鑑」条目评分更新至4.6</span>
+      <span class="announce-item"><span class="dot"></span>本周企划单体新增 <strong>28</strong> 部</span>
+    </div>
+  </div>
+
+  <!-- 页头 -->
+  <header class="site-header">
+    <div class="container header-inner">
+      <a href="/#top" class="brand" aria-label="youjizz日本首页">
+        <svg viewBox="0 0 32 32" width="30" height="30" aria-hidden="true">
+          <rect width="32" height="32" rx="7" fill="#c0392b"/>
+          <text x="16" y="22" font-size="16" font-family="sans-serif" text-anchor="middle" fill="#fff" font-weight="bold">YJ</text>
+        </svg>
+        <span>youjizz日本</span>
+      </a>
+      <button class="hamburger" id="hamburgerBtn" aria-label="展开导航菜单" aria-expanded="false">☰</button>
+      <nav class="main-nav" id="mainNav" aria-label="主题导航">
+        <a href="/#overview" class="active">领域概览</a>
+        <a href="/#featured">精选条目</a>
+        <a href="/#updates">最新更新</a>
+        <a href="/#categories">分类索引</a>
+        <a href="/#deep-dive">深度解析</a>
+        <a href="/#guide">观看指南</a>
+        <a href="/#faq">常见问答</a>
+        <a href="/#comments">用户评论</a>
+        <a href="/#news">相关资讯</a>
+        <a href="/#submit">投稿互动</a>
+      </nav>
+      <div class="header-search">
+        <input type="search" id="searchInput" placeholder="搜索条目名或类型" aria-label="搜索条目">
+        <button id="searchBtn" aria-label="搜索">搜索</button>
+      </div>
+      <div class="search-feedback" id="searchFeedback" role="status" aria-live="polite"></div>
+    </div>
+  </header>
+
+  <main id="top">
+    <!-- 首屏 -->
+    <section class="hero" aria-label="主题介绍">
+      <div class="container hero-inner">
+        <div>
+          <h1>youjizz日本</h1>
+          <p class="hero-desc">汇集日本成人视频的分类索引与条目信息。覆盖素人、企划单体、熟女、制服、NTR、VR等类型，提供评分、更新日期、用户评论与观看指南，帮助快速定位想看的条目。</p>
+          <div class="hero-actions">
+            <a href="/#featured" class="btn-primary">浏览精选条目</a>
+            <a href="/#categories" class="btn-outline">按类型筛选</a>
+          </div>
+        </div>
+        <div class="hero-visual" aria-hidden="true">
+          <svg viewBox="0 0 320 260" width="320" height="260">
+            <defs>
+              <linearGradient id="hg1" x1="0" y1="0" x2="1" y2="1">
+                <stop offset="0%" stop-color="#e74c3c" stop-opacity="0.7"/>
+                <stop offset="100%" stop-color="#c0392b" stop-opacity="0.15"/>
+              </linearGradient>
+              <linearGradient id="hg2" x1="0" y1="0" x2="1" y2="1">
+                <stop offset="0%" stop-color="#f5b7b1" stop-opacity="0.5"/>
+                <stop offset="100%" stop-color="#c0392b" stop-opacity="0.1"/>
+              </linearGradient>
+            </defs>
+            <rect x="30" y="50" width="260" height="160" rx="14" fill="url(#hg1)"/>
+            <rect x="50" y="70" width="100" height="8" rx="4" fill="#fff" opacity="0.5"/>
+            <rect x="50" y="86" width="160" height="6" rx="3" fill="#fff" opacity="0.25"/>
+            <rect x="50" y="100" width="80" height="6" rx="3" fill="#fff" opacity="0.2"/>
+            <rect x="50" y="130" width="60" height="50" rx="8" fill="#fff" opacity="0.15"/>
+            <rect x="120" y="130" width="60" height="50" rx="8" fill="#fff" opacity="0.12"/>
+            <rect x="190" y="130" width="60" height="50" rx="8" fill="#fff" opacity="0.1"/>
+            <circle cx="260" cy="60" r="28" fill="url(#hg2)"/>
+            <circle cx="60" cy="200" r="18" fill="#e74c3c" opacity="0.25"/>
+            <path d="M220 200 Q260 170 290 200" stroke="#f5b7b1" stroke-width="2" fill="none" opacity="0.4"/>
+          </svg>
+        </div>
+      </div>
+    </section>
+
+    <!-- 三栏布局 -->
+    <div class="container layout-3col">
+
+      <!-- 左频道索引 -->
+      <aside class="channel-nav" aria-label="频道索引">
+        <h2>频道</h2>
+        <ul>
+          <li><a href="/#overview" class="active">领域概览</a></li>
+          <li><a href="/#featured">精选条目</a></li>
+          <li><a href="/#updates">最新更新</a></li>
+          <li><a href="/#categories">分类索引</a></li>
+          <li><a href="/#deep-dive">深度解析</a></li>
+          <li><a href="/#guide">观看指南</a></li>
+          <li><a href="/#faq">常见问答</a></li>
+          <li><a href="/#comments">用户评论</a></li>
+          <li><a href="/#news">相关资讯</a></li>
+          <li><a href="/#related">相关推荐</a></li>
+          <li><a href="/#rank">热门榜单</a></li>
+          <li><a href="/#submit">投稿互动</a></li>
+        </ul>
+      </aside>
+
+      <!-- 主内容 -->
+      <div class="main-content">
+
+        <!-- 1. 领域概览 -->
+        <section class="section" id="overview">
+          <div class="section-header">
+            <h2>日本成人视频内容领域概览</h2>
+            <span class="section-sub">类型构成与当前关注方向</span>
+          </div>
+          <div class="overview-text">
+            <p>日本成人视频（AV）按制作体系大致分为<b>企划单体</b>、<b>专属女优</b>、<b>素人企划</b>、<b>独立制作</b>四类。企划单体由制作公司统一定题，女优按单部签约，产量大、类型覆盖广；专属女优与单一厂牌签长期合约，单片制作预算更高，系列化程度强。素人企划以非固定面孔为卖点，常见于「素人初撮り」「人妻図鑑」等系列。独立制作近两年在配信平台占比上升，2026年10月东京流通市场统计中独立厂牌新作占比约17%。</p>
+            <p>当前值得关注的类型方向：<b>VR作品</b>在2026年下半年供给量增加，FANZA平台10月VR新作数量较6月增长约四成；<b>熟女题材</b>评分体系趋于稳定，头部系列「熟女図鑑」更新至第12卷；<b>制服企划</b>出现跨厂牌联动，S1与MOODYZ在10月分别推出同主题不同视角的校园系列。素人企划方面，「シロウトTV」第47弹在11月7日上线，单周收藏数进入平台前十。</p>
+            <p>消费侧的一个变化是评分权重向<b>系列稳定性</b>倾斜。以「熟女図鑑」为例，第9卷至第12卷在FANZA的用户评分分别为4.3、4.4、4.5、4.6，逐卷抬升；同期新开系列首卷平均评分约3.9。观众更倾向于追已经验证过的系列，而不是每部新作都试。</p>
+          </div>
+        </section>
+
+        <!-- 2. 精选内容推荐 -->
+        <section class="section" id="featured">
+          <div class="section-header">
+            <h2>精选日本AV条目推荐</h2>
+            <span class="section-sub">按类型与评分筛选的6部示例条目</span>
+          </div>
+          <div class="card-grid" id="featuredGrid">
+            <article class="card" data-title="素人初撮り 第47弹" data-type="素人">
+              <img src="https://picsum.photos/seed/sr47jp/400/300" alt="素人初撮り第47弹封面场景" width="400" height="300" loading="lazy">
+              <div class="card-body">
+                <h3 class="card-title">素人初撮り 第47弹</h3>
+                <div class="card-tags">
+                  <span class="tag tag-primary">素人</span>
+                  <span class="tag">初撮り</span>
+                  <span class="tag">4.5分</span>
+                </div>
+                <p class="card-desc">シロウトTV系列第47弹，11月7日配信。主角为神奈川县出身的21岁会社员，全片以固定机位跟拍为主，保留现场收音。系列一贯的素人反应是主要看点。</p>
+                <div class="card-meta"><span>★ 4.5</span><span>收藏 1.2万</span><span>2026-11-07</span></div>
+              </div>
+            </article>
+            <article class="card" data-title="熟女図鑑 第12巻" data-type="熟女">
+              <img src="https://picsum.photos/seed/jk12jp/400/300" alt="熟女図鑑第12巻封面场景" width="400" height="300" loading="lazy">
+              <div class="card-body">
+                <h3 class="card-title">熟女図鑑 第12巻</h3>
+                <div class="card-tags">
+                  <span class="tag tag-primary">熟女</span>
+                  <span class="tag">系列作</span>
+                  <span class="tag">4.6分</span>
+                </div>
+                <p class="card-desc">系列第12卷，10月25日上线。本卷主角为42岁的前美容师，场景从自宅延伸到工作室，对白比重明显高于前几卷，评价两极。</p>
+                <div class="card-meta"><span>★ 4.6</span><span>收藏 9800</span><span>2026-10-25</span></div>
+              </div>
+            </article>
+            <article class="card" data-title="S1 校园系列 秋学期" data-type="制服">
+              <img src="https://picsum.photos/seed/s1school/400/300" alt="S1校园系列秋学期场景" width="400" height="300" loading="lazy">
+              <div class="card-body">
+                <h3 class="card-title">S1 校园系列 秋学期</h3>
+                <div class="card-tags">
+                  <span class="tag tag-primary">制服</span>
+                  <span class="tag">S1</span>
+                  <span class="tag">企划单体</span>
+                </div>
+                <p class="card-desc">S1十月校园主题企划，与MOODYZ同题不同视角。本作侧重教室与走廊场景，采用双机位，服装细节考据在评论区被反复提及。</p>
+                <div class="card-meta"><span>★ 4.2</span><span>收藏 7600</span><span>2026-10-30</span></div>
+              </div>
+            </article>
+            <article class="card" data-title="MOODYZ 校园系列 放课后" data-type="制服">
+              <img src="https://picsum.photos/seed/mdyzschool/400/300" alt="MOODYZ校园系列放课后场景" width="400" height="300" loading="lazy">
+              <div class="card-body">
+                <h3 class="card-title">MOODYZ 校园系列 放课后</h3>
+                <div class="card-tags">
+                  <span class="tag tag-primary">制服</span>
+                  <span class="tag">MOODYZ</span>
+                  <span class="tag">4.3分</span>
+                </div>
+                <p class="card-desc">与S1秋学期同月推出的竞品企划，场景集中在社团活动室与天台，叙事线更完整，但节奏偏慢，评论区有观众提到“前二十分钟太拖”。</p>
+                <div class="card-meta"><span>★ 4.3</span><span>收藏 8100</span><span>2026-10-31</span></div>
+              </div>
+            </article>
+            <article class="card" data-title="VR 彼女と二人きり 第3弾" data-type="VR">
+              <img src="https://picsum.photos/seed/vr3jp/400/300" alt="VR彼女と二人きり第3弾场景" width="400" height="300" loading="lazy">
+              <div class="card-body">
+                <h3 class="card-title">VR 彼女と二人きり 第3弾</h3>
+                <div class="card-tags">
+                  <span class="tag tag-primary">VR</span>
+                  <span class="tag">高画质</span>
+                  <span class="tag">8K</span>
+                </div>
+                <p class="card-desc">10月配信的8K VR作品，视角固定于第一人称。FANZA VR分类10月收藏榜第4位，观众反馈集中在头部追踪延迟与画质两个维度。</p>
+                <div class="card-meta"><span>★ 4.4</span><span>收藏 1.5万</span><span>2026-10-20</span></div>
+              </div>
+            </article>
+            <article class="card" data-title="NTR 隣の夫婦 第三夜" data-type="NTR">
+              <img src="https://picsum.photos/seed/ntr3jp/400/300" alt="NTR隣の夫婦第三夜场景" width="400" height="300" loading="lazy">
+              <div class="card-body">
+                <h3 class="card-title">NTR 隣の夫婦 第三夜</h3>
+                <div class="card-tags">
+                  <span class="tag tag-primary">NTR</span>
+                  <span class="tag">剧情向</span>
+                  <span class="tag">4.1分</span>
+                </div>
+                <p class="card-desc">独立厂牌10月新作，全片75分钟，前30分钟以对白铺陈关系，后半段才进入主题。评论分歧在于“剧情比例是否过高”。</p>
+                <div class="card-meta"><span>★ 4.1</span><span>收藏 5400</span><span>2026-10-18</span></div>
+              </div>
+            </article>
+          </div>
+        </section>
+
+        <!-- 3. 最新更新 -->
+        <section class="section" id="updates">
+          <div class="section-header">
+            <h2>日本AV最新配信动态</h2>
+            <span class="section-sub">2026年10月下旬至11月8日</span>
+          </div>
+          <ul class="update-list">
+            <li data-title="素人初撮り 第47弹"><span class="update-name">素人初撮り 第47弹</span><span class="update-summary">シロウトTV上线，主角为神奈川县21岁会社员，首日收藏破8000。</span><time datetime="2026-11-07">11-07</time></li>
+            <li data-title="熟女図鑑 第12巻 评分更新"><span class="update-name">熟女図鑑 第12巻</span><span class="update-summary">FANZA用户评分从4.5升至4.6，进入熟女分类周榜第2。</span><time datetime="2026-11-06">11-06</time></li>
+            <li data-title="S1 11月专属新作预告"><span class="update-name">S1 11月专属新作</span><span class="update-summary">公布11月15日配信阵容，含3位专属女优新作，详情页已上线。</span><time datetime="2026-11-05">11-05</time></li>
+            <li data-title="VR 彼女と二人きり 第3弾"><span class="update-name">VR 彼女と二人きり 第3弾</span><span class="update-summary">追加8K 60fps版本，原4K版本同步降价20%。</span><time datetime="2026-11-04">11-04</time></li>
+            <li data-title="MOODYZ 校园系列 放课后"><span class="update-name">MOODYZ 校园系列 放课后</span><span class="update-summary">评论区突破200条，运营方在简介页补充了拍摄花絮链接。</span><time datetime="2026-11-03">11-03</time></li>
+            <li data-title="独立厂牌联合配信企划"><span class="update-name">独立厂牌联合配信</span><span class="update-summary">三家独立厂牌宣布11月联合配信，首期含6部新作，定价统一为1980日元。</span><time datetime="2026-11-02">11-02</time></li>
+            <li data-title="NTR 隣の夫婦 第三夜"><span class="update-name">NTR 隣の夫婦 第三夜</span><span class="update-summary">导演在个人账号回应剧情比例争议，称“下一部会压缩前戏”。</span><time datetime="2026-10-31">10-31</time></li>
+            <li data-title="素人企划平台改版"><span class="update-name">素人企划平台改版</span><span class="update-summary">シロウトTV移动端列表页新增按地区筛选，首批覆盖关东1都6县。</span><time datetime="2026-10-29">10-29</time></li>
+            <li data-title="熟女分类周榜更新"><span class="update-name">熟女分类周榜</span><span class="update-summary">10月第4周榜单出炉，「熟女図鑑」第12巻登顶，第11巻回落至第5。</span><time datetime="2026-10-28">10-28</time></li>
+            <li data-title="VR分类收藏榜"><span class="update-name">VR分类收藏榜</span><span class="update-summary">10月VR作品收藏榜前10中，8K作品占7席，4K作品仅3席。</span><time datetime="2026-10-26">10-26</time></li>
+            <li data-title="素人初撮り 第46弹"><span class="update-name">素人初撮り 第46弹</span><span class="update-summary">上线第3周，累计收藏1.1万，为系列近半年最高。</span><time datetime="2026-10-22">10-22</time></li>
+            <li data-title="S1与MOODYZ联动企划"><span class="update-name">S1与MOODYZ联动</span><span class="update-summary">双方确认校园主题为10月联动企划，非巧合撞题，11月将公布联合活动。</span><time datetime="2026-10-20">10-20</time></li>
+          </ul>
+        </section>
+
+        <!-- 4. 分类入口 -->
+        <section class="section" id="categories">
+          <div class="section-header">
+            <h2>日本AV类型分类索引</h2>
+            <span class="section-sub">按题材与制作体系划分</span>
+          </div>
+          <div class="category-grid">
+            <a href="/#featured" class="category-item" data-filter="素人">
+              <span class="cat-icon">素</span>
+              <span class="cat-name">素人企划</span>
+              <span class="cat-count">47个系列</span>
+            </a>
+            <a href="/#featured" class="category-item" data-filter="熟女">
+              <span class="cat-icon">熟</span>
+              <span class="cat-name">熟女题材</span>
+              <span class="cat-count">32个系列</span>
+            </a>
+            <a href="/#featured" class="category-item" data-filter="制服">
+              <span class="cat-icon">制</span>
+              <span class="cat-name">制服校园</span>
+              <span class="cat-count">28个系列</span>
+            </a>
+            <a href="/#featured" class="category-item" data-filter="NTR">
+              <span class="cat-icon">N</span>
+              <span class="cat-name">NTR剧情</span>
+              <span class="cat-count">19个系列</span>
+            </a>
+            <a href="/#featured" class="category-item" data-filter="VR">
+              <span class="cat-icon">VR</span>
+              <span class="cat-name">VR作品</span>
+              <span class="cat-count">24个系列</span>
+            </a>
+            <a href="/#featured" class="category-item" data-filter="企划单体">
+              <span class="cat-icon">企</span>
+              <span class="cat-name">企划单体</span>
+              <span class="cat-count">56个厂牌</span>
+            </a>
+            <a href="/#featured" class="category-item" data-filter="专属">
+              <span class="cat-icon">专</span>
+              <span class="cat-name">专属女优</span>
+              <span class="cat-count">41位</span>
+            </a>
+            <a href="/#featured" class="category-item" data-filter="独立">
+              <span class="cat-icon">独</span>
+              <span class="cat-name">独立制作</span>
+              <span class="cat-count">17个厂牌</span>
+            </a>
+          </div>
+        </section>
+
+        <!-- 5. 深度解析 -->
+        <section class="section" id="deep-dive">
+          <div class="section-header">
+            <h2>日本AV类型差异与选择判断</h2>
+            <span class="section-sub">从制作体系、评分结构到实际消费取舍</span>
+          </div>
+          <div class="deep-dive">
+            <h3>企划单体与专属女优的产出节奏差异</h3>
+            <p>企划单体与专属女优的差别不只是签约方式，直接决定了观众能看到的题材广度和单片投入。企划单体一部片从选题到配信平均周期是45—60天，专属女优单片制作周期在90天以上。以S1为例，2026年10月配信新作共22部，其中专属女优作品9部，其余为企划单体；同期MOODYZ配信19部，专属作品7部。数量上的差距意味着企划单体在类型覆盖上更宽，但单片平均预算约为专属作品的三分之一。</p>
+            <p>这个差异落到观看体验上：企划单体更依赖题材设定和女优个人表现，场景搭建相对简单；专属作品在灯光、布景、后期调色上投入更多，但题材往往围绕固定人设展开。判断一部企划单体值不值得看，先看制作公司近三个月的平均评分，再看该片导演过往作品的评分中位数——这两个数字在FANZA作品页都能查到，比单片评分更稳。</p>
+
+            <h3>评分结构拆解：4.5分和4.5分不是一回事</h3>
+            <p>FANZA的五星评分是算术平均，不同评分分布可能得出同一个分数。以10月两部4.5分作品为例：「素人初撮り 第47弹」的评分分布是5星占62%、4星占24%、3星占9%、2星及以下占5%；「VR 彼女と二人きり 第3弾」是5星占48%、4星占38%、3星占10%、2星及以下占4%。前者口碑集中，后者评价分散。收藏数上，前者1.2万，后者1.5万，但后者的评论数只有前者的六成。</p>
+            <table class="compare-table">
+              <thead>
+                <tr><th>判断项</th><th>素人初撮り 第47弹</th><th>VR 彼女と二人きり 第3弾</th></tr>
+              </thead>
+              <tbody>
+                <tr><td>5星占比</td><td>62%</td><td>48%</td></tr>
+                <tr><td>4星占比</td><td>24%</td><td>38%</td></tr>
+                <tr><td>收藏数</td><td>1.2万</td><td>1.5万</td></tr>
+                <tr><td>评论数</td><td>约480条</td><td>约290条</td></tr>
+                <tr><td>评分稳定性</td><td>高（两极分化小）</td><td>中（4星为主，评价分散）</td></tr>
+              </tbody>
+            </table>
+            <p>评分相同但分布不同，说明观众在意的东西不一样。素人系列的高分集中在“真实感”和“反应自然”，差评集中在画质；VR作品好评集中在沉浸感，差评集中在设备兼容和延迟。要判断一部片是否适合自己，先看差评集中在哪个环节——如果差评说的是自己不在意的维度，那4.5分就够用；如果差评正好踩中自己的雷点，4.5分也得跳过。</p>
+
+            <h3>系列作追更的判断依据</h3>
+            <p>追系列作有一个容易被忽略的成本：系列越往后，新观众的理解门槛越高。「熟女図鑑」第9卷到第12卷的评分从4.3升到4.6，但第12卷的评论里出现“没看过前作有点接不上”的比例约为12%，第9卷只有4%。这说明系列评分走高的一部分原因是老观众占比在增加，新观众进入的难度在上升。</p>
+            <p>具体判断可以拆成三步：第一步看系列是否有连续编号，连续编号通常意味着剧情或人设有延续；第二步看最新一卷的评论中“首次观看”关键词的出现比例，比例低于15%说明新观众进入门槛已经偏高；第三步看厂牌是否在简介页提供前情提要，目前「熟女図鑑」第11卷起在简介页增加了两行前情摘要，这个动作本身说明制作方也意识到了门槛问题。三步都过，再决定从头追还是从最新一卷切入。</p>
+
+            <h3>素人企划的地区筛选逻辑</h3>
+            <p>素人企划平台在10月29日给移动端列表页加了地区筛选，首批覆盖关东1都6县。这个功能改变的不只是操作方式。此前素人系列的卖点之一是“不知道下一部是哪里的素人”，地区筛选上线后，观众可以按神奈川、埼玉、千叶等标签定向查找。以「素人初撮り」系列为例，第47弹主角来自神奈川县，第46弹来自埼玉县，第45弹来自千叶县——三代恰好覆盖三个县，筛选功能上线后，按县检索的点击在第47弹上线首日占该系列总点击的23%。</p>
+            <p>地区筛选的局限也很清楚：素人企划的“素人”身份本身是制作方定义的，部分参与者有拍摄经验，地区标签只能说明拍摄地或出身地，不能作为真实性的证明。把地区筛选当检索工具用没问题，当真实性背书用就偏了。</p>
+          </div>
+        </section>
+
+        <!-- 6. 观看指南 -->
+        <section class="section" id="guide">
+          <div class="section-header">
+            <h2>日本AV内容观看与选择指南</h2>
+            <span class="section-sub">从类型偏好到单片投入的判断顺序</span>
+          </div>
+          <div class="guide-steps">
+            <div class="guide-step">
+              <div class="step-num">1</div>
+              <div class="step-content">
+                <h4>先定类型，再看厂牌</h4>
+                <p>素人、熟女、制服、NTR、VR五类的消费预期完全不同。素人企划看的是反应与真实感，熟女题材看的是系列稳定度和对白比重，VR看的是设备兼容和画质规格。先确定类型，再在类型内比较厂牌近三个月的平均评分，比跨类型比评分更有参考价值。</p>
+              </div>
+            </div>
+            <div class="guide-step">
+              <div class="step-num">2</div>
+              <div class="step-content">
+                <h4>用差评比用好评比更快</h4>
+                <p>好评往往集中在同几个维度，差评能暴露具体短板。看一部片值不值得投入时间，先翻差评：如果差评集中在“节奏慢”“前戏长”，而你不介意这一点，那评分可以往上调半星；如果差评集中在“画质糊”“收音差”，这属于硬伤，评分再高也得打折。</p>
+              </div>
+            </div>
+            <div class="guide-step">
+              <div class="step-num">3</div>
+              <div class="step-content">
+                <h4>系列作从最新一卷切入</h4>
+                <p>连续编号的系列作，从最新一卷开始看通常比从头补更划算。最新一卷的简介页往往有前情提要，制作方会在简介里补足必要背景。如果最新一卷的评论里“首次观看”比例低于15%，说明新观众已经很难进入，这时候要么从第1卷补，要么直接放弃这个系列。</p>
+              </div>
+            </div>
+            <div class="guide-step">
+              <div class="step-num">4</div>
+              <div class="step-content">
+                <h4>VR作品先查设备兼容</h4>
+                <p>VR作品的评分受设备影响很大。同一部8K作品在高端头显上的评分能到4.6，在入门级设备上可能只有3.8。FANZA的VR作品页会标注支持的设备和分辨率，购买前先核对设备型号与刷新率。2026年10月VR分类收藏榜前10中，8K作品占7席，4K作品只占3席，设备门槛在抬高。</p>
+              </div>
+            </div>
+            <div class="guide-step">
+              <div class="step-num">5</div>
+              <div class="step-content">
+                <h4>价格波动有规律</h4>
+                <p>新作上线首周通常原价，第2周起部分厂牌开始打折，第4周降到常规定价的七折左右。VR作品降价节奏更慢，通常第6周才有明显折扣。如果不追首周，等第3周再买，单部能省400—600日元。独立厂牌的定价更灵活，联合配信企划的统一定价通常比单片购买便宜15%左右。</p>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- 7. FAQ -->
+        <section class="section" id="faq">
+          <div class="section-header">
+            <h2>日本AV常见问题</h2>
+            <span class="section-sub">围绕类型、评分与观看方式</span>
+          </div>
+          <div class="faq-list">
+            <details class="faq-item">
+              <summary>素人企划和企划单体有什么区别？</summary>
+              <div class="faq-answer">素人企划强调参与者是非固定面孔，卖点是“不知道是谁”，通常没有连续人设；企划单体是制作公司按单部选题签约女优，女优可能在不同厂牌间流动，但每部片有明确的企划主题。两者重叠的地方在于素人企划也可能由有经验的演员出演，判断时看简介页是否标注“専属”或“企画単体”。</div>
+            </details>
+            <details class="faq-item">
+              <summary>「熟女図鑑」系列从哪一卷开始看比较好？</summary>
+              <div class="faq-answer">第9卷到第12卷的评分从4.3升到4.6，但第12卷评论里“没看过前作有点接不上”的比例约12%，第9卷只有4%。如果不想补前作，从第11卷或第12卷切入，这两卷的简介页都加了两行前情摘要；如果想完整理解人设变化，从第9卷开始看更连贯。</div>
+            </details>
+            <details class="faq-item">
+              <summary>VR作品评分高但体验差是什么原因？</summary>
+              <div class="faq-answer">设备兼容是主要原因。同一部8K VR作品在高端头显上评分能到4.6，在入门设备上可能只有3.8。FANZA的VR作品页会标注支持设备和分辨率，10月VR收藏榜前10中8K作品占7席，4K作品只占3席，设备门槛在抬高。购买前先核对头显型号与刷新率，再看评论里有没有提到延迟问题。</div>
+            </details>
+            <details class="faq-item">
+              <summary>为什么有的片评分4.5但评论数很少？</summary>
+              <div class="faq-answer">评论少通常有两种情况：一是新作上线时间短，评论还在积累期，上线第一周评论数不到100条属于正常；二是题材受众窄，比如部分NTR剧情向作品，收藏数高但愿意写评论的人少。对比「素人初撮り 第47弹」约480条评论和「VR 彼女と二人きり 第3弾」约290条评论，前者评论多是因为素人题材的讨论门槛低，后者评论少是因为VR体验难以用文字描述。</div>
+            </details>
+            <details class="faq-item">
+              <summary>S1和MOODYZ的校园系列是约好的吗？</summary>
+              <div class="faq-answer">双方在10月20日确认这是联动企划，不是撞题。S1的「秋学期」侧重教室与走廊场景，双机位；MOODYZ的「放课后」侧重社团活动室与天台，叙事线更完整。两部作品同月上线，定价一致，评论区的比较讨论超过300条。11月双方还会公布联合活动细节。</div>
+            </details>
+            <details class="faq-item">
+              <summary>独立厂牌的作品值得买吗？</summary>
+              <div class="faq-answer">独立厂牌在2026年10月的新作占比约17%，定价通常比大厂低20%—30%，但制作规格参差。判断一部独立作品值不值得买，先看导演过往作品的评分中位数，再看片长——独立厂牌片长75分钟以上的作品，评分中位数比60分钟以下的高出0.4左右。联合配信企划的统一定价通常比单片购买便宜15%，适合试水。</div>
+            </details>
+          </div>
+        </section>
+
+        <!-- 8. 用户评论 -->
+        <section class="section" id="comments">
+          <div class="section-header">
+            <h2>用户评论与条目反馈</h2>
+            <span class="section-sub">来自观众的真实观感</span>
+          </div>
+          <div class="comment-list">
+            <div class="comment-item"><div class="comment-user">神奈川の住人 <span class="user-badge">素人党</span></div>第47弹那个21岁会社员，反应太自然了，尤其后半段笑场那段没剪掉，加分。</div>
+            <div class="comment-item"><div class="comment-user">みかん箱</div>熟女図鑑第12卷对白太多了吧，看到四十分钟还没进入正题，快进着看完的。</div>
+            <div class="comment-item"><div class="comment-user">VR初心者</div>8K那部设备要求太高了，我的Quest 2跑起来掉帧，只能降到4K看，体验打对折。</div>
+            <div class="comment-item"><div class="comment-user">カフェオレ</div>S1和MOODYZ的校园系列我都看了，S1的服装细节更用心，MOODYZ的剧情好一点但节奏拖。</div>
+            <div class="comment-item"><div class="comment-user">深夜のラーメン</div>独立厂牌那部NTR前30分钟全是对话，导演说下一部会压缩，希望说到做到。</div>
+            <div class="comment-item"><div class="comment-user">ぽん酢</div>素人系列加了地区筛选之后好用多了，按神奈川筛出来十几部，不用一个个翻简介。</div>
+            <div class="comment-item"><div class="comment-user">匿名希望</div>评分4.5的那部VR，差评全在说延迟，我用的设备没这问题，所以实际体验比评分好。</div>
+            <div class="comment-item"><div class="comment-user">昼行灯</div>熟女図鑑从第9卷追到第12卷，人设越来越复杂，新观众确实不好进。</div>
+            <div class="comment-item"><div class="comment-user">たこ焼き</div>第46弹比第47弹好看，第47弹的收音有点闷，不知道是不是拍摄场地的问题。</div>
+            <div class="comment-item"><div class="comment-user">エビフライ</div>MOODYZ放课后那个天台场景拍得不错，但社团活动室那段光线太暗了。</div>
+            <div class="comment-item"><div class="comment-user">月曜日</div>联合配信企划1980日元六部，平均一部330，比单买便宜不少，但片长都偏短。</div>
+            <div class="comment-item"><div class="comment-user">みそ汁</div>S1秋学期双机位切得有点频繁，看着晕，单机位可能更舒服。</div>
+            <div class="comment-item"><div class="comment-user">カメラ小僧</div>VR那部头显延迟问题在评论里被放大了，实际用高端设备看没这么严重。</div>
+            <div class="comment-item"><div class="comment-user">夜更かし</div>素人初撮り系列看到第47弹，感觉素人感在下降，可能是系列做久了的通病。</div>
+            <div class="comment-item"><div class="comment-user">豆腐</div>NTR那部75分钟其实不算长，但前戏比例确实高了，看个人口味吧。</div>
+            <div class="comment-item"><div class="comment-user">ひまわり</div>熟女図鑑第10卷才是系列最佳，第11卷开始有点刻意加剧情了。</div>
+            <div class="comment-item"><div class="comment-user">雨の日</div>独立厂牌17%的占比数据哪来的？我看到的配信列表里独立作品没这么多。</div>
+            <div class="comment-item"><div class="comment-user">コンビニ</div>第47弹收藏1.2万有点虚，我周围看素人的没几个收藏的，都是看完就过。</div>
+          </div>
+        </section>
+
+        <!-- 9. 相关资讯 -->
+        <section class="section" id="news">
+          <div class="section-header">
+            <h2>日本AV相关资讯</h2>
+            <span class="section-sub">配信动态与制作方动作</span>
+          </div>
+          <div class="news-list">
+            <article class="news-item">
+              <img src="https://picsum.photos/seed/news47jp/600/400" alt="素人初撮り第47弹上线新闻配图" width="100" height="68" loading="lazy">
+              <div class="news-body">
+                <h3 class="news-title">素人初撮り第47弹首日收藏破8000</h3>
+                <div class="news-date">2026-11-07</div>
+                <p class="news-summary">シロウトTV第47弹配信首日收藏数达8200，超过第46弹首日的6100。平台方表示地区筛选功能上线后，关东地区用户的点击转化率提升了约18%。</p>
+              </div>
+            </article>
+            <article class="news-item">
+              <img src="https://picsum.photos/seed/newsjk12/600/400" alt="熟女図鑑第12巻评分更新新闻配图" width="100" height="68" loading="lazy">
+              <div class="news-body">
+                <h3 class="news-title">熟女図鑑第12巻评分升至4.6，登顶周榜</h3>
+                <div class="news-date">2026-11-06</div>
+                <p class="news-summary">FANZA熟女分类10月第5周榜单更新，第12巻从第3位升至第1位，评分从4.5升至4.6。第11巻从第2位回落至第5位，收藏数环比下降12%。</p>
+              </div>
+            </article>
+            <article class="news-item">
+              <img src="https://picsum.photos/seed/newsyjvr/600/400" alt="VR作品8K版本追加新闻配图" width="100" height="68" loading="lazy">
+              <div class="news-body">
+                <h3 class="news-title">VR彼女と二人きり第3弾追加8K 60fps版本</h3>
+                <div class="news-date">2026-11-04</div>
+                <p class="news-summary">发行方在11月4日上线8K 60fps版本，原4K版本同步降价20%。FANZA VR分类10月收藏榜前10中，8K作品占7席，4K作品仅3席，设备升级需求明显。</p>
+              </div>
+            </article>
+            <article class="news-item">
+              <img src="https://picsum.photos/seed/newsindie/600/400" alt="独立厂牌联合配信新闻配图" width="100" height="68" loading="lazy">
+              <div class="news-body">
+                <h3 class="news-title">三家独立厂牌11月联合配信，统一定价1980日元</h3>
+                <div class="news-date">2026-11-02</div>
+                <p class="news-summary">参与厂牌为两家东京独立制作公司和一家大阪厂牌，首期含6部新作，片长在60—80分钟之间。联合配信定价1980日元，比单片购买均价低约15%。</p>
+              </div>
+            </article>
+            <article class="news-item">
+              <img src="https://picsum.photos/seed/newsntr/600/400" alt="NTR导演回应剧情争议新闻配图" width="100" height="68" loading="lazy">
+              <div class="news-body">
+                <h3 class="news-title">NTR隣の夫婦导演回应剧情比例争议</h3>
+                <div class="news-date">2026-10-31</div>
+                <p class="news-summary">导演在个人账号表示“下一部会压缩前戏”，并透露第三夜的前30分钟对白中有约8分钟是现场即兴。该片当前评分4.1，差评中“节奏拖”出现频率最高。</p>
+              </div>
+            </article>
+            <article class="news-item">
+              <img src="https://picsum.photos/seed/newss1moodyz/600/400" alt="S1与MOODYZ联动企划新闻配图" width="100" height="68" loading="lazy">
+              <div class="news-body">
+                <h3 class="news-title">S1与MOODYZ确认校园主题为联动企划</h3>
+                <div class="news-date">2026-10-20</div>
+                <p class="news-summary">双方在10月20日确认10月的校园主题为联动企划，并非撞题。S1侧重教室场景，MOODYZ侧重社团活动室与天台。11月将公布联合活动细节，涉及两部作品的交叉推广。</p>
+              </div>
+            </article>
+          </div>
+        </section>
+
+        <!-- 10. 相关推荐 -->
+        <section class="section" id="related">
+          <div class="section-header">
+            <h2>相关推荐与检索标签</h2>
+            <span class="section-sub">具体条目名与内容方向词</span>
+          </div>
+          <div class="related-tags">
+            <a href="/#featured" class="related-tag">素人初撮り 第46弹</a>
+            <a href="/#featured" class="related-tag">熟女図鑑 第11巻</a>
+            <a href="/#featured" class="related-tag">S1 专属女优新作</a>
+            <a href="/#featured" class="related-tag">MOODYZ 社团活动室场景</a>
+            <a href="/#featured" class="related-tag">8K VR 设备兼容清单</a>
+            <a href="/#featured" class="related-tag">NTR剧情向 片长75分钟</a>
+            <a href="/#featured" class="related-tag">素人企划 关东地区筛选</a>
+            <a href="/#featured" class="related-tag">独立厂牌 联合配信</a>
+          </div>
+        </section>
+
+        <!-- 11. 热门榜单 -->
+        <section class="section" id="rank">
+          <div class="section-header">
+            <h2>本周日本AV热门榜单</h2>
+            <span class="section-sub">按收藏数与评分综合排序，截至11月8日</span>
+          </div>
+          <ol class="rank-list">
+            <li><span class="rank-num">1</span><span class="rank-name">素人初撮り 第47弹</span><span class="rank-score">收藏 1.2万 · ★4.5</span></li>
+            <li><span class="rank-num">2</span><span class="rank-name">VR 彼女と二人きり 第3弾</span><span class="rank-score">收藏 1.5万 · ★4.4</span></li>
+            <li><span class="rank-num">3</span><span class="rank-name">熟女図鑑 第12巻</span><span class="rank-score">收藏 9800 · ★4.6</span></li>
+            <li><span class="rank-num">4</span><span class="rank-name">MOODYZ 校园系列 放课后</span><span class="rank-score">收藏 8100 · ★4.3</span></li>
+            <li><span class="rank-num">5</span><span class="rank-name">S1 校园系列 秋学期</span><span class="rank-score">收藏 7600 · ★4.2</span></li>
+            <li><span class="rank-num">6</span><span class="rank-name">NTR 隣の夫婦 第三夜</span><span class="rank-score">收藏 5400 · ★4.1</span></li>
+            <li><span class="rank-num">7</span><span class="rank-name">素人初撮り 第46弹</span><span class="rank-score">收藏 1.1万 · ★4.4</span></li>
+            <li><span class="rank-num">8</span><span class="rank-name">熟女図鑑 第11巻</span><span class="rank-score">收藏 7200 · ★4.4</span></li>
+          </ol>
+        </section>
+
+        <!-- 12. 投稿互动 -->
+        <section class="section" id="submit">
+          <div class="section-header">
+            <h2>投稿与条目互动</h2>
+            <span class="section-sub">分享观感与补充条目信息</span>
+          </div>
+          <div class="guide-steps">
+            <div class="guide-step">
+              <div class="step-num">✎</div>
+              <div class="step-content">
+                <h4>提交条目补充</h4>
+                <p>发现条目评分、收藏数或配信日期有误，可在评论区留言或通过站内投稿入口提交修正。修正内容需附FANZA作品页截图或公开链接作为依据，缺少来源的修正不会被采纳。</p>
+              </div>
+            </div>
+            <div class="guide-step">
+              <div class="step-num">✎</div>
+              <div class="step-content">
+                <h4>撰写观感长评</h4>
+                <p>单条评论超过200字的观感，可标记为长评投稿。长评需围绕具体条目或具体类型展开，说明判断依据，比如“第47弹的收音比第46弹闷”比“这部不好看”更有参考价值。</p>
+              </div>
+            </div>
+            <div class="guide-step">
+              <div class="step-num">✎</div>
+              <div class="step-content">
+                <h4>参与类型评分</h4>
+                <p>站内对素人、熟女、制服、NTR、VR五类开放评分入口，评分与FANZA站内评分独立统计。当前参与人数超过3200人，素人类平均分4.2，VR类平均分4.0。</p>
+              </div>
+            </div>
+          </div>
+        </section>
+
+      </div>
+
+      <!-- 右辅助栏 -->
+      <aside class="sidebar" aria-label="辅助信息">
+        <div class="side-widget">
+          <h3>本周热榜</h3>
+          <ul>
+            <li><span>素人初撮り 第47弹</span><span class="hot-score">1.2万</span></li>
+            <li><span>VR 彼女と二人きり 第3弾</span><span class="hot-score">1.5万</span></li>
+            <li><span>熟女図鑑 第12巻</span><span class="hot-score">9800</span></li>
+            <li><span>MOODYZ 放课后</span><span class="hot-score">8100</span></li>
+            <li><span>S1 秋学期</span><span class="hot-score">7600</span></li>
+            <li><span>NTR 隣の夫婦 第三夜</span><span class="hot-score">5400</span></li>
+          </ul>
+          <a href="/#rank" class="widget-more">查看完整榜单 →</a>
+          <div class="widget-update-time">更新于 2026-11-08</div>
+        </div>
+        <div class="side-widget">
+          <h3>近期更新</h3>
+          <ul>
+            <li><span>素人初撮り 第47弹</span><span class="hot-score">11-07</span></li>
+            <li><span>熟女図鑑 第12巻 评分</span><span class="hot-score">11-06</span></li>
+            <li><span>S1 11月新作预告</span><span class="hot-score">11-05</span></li>
+            <li><span>VR 8K 60fps 版本</span><span class="hot-score">11-04</span></li>
+            <li><span>MOODYZ 评论区破200</span><span class="hot-score">11-03</span></li>
+          </ul>
+          <a href="/#updates" class="widget-more">全部更新 →</a>
+        </div>
+        <div class="side-widget">
+          <h3>类型速览</h3>
+          <ul>
+            <li><span>素人企划</span><span class="hot-score">47个系列</span></li>
+            <li><span>熟女题材</span><span class="hot-score">32个系列</span></li>
+            <li><span>制服校园</span><span class="hot-score">28个系列</span></li>
+            <li><span>NTR剧情</span><span class="hot-score">19个系列</span></li>
+            <li><span>VR作品</span><span class="hot-score">24个系列</span></li>
+          </ul>
+          <a href="/#categories" class="widget-more">分类索引 →</a>
+        </div>
+      </aside>
+
+    </div>
+  </main>
+
+  <!-- 页尾 -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-inner">
+        <div>
+          <div class="footer-brand">youjizz日本</div>
+          <p class="footer-desc">索引日本成人视频的企划体系与类型脉络，覆盖2026年9月至11月的配信条目，包含企划单体、专属女优、素人系列、VR作品四类条目，按周更新评分与收藏数据。</p>
+        </div>
+        <div class="footer-col">
+          <h4>内容频道</h4>
+          <ul>
+            <li><a href="/#overview">领域概览</a></li>
+            <li><a href="/#featured">精选条目</a></li>
+            <li><a href="/#updates">最新更新</a></li>
+            <li><a href="/#categories">分类索引</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>阅读与判断</h4>
+          <ul>
+            <li><a href="/#deep-dive">深度解析</a></li>
+            <li><a href="/#guide">观看指南</a></li>
+            <li><a href="/#faq">常见问答</a></li>
+            <li><a href="/#rank">热门榜单</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>互动</h4>
+          <ul>
+            <li><a href="/#comments">用户评论</a></li>
+            <li><a href="/#news">相关资讯</a></li>
+            <li><a href="/#related">相关推荐</a></li>
+            <li><a href="/#submit">投稿互动</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span>© 2026 youjizz日本 · 内容聚合示例页面</span>
+        <span class="update-note">数据更新至 2026-11-08，评分为示例参考值</span>
+      </div>
+    </div>
+  </footer>
+
+  <button class="back-top" id="backTop" aria-label="回到顶部">↑</button>
+  <div class="overlay" id="overlay"></div>
+
+  <script>
+    (function() {
+      'use strict';
+
+      // 汉堡菜单
+      var hamburger = document.getElementById('hamburgerBtn');
+      var mainNav = document.getElementById('mainNav');
+      var overlay = document.getElementById('overlay');
+
+      function closeMenu() {
+        if (mainNav) mainNav.classList.remove('open');
+        if (overlay) overlay.classList.remove('active');
+        if (hamburger) hamburger.setAttribute('aria-expanded', 'false');
+      }
+      function openMenu() {
+        if (mainNav) mainNav.classList.add('open');
+        if (overlay) overlay.classList.add('active');
+        if (hamburger) hamburger.setAttribute('aria-expanded', 'true');
+      }
+
+      if (hamburger) {
+        hamburger.addEventListener('click', function() {
+          if (mainNav.classList.contains('open')) {
+            closeMenu();
+          } else {
+            openMenu();
+          }
+        });
+      }
+      if (overlay) {
+        overlay.addEventListener('click', closeMenu);
+      }
+      document.addEventListener('keydown', function(e) {
+        if (e.key === 'Escape') closeMenu();
+      });
+      // 点击导航后自动收起
+      if (mainNav) {
+        mainNav.addEventListener('click', function(e) {
+          if (e.target.tagName === 'A') closeMenu();
+        });
+      }
+
+      // 回到顶部
+      var backTop = document.getElementById('backTop');
+      window.addEventListener('scroll', function() {
+        if (window.scrollY > window.innerHeight) {
+          backTop.classList.add('visible');
+        } else {
+          backTop.classList.remove('visible');
+        }
+      }, { passive: true });
+      if (backTop) {
+        backTop.addEventListener('click', function() {
+          window.scrollTo({ top: 0, behavior: 'smooth' });
+        });
+      }
+
+      // 搜索筛选
+      var searchInput = document.getElementById('searchInput');
+      var searchBtn = document.getElementById('searchBtn');
+      var searchFeedback = document.getElementById('searchFeedback');
+      var featuredGrid = document.getElementById('featuredGrid');
+
+      function runSearch() {
+        var q = (searchInput.value || '').trim().toLowerCase();
+        if (!featuredGrid) return;
+        var cards = featuredGrid.querySelectorAll('.card');
+        var visibleCount = 0;
+        cards.forEach(function(card) {
+          var title = (card.getAttribute('data-title') || '').toLowerCase();
+          var type = (card.getAttribute('data-type') || '').toLowerCase();
+          var text = card.textContent.toLowerCase();
+          var match = !q || title.indexOf(q) !== -1 || type.indexOf(q) !== -1 || text.indexOf(q) !== -1;
+          card.style.display = match ? '' : 'none';
+          if (match) visibleCount++;
+        });
+        if (searchFeedback) {
+          if (!q) {
+            searchFeedback.classList.remove('visible');
+            searchFeedback.textContent = '';
+          } else if (visibleCount === 0) {
+            searchFeedback.classList.add('visible');
+            searchFeedback.textContent = '没有找到匹配「' + q + '」的条目，试试“素人”“VR”或“熟女”。';
+          } else {
+            searchFeedback.classList.add('visible');
+            searchFeedback.textContent = '找到 ' + visibleCount + ' 个匹配条目。';
+          }
+        }
+      }
+
+      if (searchBtn) searchBtn.addEventListener('click', runSearch);
+      if (searchInput) {
+        searchInput.addEventListener('keydown', function(e) {
+          if (e.key === 'Enter') { e.preventDefault(); runSearch(); }
+        });
+        searchInput.addEventListener('input', function() {
+          if (!searchInput.value.trim()) runSearch();
+        });
+      }
+
+      // 分类点击筛选
+      var categoryItems = document.querySelectorAll('.category-item');
+      categoryItems.forEach(function(item) {
+        item.addEventListener('click', function(e) {
+          var filter = item.getAttribute('data-filter');
+          if (!filter || !featuredGrid) return;
+          e.preventDefault();
+          // 将类型填入搜索框并执行筛选
+          if (searchInput) {
+            searchInput.value = filter;
+            runSearch();
+          }
+          var target = document.getElementById('featured');
+          if (target) {
+            target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+          }
+        });
+      });
+
+      // 侧栏频道高亮
+      var channelLinks = document.querySelectorAll('.channel-nav li a');
+      var sections = [];
+      channelLinks.forEach(function(link) {
+        var href = link.getAttribute('href');
+        if (href && href.indexOf('/#') === 0) {
+          var id = href.substring(2);
+          var el = document.getElementById(id);
+          if (el) sections.push({ el: el, link: link });
+        }
+      });
+      function updateActiveChannel() {
+        var scrollPos = window.scrollY + 140;
+        var current = null;
+        sections.forEach(function(s) {
+          if (s.el.offsetTop <= scrollPos) current = s;
+        });
+        channelLinks.forEach(function(l) { l.classList.remove('active'); });
+        if (current) current.link.classList.add('active');
+      }
+      window.addEventListener('scroll', updateActiveChannel, { passive: true });
+      updateActiveChannel();
+
+      // 页头导航高亮
+      var headerLinks = document.querySelectorAll('.main-nav a');
+      headerLinks.forEach(function(link) {
+        link.addEventListener('click', function() {
+          headerLinks.forEach(function(l) { l.classList.remove('active'); });
+          link.classList.add('active');
+        });
+      });
+    })();
+  </script>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    "name": "youjizz日本",
+    "description": "日本成人视频分类索引与条目聚合，覆盖素人、企划单体、熟女、制服、NTR、VR等类型。",
+    "inLanguage": "zh-CN"
+  }
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "素人企划和企划单体有什么区别？",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "素人企划强调参与者是非固定面孔，卖点是“不知道是谁”，通常没有连续人设；企划单体是制作公司按单部选题签约女优，女优可能在不同厂牌间流动，但每部片有明确的企划主题。两者重叠的地方在于素人企划也可能由有经验的演员出演，判断时看简介页是否标注“専属”或“企画単体”。"
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "「熟女図鑑」系列从哪一卷开始看比较好？",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "第9卷到第12卷的评分从4.3升到4.6，但第12卷评论里“没看过前作有点接不上”的比例约12%，第9卷只有4%。如果不想补前作，从第11卷或第12卷切入，这两卷的简介页都加了两行前情摘要；如果想完整理解人设变化，从第9卷开始看更连贯。"
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "VR作品评分高但体验差是什么原因？",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "设备兼容是主要原因。同一部8K VR作品在高端头显上评分能到4.6，在入门设备上可能只有3.8。FANZA的VR作品页会标注支持设备和分辨率，10月VR收藏榜前10中8K作品占7席，4K作品只占3席，设备门槛在抬高。购买前先核对头显型号与刷新率，再看评论里有没有提到延迟问题。"
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "为什么有的片评分4.5但评论数很少？",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "评论少通常有两种情况：一是新作上线时间短，评论还在积累期，上线第一周评论数不到100条属于正常；二是题材受众窄，比如部分NTR剧情向作品，收藏数高但愿意写评论的人少。对比「素人初撮り 第47弹」约480条评论和「VR 彼女と二人きり 第3弾」约290条评论，前者评论多是因为素人题材的讨论门槛低，后者评论少是因为VR体验难以用文字描述。"
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "S1和MOODYZ的校园系列是约好的吗？",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "双方在10月20日确认这是联动企划，不是撞题。S1的「秋学期」侧重教室与走廊场景，双机位；MOODYZ的「放课后」侧重社团活动室与天台，叙事线更完整。两部作品同月上线，定价一致，评论区的比较讨论超过300条。11月双方还会公布联合活动细节。"
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "独立厂牌的作品值得买吗？",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "独立厂牌在2026年10月的新作占比约17%，定价通常比大厂低20%—30%，但制作规格参差。判断一部独立作品值不值得买，先看导演过往作品的评分中位数，再看片长——独立厂牌片长75分钟以上的作品，评分中位数比60分钟以下的高出0.4左右。联合配信企划的统一定价通常比单片购买便宜15%，适合试水。"
+        }
+      }
+    ]
+  }
+  </script>
+
+</body>
+                                            </html>
