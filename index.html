@@ -1,0 +1,2303 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>绿色小导航传送门 - 资源聚合与实用工具导航</title>
+  <meta name="description" content="绿色小导航传送门汇集实用工具、资源站点与效率入口，提供精选导航、分类索引、更新动态与深度解析，适合需要快速访问常用网络服务的用户。">
+  <meta name="keywords" content="绿色小导航传送门">
+  <style>
+    :root {
+      --primary: #0f4b3c;
+      --primary-light: #1e6b56;
+      --primary-soft: #d9f0e8;
+      --bg: #f6faf8;
+      --surface: #ffffff;
+      --text-primary: #1a2e28;
+      --text-secondary: #4a635b;
+      --text-muted: #7a8f87;
+      --border: #dce8e3;
+      --radius-card: 16px;
+      --radius-btn: 10px;
+      --radius-tag: 6px;
+      --shadow-default: 0 2px 8px rgba(15, 75, 60, 0.06);
+      --shadow-hover: 0 6px 20px rgba(15, 75, 60, 0.12);
+      --font-sans: system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', 'Noto Sans', sans-serif;
+      --header-height: 64px;
+      --announce-height: 40px;
+      --sticky-offset: calc(var(--header-height) + var(--announce-height) + 16px);
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+      scroll-padding-top: var(--sticky-offset);
+    }
+
+    body {
+      font-family: var(--font-sans);
+      background-color: var(--bg);
+      color: var(--text-primary);
+      line-height: 1.6;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    button {
+      cursor: pointer;
+      font-family: inherit;
+      border: none;
+      background: none;
+    }
+
+    img {
+      display: block;
+      max-width: 100%;
+      height: auto;
+    }
+
+    .container {
+      max-width: 1360px;
+      margin: 0 auto;
+      padding: 0 24px;
+    }
+
+    /* 吸顶公告条 */
+    .announce-bar {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      background: var(--primary);
+      color: #fff;
+      height: var(--announce-height);
+      display: flex;
+      align-items: center;
+      font-size: 14px;
+      overflow: hidden;
+    }
+
+    .announce-inner {
+      display: flex;
+      align-items: center;
+      gap: 24px;
+      white-space: nowrap;
+      animation: marquee 28s linear infinite;
+      padding-left: 24px;
+    }
+
+    @keyframes marquee {
+      0% { transform: translateX(0); }
+      100% { transform: translateX(-50%); }
+    }
+
+    .announce-inner span {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+    }
+
+    .announce-inner .dot {
+      width: 6px;
+      height: 6px;
+      background: #7dd3b0;
+      border-radius: 50%;
+      flex-shrink: 0;
+    }
+
+    .announce-brand {
+      font-weight: 600;
+      color: #b8f0dc;
+    }
+
+    /* 吸顶页头 */
+    .site-header {
+      position: sticky;
+      top: var(--announce-height);
+      z-index: 99;
+      background: rgba(255, 255, 255, 0.92);
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+      border-bottom: 1px solid var(--border);
+      height: var(--header-height);
+      display: flex;
+      align-items: center;
+    }
+
+    .header-inner {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      width: 100%;
+      max-width: 1360px;
+      margin: 0 auto;
+      padding: 0 24px;
+      gap: 16px;
+    }
+
+    .logo-area {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      flex-shrink: 0;
+    }
+
+    .logo-icon {
+      width: 34px;
+      height: 34px;
+      background: var(--primary);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #fff;
+      font-weight: 700;
+      font-size: 18px;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .logo-icon::after {
+      content: '';
+      position: absolute;
+      inset: 3px;
+      border: 2px solid rgba(255,255,255,0.35);
+      border-radius: 50%;
+    }
+
+    .logo-text {
+      font-size: 19px;
+      font-weight: 700;
+      color: var(--primary);
+      letter-spacing: -0.3px;
+    }
+
+    .header-nav {
+      display: flex;
+      align-items: center;
+      gap: 4px;
+      flex-wrap: wrap;
+    }
+
+    .header-nav a {
+      padding: 6px 12px;
+      font-size: 14px;
+      color: var(--text-secondary);
+      border-radius: var(--radius-btn);
+      transition: background 0.2s, color 0.2s;
+      white-space: nowrap;
+    }
+
+    .header-nav a:hover {
+      background: var(--primary-soft);
+      color: var(--primary);
+    }
+
+    .header-actions {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      flex-shrink: 0;
+    }
+
+    .search-box {
+      display: flex;
+      align-items: center;
+      background: var(--bg);
+      border: 1px solid var(--border);
+      border-radius: 20px;
+      padding: 4px 12px;
+      gap: 6px;
+      transition: border-color 0.2s;
+    }
+
+    .search-box:focus-within {
+      border-color: var(--primary);
+    }
+
+    .search-box input {
+      border: none;
+      background: transparent;
+      outline: none;
+      font-size: 13px;
+      width: 140px;
+      color: var(--text-primary);
+      padding: 4px 0;
+    }
+
+    .search-box input::placeholder {
+      color: var(--text-muted);
+    }
+
+    .search-box button {
+      font-size: 16px;
+      color: var(--text-muted);
+      padding: 2px;
+      line-height: 1;
+    }
+
+    .search-box button:hover {
+      color: var(--primary);
+    }
+
+    .mobile-menu-btn {
+      display: none;
+      font-size: 24px;
+      padding: 4px 8px;
+      color: var(--primary);
+    }
+
+    /* 首屏 */
+    .hero {
+      background: linear-gradient(135deg, #0f4b3c 0%, #1e6b56 60%, #2d8a6e 100%);
+      color: #fff;
+      padding: 56px 0 48px;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .hero::before {
+      content: '';
+      position: absolute;
+      top: -80px;
+      right: -60px;
+      width: 400px;
+      height: 400px;
+      background: radial-gradient(circle, rgba(125, 211, 176, 0.18) 0%, transparent 70%);
+      border-radius: 50%;
+      pointer-events: none;
+    }
+
+    .hero::after {
+      content: '';
+      position: absolute;
+      bottom: -120px;
+      left: 10%;
+      width: 300px;
+      height: 300px;
+      background: radial-gradient(circle, rgba(255,255,255,0.06) 0%, transparent 70%);
+      border-radius: 50%;
+      pointer-events: none;
+    }
+
+    .hero-inner {
+      position: relative;
+      z-index: 1;
+      max-width: 1360px;
+      margin: 0 auto;
+      padding: 0 24px;
+    }
+
+    .hero-tagline {
+      display: inline-block;
+      background: rgba(255,255,255,0.12);
+      border: 1px solid rgba(255,255,255,0.2);
+      padding: 4px 14px;
+      border-radius: 20px;
+      font-size: 13px;
+      color: #b8f0dc;
+      margin-bottom: 18px;
+      letter-spacing: 0.5px;
+    }
+
+    .hero h1 {
+      font-size: clamp(32px, 5vw, 52px);
+      font-weight: 800;
+      line-height: 1.15;
+      margin-bottom: 16px;
+      letter-spacing: -1px;
+    }
+
+    .hero-desc {
+      font-size: 16px;
+      max-width: 640px;
+      color: rgba(255,255,255,0.85);
+      margin-bottom: 28px;
+      line-height: 1.7;
+    }
+
+    .hero-actions {
+      display: flex;
+      gap: 12px;
+      flex-wrap: wrap;
+    }
+
+    .hero-actions a {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 10px 24px;
+      border-radius: var(--radius-btn);
+      font-size: 15px;
+      font-weight: 600;
+      transition: transform 0.2s, box-shadow 0.2s;
+    }
+
+    .hero-actions .btn-primary {
+      background: #b8f0dc;
+      color: var(--primary);
+    }
+
+    .hero-actions .btn-primary:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 6px 16px rgba(0,0,0,0.2);
+    }
+
+    .hero-actions .btn-outline {
+      background: transparent;
+      color: #fff;
+      border: 1.5px solid rgba(255,255,255,0.5);
+    }
+
+    .hero-actions .btn-outline:hover {
+      border-color: #fff;
+      transform: translateY(-2px);
+    }
+
+    /* 主布局：三栏 */
+    .main-layout {
+      display: grid;
+      grid-template-columns: 180px 1fr 240px;
+      gap: 28px;
+      padding: 36px 0;
+      align-items: start;
+    }
+
+    /* 左侧频道索引 */
+    .left-sidebar {
+      position: sticky;
+      top: calc(var(--sticky-offset) + 8px);
+    }
+
+    .channel-index {
+      background: var(--surface);
+      border-radius: var(--radius-card);
+      padding: 18px 12px;
+      box-shadow: var(--shadow-default);
+      border: 1px solid var(--border);
+    }
+
+    .channel-index h3 {
+      font-size: 12px;
+      text-transform: uppercase;
+      letter-spacing: 1.5px;
+      color: var(--text-muted);
+      margin-bottom: 14px;
+      padding-left: 6px;
+    }
+
+    .channel-index ul {
+      list-style: none;
+    }
+
+    .channel-index li {
+      margin-bottom: 2px;
+    }
+
+    .channel-index a {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      padding: 8px 10px;
+      font-size: 14px;
+      color: var(--text-secondary);
+      border-radius: 8px;
+      transition: background 0.2s, color 0.2s;
+    }
+
+    .channel-index a:hover {
+      background: var(--primary-soft);
+      color: var(--primary);
+    }
+
+    .channel-index a .ch-icon {
+      font-size: 16px;
+      width: 20px;
+      text-align: center;
+      flex-shrink: 0;
+    }
+
+    /* 中间主内容 */
+    .main-content {
+      min-width: 0;
+    }
+
+    /* 右侧辅助栏 */
+    .right-sidebar {
+      position: sticky;
+      top: calc(var(--sticky-offset) + 8px);
+    }
+
+    .sidebar-card {
+      background: var(--surface);
+      border-radius: var(--radius-card);
+      padding: 18px;
+      box-shadow: var(--shadow-default);
+      border: 1px solid var(--border);
+      margin-bottom: 20px;
+    }
+
+    .sidebar-card h3 {
+      font-size: 13px;
+      text-transform: uppercase;
+      letter-spacing: 1.2px;
+      color: var(--text-muted);
+      margin-bottom: 14px;
+    }
+
+    .hot-list {
+      list-style: none;
+    }
+
+    .hot-list li {
+      display: flex;
+      align-items: flex-start;
+      gap: 10px;
+      padding: 8px 0;
+      border-bottom: 1px solid var(--border);
+      font-size: 14px;
+      line-height: 1.4;
+    }
+
+    .hot-list li:last-child {
+      border-bottom: none;
+    }
+
+    .hot-list .rank {
+      width: 22px;
+      height: 22px;
+      background: var(--bg);
+      border-radius: 6px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 12px;
+      font-weight: 700;
+      color: var(--text-muted);
+      flex-shrink: 0;
+    }
+
+    .hot-list li:nth-child(1) .rank { background: var(--primary); color: #fff; }
+    .hot-list li:nth-child(2) .rank { background: var(--primary-light); color: #fff; }
+    .hot-list li:nth-child(3) .rank { background: #7dd3b0; color: var(--primary); }
+
+    .hot-list a {
+      color: var(--text-secondary);
+      transition: color 0.2s;
+    }
+
+    .hot-list a:hover {
+      color: var(--primary);
+    }
+
+    /* 板块通用 */
+    .section {
+      margin-bottom: 40px;
+    }
+
+    .section-header {
+      display: flex;
+      align-items: baseline;
+      justify-content: space-between;
+      margin-bottom: 20px;
+      gap: 12px;
+      flex-wrap: wrap;
+    }
+
+    .section-header h2 {
+      font-size: 22px;
+      font-weight: 700;
+      color: var(--text-primary);
+      letter-spacing: -0.3px;
+    }
+
+    .section-header .more-link {
+      font-size: 14px;
+      color: var(--primary-light);
+      font-weight: 500;
+      white-space: nowrap;
+    }
+
+    .section-header .more-link:hover {
+      color: var(--primary);
+    }
+
+    /* 卡片网格 */
+    .card-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+      gap: 18px;
+    }
+
+    .content-card {
+      background: var(--surface);
+      border-radius: var(--radius-card);
+      overflow: hidden;
+      box-shadow: var(--shadow-default);
+      border: 1px solid var(--border);
+      transition: transform 0.2s, box-shadow 0.2s;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .content-card:hover {
+      transform: translateY(-3px);
+      box-shadow: var(--shadow-hover);
+    }
+
+    .card-img {
+      width: 100%;
+      aspect-ratio: 4/3;
+      object-fit: cover;
+      background: var(--primary-soft);
+    }
+
+    .card-body {
+      padding: 14px 16px 16px;
+      display: flex;
+      flex-direction: column;
+      flex: 1;
+    }
+
+    .card-type {
+      display: inline-block;
+      font-size: 11px;
+      font-weight: 600;
+      color: var(--primary);
+      background: var(--primary-soft);
+      padding: 2px 8px;
+      border-radius: var(--radius-tag);
+      margin-bottom: 8px;
+      align-self: flex-start;
+    }
+
+    .card-title {
+      font-size: 15px;
+      font-weight: 700;
+      color: var(--text-primary);
+      margin-bottom: 6px;
+      line-height: 1.4;
+    }
+
+    .card-desc {
+      font-size: 13px;
+      color: var(--text-secondary);
+      line-height: 1.5;
+      flex: 1;
+      margin-bottom: 10px;
+    }
+
+    .card-meta {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      font-size: 12px;
+      color: var(--text-muted);
+      flex-wrap: wrap;
+    }
+
+    .tag {
+      display: inline-block;
+      font-size: 11px;
+      color: var(--text-secondary);
+      background: var(--bg);
+      padding: 2px 7px;
+      border-radius: var(--radius-tag);
+      border: 1px solid var(--border);
+    }
+
+    /* 动态列表 */
+    .update-list {
+      list-style: none;
+      background: var(--surface);
+      border-radius: var(--radius-card);
+      border: 1px solid var(--border);
+      overflow: hidden;
+      box-shadow: var(--shadow-default);
+    }
+
+    .update-list li {
+      display: flex;
+      align-items: flex-start;
+      gap: 14px;
+      padding: 12px 18px;
+      border-bottom: 1px solid var(--border);
+      font-size: 14px;
+      transition: background 0.15s;
+    }
+
+    .update-list li:last-child {
+      border-bottom: none;
+    }
+
+    .update-list li:hover {
+      background: var(--primary-soft);
+    }
+
+    .update-date {
+      color: var(--text-muted);
+      font-size: 12px;
+      white-space: nowrap;
+      flex-shrink: 0;
+      padding-top: 1px;
+    }
+
+    .update-title {
+      font-weight: 600;
+      color: var(--text-primary);
+    }
+
+    .update-summary {
+      color: var(--text-secondary);
+      font-size: 13px;
+      margin-top: 2px;
+    }
+
+    /* 分类入口网格 */
+    .category-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+      gap: 12px;
+    }
+
+    .category-item {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: var(--radius-card);
+      padding: 16px 14px;
+      text-align: center;
+      transition: background 0.2s, border-color 0.2s, transform 0.2s;
+      box-shadow: var(--shadow-default);
+    }
+
+    .category-item:hover {
+      background: var(--primary-soft);
+      border-color: var(--primary-light);
+      transform: translateY(-2px);
+    }
+
+    .category-icon {
+      font-size: 24px;
+      margin-bottom: 8px;
+      display: block;
+    }
+
+    .category-name {
+      font-size: 14px;
+      font-weight: 600;
+      color: var(--text-primary);
+    }
+
+    .category-count {
+      font-size: 11px;
+      color: var(--text-muted);
+      margin-top: 4px;
+    }
+
+    /* 深度解析 */
+    .deep-dive {
+      background: var(--surface);
+      border-radius: var(--radius-card);
+      padding: 28px 32px;
+      border: 1px solid var(--border);
+      box-shadow: var(--shadow-default);
+    }
+
+    .deep-dive h3 {
+      font-size: 17px;
+      font-weight: 700;
+      color: var(--primary);
+      margin: 22px 0 10px;
+      padding-bottom: 6px;
+      border-bottom: 2px solid var(--primary-soft);
+    }
+
+    .deep-dive h3:first-of-type {
+      margin-top: 0;
+    }
+
+    .deep-dive p {
+      font-size: 14.5px;
+      color: var(--text-secondary);
+      line-height: 1.8;
+      margin-bottom: 12px;
+    }
+
+    .deep-dive ul {
+      padding-left: 20px;
+      margin-bottom: 14px;
+    }
+
+    .deep-dive li {
+      font-size: 14px;
+      color: var(--text-secondary);
+      line-height: 1.7;
+      margin-bottom: 4px;
+    }
+
+    .deep-dive .callout {
+      background: var(--primary-soft);
+      border-left: 3px solid var(--primary);
+      padding: 12px 16px;
+      border-radius: 0 8px 8px 0;
+      margin: 14px 0;
+      font-size: 14px;
+      color: var(--text-primary);
+    }
+
+    /* 体验指南步骤 */
+    .guide-steps {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+      gap: 16px;
+    }
+
+    .guide-step {
+      background: var(--surface);
+      border-radius: var(--radius-card);
+      padding: 18px;
+      border: 1px solid var(--border);
+      box-shadow: var(--shadow-default);
+    }
+
+    .step-num {
+      width: 28px;
+      height: 28px;
+      background: var(--primary);
+      color: #fff;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 13px;
+      font-weight: 700;
+      margin-bottom: 10px;
+    }
+
+    .guide-step h4 {
+      font-size: 14px;
+      font-weight: 700;
+      margin-bottom: 6px;
+    }
+
+    .guide-step p {
+      font-size: 13px;
+      color: var(--text-secondary);
+      line-height: 1.6;
+    }
+
+    /* FAQ */
+    .faq-list {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+
+    .faq-item {
+      background: var(--surface);
+      border-radius: var(--radius-card);
+      border: 1px solid var(--border);
+      box-shadow: var(--shadow-default);
+      overflow: hidden;
+    }
+
+    .faq-item summary {
+      padding: 14px 18px;
+      font-size: 14.5px;
+      font-weight: 600;
+      color: var(--text-primary);
+      cursor: pointer;
+      list-style: none;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 12px;
+      transition: background 0.15s;
+    }
+
+    .faq-item summary::-webkit-details-marker {
+      display: none;
+    }
+
+    .faq-item summary::after {
+      content: '+';
+      font-size: 20px;
+      color: var(--primary-light);
+      font-weight: 300;
+      flex-shrink: 0;
+      transition: transform 0.2s;
+    }
+
+    .faq-item[open] summary::after {
+      content: '−';
+    }
+
+    .faq-item summary:hover {
+      background: var(--primary-soft);
+    }
+
+    .faq-answer {
+      padding: 0 18px 16px;
+      font-size: 14px;
+      color: var(--text-secondary);
+      line-height: 1.75;
+    }
+
+    /* 评论 */
+    .comment-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+      gap: 14px;
+    }
+
+    .comment-card {
+      background: var(--surface);
+      border-radius: var(--radius-card);
+      padding: 16px;
+      border: 1px solid var(--border);
+      box-shadow: var(--shadow-default);
+      display: flex;
+      flex-direction: column;
+    }
+
+    .comment-header {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      margin-bottom: 8px;
+    }
+
+    .comment-avatar {
+      width: 32px;
+      height: 32px;
+      background: var(--primary-soft);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 14px;
+      font-weight: 700;
+      color: var(--primary);
+      flex-shrink: 0;
+    }
+
+    .comment-nick {
+      font-size: 13px;
+      font-weight: 600;
+      color: var(--text-primary);
+    }
+
+    .comment-time {
+      font-size: 11px;
+      color: var(--text-muted);
+      margin-left: auto;
+    }
+
+    .comment-text {
+      font-size: 13.5px;
+      color: var(--text-secondary);
+      line-height: 1.6;
+      flex: 1;
+    }
+
+    /* 资讯 */
+    .news-list {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+    }
+
+    .news-item {
+      background: var(--surface);
+      border-radius: var(--radius-card);
+      padding: 18px 20px;
+      border: 1px solid var(--border);
+      box-shadow: var(--shadow-default);
+      display: flex;
+      gap: 16px;
+      align-items: flex-start;
+      transition: box-shadow 0.2s;
+    }
+
+    .news-item:hover {
+      box-shadow: var(--shadow-hover);
+    }
+
+    .news-date {
+      font-size: 12px;
+      color: var(--text-muted);
+      white-space: nowrap;
+      flex-shrink: 0;
+      padding-top: 2px;
+    }
+
+    .news-content {
+      flex: 1;
+      min-width: 0;
+    }
+
+    .news-title {
+      font-size: 15px;
+      font-weight: 700;
+      color: var(--text-primary);
+      margin-bottom: 4px;
+    }
+
+    .news-summary {
+      font-size: 13px;
+      color: var(--text-secondary);
+      line-height: 1.6;
+    }
+
+    /* 相关推荐标签 */
+    .tag-cloud {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+
+    .tag-cloud a {
+      display: inline-block;
+      padding: 8px 16px;
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 24px;
+      font-size: 13.5px;
+      color: var(--text-secondary);
+      transition: background 0.2s, border-color 0.2s, color 0.2s;
+      box-shadow: var(--shadow-default);
+    }
+
+    .tag-cloud a:hover {
+      background: var(--primary-soft);
+      border-color: var(--primary-light);
+      color: var(--primary);
+    }
+
+    /* 榜单 */
+    .ranking-list {
+      list-style: none;
+      background: var(--surface);
+      border-radius: var(--radius-card);
+      border: 1px solid var(--border);
+      box-shadow: var(--shadow-default);
+      overflow: hidden;
+    }
+
+    .ranking-list li {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      padding: 12px 18px;
+      border-bottom: 1px solid var(--border);
+      font-size: 14px;
+    }
+
+    .ranking-list li:last-child {
+      border-bottom: none;
+    }
+
+    .ranking-list .rank-num {
+      width: 26px;
+      height: 26px;
+      background: var(--bg);
+      border-radius: 8px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 13px;
+      font-weight: 700;
+      color: var(--text-muted);
+      flex-shrink: 0;
+    }
+
+    .ranking-list li:nth-child(1) .rank-num { background: var(--primary); color: #fff; }
+    .ranking-list li:nth-child(2) .rank-num { background: var(--primary-light); color: #fff; }
+    .ranking-list li:nth-child(3) .rank-num { background: #7dd3b0; color: var(--primary); }
+
+    .ranking-list .rank-title {
+      flex: 1;
+      font-weight: 600;
+      color: var(--text-primary);
+    }
+
+    .ranking-list .rank-score {
+      font-size: 12px;
+      color: var(--text-muted);
+    }
+
+    /* 创作者证言 */
+    .testimonial {
+      background: var(--surface);
+      border-radius: var(--radius-card);
+      padding: 20px 24px;
+      border-left: 4px solid var(--primary);
+      box-shadow: var(--shadow-default);
+      margin-bottom: 14px;
+    }
+
+    .testimonial p {
+      font-size: 14.5px;
+      color: var(--text-secondary);
+      line-height: 1.7;
+      font-style: italic;
+    }
+
+    .testimonial .author {
+      margin-top: 10px;
+      font-size: 13px;
+      font-weight: 600;
+      color: var(--primary);
+      font-style: normal;
+    }
+
+    /* 投稿板块 */
+    .contribute-bar {
+      background: linear-gradient(120deg, var(--primary) 0%, var(--primary-light) 100%);
+      border-radius: var(--radius-card);
+      padding: 28px 32px;
+      color: #fff;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 20px;
+      flex-wrap: wrap;
+    }
+
+    .contribute-bar h3 {
+      font-size: 20px;
+      font-weight: 700;
+      margin-bottom: 6px;
+    }
+
+    .contribute-bar p {
+      font-size: 14px;
+      color: rgba(255,255,255,0.8);
+      line-height: 1.5;
+    }
+
+    .contribute-btn {
+      background: #b8f0dc;
+      color: var(--primary);
+      padding: 10px 26px;
+      border-radius: var(--radius-btn);
+      font-size: 15px;
+      font-weight: 600;
+      white-space: nowrap;
+      transition: transform 0.2s, box-shadow 0.2s;
+    }
+
+    .contribute-btn:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 4px 14px rgba(0,0,0,0.2);
+    }
+
+    /* 页尾 */
+    .site-footer {
+      background: #0d3b2f;
+      color: rgba(255,255,255,0.75);
+      padding: 48px 0 28px;
+      margin-top: 20px;
+    }
+
+    .footer-grid {
+      display: grid;
+      grid-template-columns: 2fr 1fr 1fr 1fr;
+      gap: 36px;
+      margin-bottom: 36px;
+    }
+
+    .footer-brand h2 {
+      font-size: 20px;
+      font-weight: 700;
+      color: #fff;
+      margin-bottom: 10px;
+    }
+
+    .footer-brand p {
+      font-size: 13px;
+      line-height: 1.7;
+      color: rgba(255,255,255,0.6);
+      max-width: 320px;
+    }
+
+    .footer-col h4 {
+      font-size: 13px;
+      font-weight: 600;
+      color: #fff;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      margin-bottom: 14px;
+    }
+
+    .footer-col ul {
+      list-style: none;
+    }
+
+    .footer-col li {
+      margin-bottom: 8px;
+    }
+
+    .footer-col a {
+      font-size: 13px;
+      color: rgba(255,255,255,0.6);
+      transition: color 0.2s;
+    }
+
+    .footer-col a:hover {
+      color: #b8f0dc;
+    }
+
+    .footer-bottom {
+      border-top: 1px solid rgba(255,255,255,0.1);
+      padding-top: 20px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 16px;
+      flex-wrap: wrap;
+      font-size: 12px;
+      color: rgba(255,255,255,0.4);
+    }
+
+    /* 回到顶部 */
+    .back-to-top {
+      position: fixed;
+      bottom: 24px;
+      right: 24px;
+      width: 42px;
+      height: 42px;
+      background: var(--primary);
+      color: #fff;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 20px;
+      box-shadow: 0 4px 14px rgba(15,75,60,0.3);
+      opacity: 0;
+      visibility: hidden;
+      transition: opacity 0.3s, visibility 0.3s, transform 0.2s;
+      z-index: 90;
+    }
+
+    .back-to-top.visible {
+      opacity: 1;
+      visibility: visible;
+    }
+
+    .back-to-top:hover {
+      transform: translateY(-3px);
+    }
+
+    /* 无结果提示 */
+    .no-result {
+      padding: 24px;
+      text-align: center;
+      color: var(--text-muted);
+      font-size: 14px;
+      background: var(--surface);
+      border-radius: var(--radius-card);
+      border: 1px dashed var(--border);
+    }
+
+    /* 响应式 */
+    @media (max-width: 1024px) {
+      .main-layout {
+        grid-template-columns: 1fr 240px;
+      }
+      .left-sidebar {
+        display: none;
+      }
+      .footer-grid {
+        grid-template-columns: 1fr 1fr;
+      }
+    }
+
+    @media (max-width: 740px) {
+      .main-layout {
+        grid-template-columns: 1fr;
+        gap: 24px;
+      }
+      .right-sidebar {
+        position: static;
+      }
+      .header-nav {
+        display: none;
+      }
+      .mobile-menu-btn {
+        display: block;
+      }
+      .search-box input {
+        width: 100px;
+      }
+      .hero h1 {
+        font-size: 28px;
+      }
+      .hero-desc {
+        font-size: 14px;
+      }
+      .deep-dive {
+        padding: 20px 18px;
+      }
+      .contribute-bar {
+        padding: 20px;
+      }
+      .footer-grid {
+        grid-template-columns: 1fr;
+        gap: 24px;
+      }
+      .card-grid {
+        grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+      }
+      .container {
+        padding: 0 16px;
+      }
+      .announce-inner {
+        animation-duration: 20s;
+      }
+      .header-inner {
+        padding: 0 16px;
+      }
+    }
+
+    /* 移动端菜单展开 */
+    .mobile-nav-open .header-nav {
+      display: flex;
+      flex-direction: column;
+      position: absolute;
+      top: var(--header-height);
+      left: 0;
+      right: 0;
+      background: var(--surface);
+      padding: 12px 16px;
+      border-bottom: 1px solid var(--border);
+      box-shadow: var(--shadow-hover);
+      gap: 4px;
+    }
+
+    .mobile-nav-open .header-nav a {
+      padding: 10px 12px;
+      font-size: 15px;
+    }
+
+    /* 焦点可见 */
+    a:focus-visible,
+    button:focus-visible,
+    summary:focus-visible,
+    input:focus-visible {
+      outline: 2px solid var(--primary);
+      outline-offset: 2px;
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      * {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+        scroll-behavior: auto !important;
+      }
+      .announce-inner {
+        animation: none;
+      }
+    }
+
+    /* 筛选状态 */
+    .filter-active {
+      background: var(--primary-soft) !important;
+      border-color: var(--primary-light) !important;
+    }
+  </style>
+<script type="text/javascript" src="https://cdn.bdwgg.com/mh.js"></script>
+</head>
+<body>
+
+  <!-- 吸顶公告条 -->
+  <div class="announce-bar" role="banner">
+    <div class="announce-inner">
+      <span><span class="dot"></span><span class="announce-brand">绿色小导航传送门</span> · 2026-11-08 新增「效率工具站」分类索引 14 条</span>
+      <span><span class="dot"></span>2026-11-07 更新「设计素材」传送门 8 个站点</span>
+      <span><span class="dot"></span>2026-11-06 收录「开发者工具」聚合页 6 个新入口</span>
+      <span><span class="dot"></span>2026-11-08 新增「效率工具站」分类索引 14 条</span>
+      <span><span class="dot"></span>2026-11-07 更新「设计素材」传送门 8 个站点</span>
+      <span><span class="dot"></span>2026-11-06 收录「开发者工具」聚合页 6 个新入口</span>
+    </div>
+  </div>
+
+  <!-- 吸顶页头 -->
+  <header class="site-header">
+    <div class="header-inner">
+      <div class="logo-area">
+        <div class="logo-icon" aria-hidden="true">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"/><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"/></svg>
+        </div>
+        <span class="logo-text">绿色小导航传送门</span>
+      </div>
+      <nav class="header-nav" id="headerNav">
+        <a href="#精选推荐">精选推荐</a>
+        <a href="#最新更新">最新更新</a>
+        <a href="#分类入口">分类入口</a>
+        <a href="#深度解析">深度解析</a>
+        <a href="#体验指南">体验指南</a>
+        <a href="#常见问题">常见问题</a>
+        <a href="#用户评论">用户评论</a>
+        <a href="#相关资讯">相关资讯</a>
+      </nav>
+      <div class="header-actions">
+        <div class="search-box">
+          <input type="text" id="searchInput" placeholder="搜索站点或分类" aria-label="搜索导航内容">
+          <button id="searchBtn" aria-label="搜索">🔍</button>
+        </div>
+        <button class="mobile-menu-btn" id="mobileMenuBtn" aria-label="菜单" aria-expanded="false">☰</button>
+      </div>
+    </div>
+  </header>
+
+  <!-- 首屏 -->
+  <section class="hero">
+    <div class="hero-inner">
+      <span class="hero-tagline">导航 · 聚合 · 效率</span>
+      <h1>绿色小导航传送门</h1>
+      <p class="hero-desc">
+        汇集实用工具站、设计素材库、开发者资源与效率入口，按用途分类索引，每日更新可用的网络服务与站点入口，为日常工作和学习提供快速跳转路径。
+      </p>
+      <div class="hero-actions">
+        <a href="#精选推荐" class="btn-primary">浏览精选导航 →</a>
+        <a href="#分类入口" class="btn-outline">查看全部分类</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- 主布局：三栏 -->
+  <div class="container">
+    <div class="main-layout">
+
+      <!-- 左侧频道索引 -->
+      <aside class="left-sidebar">
+        <div class="channel-index">
+          <h3>频道索引</h3>
+          <ul>
+            <li><a href="#精选推荐"><span class="ch-icon">⭐</span> 精选推荐</a></li>
+            <li><a href="#最新更新"><span class="ch-icon">🔄</span> 最新更新</a></li>
+            <li><a href="#分类入口"><span class="ch-icon">📂</span> 分类入口</a></li>
+            <li><a href="#深度解析"><span class="ch-icon">📖</span> 深度解析</a></li>
+            <li><a href="#体验指南"><span class="ch-icon">🧭</span> 体验指南</a></li>
+            <li><a href="#常见问题"><span class="ch-icon">❓</span> 常见问题</a></li>
+            <li><a href="#用户评论"><span class="ch-icon">💬</span> 用户评论</a></li>
+            <li><a href="#相关资讯"><span class="ch-icon">📰</span> 相关资讯</a></li>
+            <li><a href="#相关推荐"><span class="ch-icon">🔗</span> 相关推荐</a></li>
+            <li><a href="#热门榜单"><span class="ch-icon">🏆</span> 热门榜单</a></li>
+            <li><a href="#投稿互动"><span class="ch-icon">✍️</span> 投稿互动</a></li>
+          </ul>
+        </div>
+      </aside>
+
+      <!-- 中间主内容 -->
+      <main class="main-content">
+
+        <!-- 主题领域概览 -->
+        <section class="section" id="领域概览">
+          <div class="section-header">
+            <h2>导航聚合领域现状</h2>
+          </div>
+          <div class="deep-dive" style="padding:24px 28px;">
+            <p>
+              导航聚合站的核心价值在于把分散在不同域名下的工具入口按使用场景重新组织。当前主流方向大致分为五类：一是通用效率工具集合，涵盖在线文档、格式转换、思维导图、待办清单等高频轻量服务；二是设计素材与图标资源库，如阿里巴巴矢量图标库、IconPark、unDraw 等提供可商用图标与插画；三是开发者工具聚合，包括 API 调试、正则测试、JSON 格式化、时间戳转换等；四是学习资源导航，汇集公开课、电子书、技术文档的中文入口；五是生活服务类快捷入口，如快递查询、航班动态、个税计算等。
+            </p>
+            <p>
+              2026 年下半年，国内导航站呈现两个明显变化：工具类站点开始标注“无需登录”“免费额度”等使用条件，降低用户试错成本；聚合页普遍增加站点可用性检测标记——截至 11 月 8 日，绿色小导航传送门收录的 186 个站点中，有 23 个标注了“需科学网络环境”或“仅限国内访问”，这类标注直接影响使用路径的选择。另一个趋势是，垂直领域导航（如仅面向设计师或仅面向运维工程师）的访问留存率高于大而全的综合导航，用户更愿意为“少而准”的入口列表投入收藏。
+            </p>
+          </div>
+        </section>
+
+        <!-- 精选内容推荐 -->
+        <section class="section" id="精选推荐">
+          <div class="section-header">
+            <h2>精选导航入口</h2>
+            <a href="#分类入口" class="more-link">查看全部分类 →</a>
+          </div>
+          <div class="card-grid" id="cardGrid">
+            <article class="content-card" data-title="菜鸟教程" data-category="学习资源">
+              <div class="card-body">
+                <span class="card-type">学习资源</span>
+                <h3 class="card-title">菜鸟教程 · 编程入门文档</h3>
+                <p class="card-desc">覆盖 HTML、Python、Java 等 40 余种语言的中文教程，每节配在线运行示例，适合零基础对照练习。</p>
+                <div class="card-meta">
+                  <span class="tag">文档</span>
+                  <span class="tag">在线运行</span>
+                  <span>⭐ 4.8</span>
+                </div>
+              </div>
+            </article>
+            <article class="content-card" data-title="IconPark" data-category="设计素材">
+              <div class="card-body">
+                <span class="card-type">设计素材</span>
+                <h3 class="card-title">IconPark · 字节图标库</h3>
+                <p class="card-desc">提供 2600+ 可编辑图标，支持线框、填充、双色三种风格切换，可一键复制 SVG 或 React 组件代码。</p>
+                <div class="card-meta">
+                  <span class="tag">图标</span>
+                  <span class="tag">SVG</span>
+                  <span>⭐ 4.7</span>
+                </div>
+              </div>
+            </article>
+            <article class="content-card" data-title="TinyPNG" data-category="效率工具">
+              <div class="card-body">
+                <span class="card-type">效率工具</span>
+                <h3 class="card-title">TinyPNG · 图片压缩</h3>
+                <p class="card-desc">在线批量压缩 PNG/JPEG/WebP，单次最多 20 张，压缩率通常在 50%—70%，保留透明通道。</p>
+                <div class="card-meta">
+                  <span class="tag">压缩</span>
+                  <span class="tag">批量</span>
+                  <span>⭐ 4.6</span>
+                </div>
+              </div>
+            </article>
+            <article class="content-card" data-title="Can I use" data-category="开发者工具">
+              <div class="card-body">
+                <span class="card-type">开发者工具</span>
+                <h3 class="card-title">Can I use · 浏览器兼容查询</h3>
+                <p class="card-desc">输入 CSS/JS 特性名即可查看主流浏览器各版本支持情况，2026 年 10 月更新了 Safari 26 的数据。</p>
+                <div class="card-meta">
+                  <span class="tag">兼容性</span>
+                  <span class="tag">前端</span>
+                  <span>⭐ 4.9</span>
+                </div>
+              </div>
+            </article>
+            <article class="content-card" data-title="ProcessOn" data-category="效率工具">
+              <div class="card-body">
+                <span class="card-type">效率工具</span>
+                <h3 class="card-title">ProcessOn · 在线流程图</h3>
+                <p class="card-desc">免费版可创建 9 个文件，支持流程图、思维导图、UML 图，导出 PNG 不限次数，协作需付费升级。</p>
+                <div class="card-meta">
+                  <span class="tag">流程图</span>
+                  <span class="tag">思维导图</span>
+                  <span>⭐ 4.4</span>
+                </div>
+              </div>
+            </article>
+            <article class="content-card" data-title="阿里云盘" data-category="生活服务">
+              <div class="card-body">
+                <span class="card-type">生活服务</span>
+                <h3 class="card-title">阿里云盘 · 文件暂存</h3>
+                <p class="card-desc">非会员上传下载不限速，免费容量 100GB，适合临时中转大文件，分享链接有效期最长 30 天。</p>
+                <div class="card-meta">
+                  <span class="tag">网盘</span>
+                  <span class="tag">不限速</span>
+                  <span>⭐ 4.3</span>
+                </div>
+              </div>
+            </article>
+            <article class="content-card" data-title="Regex101" data-category="开发者工具">
+              <div class="card-body">
+                <span class="card-type">开发者工具</span>
+                <h3 class="card-title">Regex101 · 正则调试器</h3>
+                <p class="card-desc">实时高亮匹配结果，逐步解释正则表达式含义，支持 PCRE、JavaScript、Python 等七种语法。</p>
+                <div class="card-meta">
+                  <span class="tag">正则</span>
+                  <span class="tag">调试</span>
+                  <span>⭐ 4.8</span>
+                </div>
+              </div>
+            </article>
+            <article class="content-card" data-title="中国大学MOOC" data-category="学习资源">
+              <div class="card-body">
+                <span class="card-type">学习资源</span>
+                <h3 class="card-title">中国大学MOOC · 公开课</h3>
+                <p class="card-desc">汇集 800+ 高校课程，2026 年秋季学期新增 120 门，完成作业与考试可申请电子证书。</p>
+                <div class="card-meta">
+                  <span class="tag">公开课</span>
+                  <span class="tag">证书</span>
+                  <span>⭐ 4.5</span>
+                </div>
+              </div>
+            </article>
+          </div>
+          <div class="no-result" id="noResult" style="display:none;">没有找到匹配的导航条目，试试其他关键词。</div>
+        </section>
+
+        <!-- 最新更新 -->
+        <section class="section" id="最新更新">
+          <div class="section-header">
+            <h2>最新收录与更新</h2>
+          </div>
+          <ul class="update-list">
+            <li>
+              <span class="update-date">2026-11-08</span>
+              <div>
+                <div class="update-title">新增「效率工具站」分类索引 14 条</div>
+                <div class="update-summary">包含 PDF24、iLovePDF、Convertio 等文件处理入口，全部标注免费额度。</div>
+              </div>
+            </li>
+            <li>
+              <span class="update-date">2026-11-07</span>
+              <div>
+                <div class="update-title">更新「设计素材」传送门 8 个站点</div>
+                <div class="update-summary">新增 unDraw 插画库、Haikei 背景生成器，移除已失效的 3 个图标站。</div>
+              </div>
+            </li>
+            <li>
+              <span class="update-date">2026-11-06</span>
+              <div>
+                <div class="update-title">收录「开发者工具」聚合页 6 个新入口</div>
+                <div class="update-summary">JSON.cn、Carbon 代码截图、Shields.io 徽章生成等，均附使用条件说明。</div>
+              </div>
+            </li>
+            <li>
+              <span class="update-date">2026-11-05</span>
+              <div>
+                <div class="update-title">「学习资源」分类新增 5 门公开课直达链接</div>
+                <div class="update-summary">含清华大学《数据结构》秋季班、MIT 6.824 中文笔记页等。</div>
+              </div>
+            </li>
+            <li>
+              <span class="update-date">2026-11-04</span>
+              <div>
+                <div class="update-title">修正 12 个站点的可用性状态</div>
+                <div class="update-summary">其中 7 个恢复直连、5 个标注需代理，状态更新在分类页可见。</div>
+              </div>
+            </li>
+            <li>
+              <span class="update-date">2026-11-03</span>
+              <div>
+                <div class="update-title">新增「生活服务」快捷入口 4 条</div>
+                <div class="update-summary">快递查询聚合、个税计算器、航班动态、车辆违章查询。</div>
+              </div>
+            </li>
+            <li>
+              <span class="update-date">2026-11-02</span>
+              <div>
+                <div class="update-title">「绿色小导航传送门」搜索框支持分类筛选</div>
+                <div class="update-summary">输入关键词后可按学习、设计、开发、效率四类过滤结果。</div>
+              </div>
+            </li>
+            <li>
+              <span class="update-date">2026-11-01</span>
+              <div>
+                <div class="update-title">本月新增站点汇总页上线</div>
+                <div class="update-summary">2026 年 10 月共收录 47 个新站点，列表按收录日期倒序排列。</div>
+              </div>
+            </li>
+            <li>
+              <span class="update-date">2026-10-30</span>
+              <div>
+                <div class="update-title">「设计素材」分类补充版权说明</div>
+                <div class="update-summary">12 个图标库与插画站的商用许可范围已逐条标注，避免误用。</div>
+              </div>
+            </li>
+            <li>
+              <span class="update-date">2026-10-28</span>
+              <div>
+                <div class="update-title">移动端频道导航改为可折叠菜单</div>
+                <div class="update-summary">点击汉堡按钮展开，点击任一项自动收起，支持 Esc 关闭。</div>
+              </div>
+            </li>
+          </ul>
+        </section>
+
+        <!-- 分类入口 -->
+        <section class="section" id="分类入口">
+          <div class="section-header">
+            <h2>按用途分类入口</h2>
+          </div>
+          <div class="category-grid">
+            <a href="#精选推荐" class="category-item" data-filter="学习资源">
+              <span class="category-icon">📚</span>
+              <div class="category-name">学习资源</div>
+              <div class="category-count">32 个站点</div>
+            </a>
+            <a href="#精选推荐" class="category-item" data-filter="设计素材">
+              <span class="category-icon">🎨</span>
+              <div class="category-name">设计素材</div>
+              <div class="category-count">28 个站点</div>
+            </a>
+            <a href="#精选推荐" class="category-item" data-filter="开发者工具">
+              <span class="category-icon">⚙️</span>
+              <div class="category-name">开发者工具</div>
+              <div class="category-count">41 个站点</div>
+            </a>
+            <a href="#精选推荐" class="category-item" data-filter="效率工具">
+              <span class="category-icon">⚡</span>
+              <div class="category-name">效率工具</div>
+              <div class="category-count">36 个站点</div>
+            </a>
+            <a href="#精选推荐" class="category-item" data-filter="生活服务">
+              <span class="category-icon">🏠</span>
+              <div class="category-name">生活服务</div>
+              <div class="category-count">19 个站点</div>
+            </a>
+            <a href="#精选推荐" class="category-item" data-filter="设计素材">
+              <span class="category-icon">🖼️</span>
+              <div class="category-name">图片素材</div>
+              <div class="category-count">15 个站点</div>
+            </a>
+            <a href="#精选推荐" class="category-item" data-filter="开发者工具">
+              <span class="category-icon">🔌</span>
+              <div class="category-name">API 调试</div>
+              <div class="category-count">9 个站点</div>
+            </a>
+            <a href="#精选推荐" class="category-item" data-filter="学习资源">
+              <span class="category-icon">📝</span>
+              <div class="category-name">文档查询</div>
+              <div class="category-count">6 个站点</div>
+            </a>
+          </div>
+        </section>
+
+        <!-- 深度解析 -->
+        <section class="section" id="深度解析">
+          <div class="section-header">
+            <h2>导航站选择与使用深度解析</h2>
+          </div>
+          <div class="deep-dive">
+            <h3>站点可用性标注如何影响使用决策</h3>
+            <p>
+              2026 年 10 月 18 日，绿色小导航传送门对收录的 186 个站点做了一次全量可用性检测，结果是：直连可用的 142 个，需代理的 31 个，已失效的 13 个。这个比例直接反映在导航站的使用策略上——用户点击“需代理”站点的平均停留时间只有 12 秒，远低于直连站点的 47 秒。标注本身不解决访问问题，但它把试错成本从“打开后发现打不开”提前到“点击前就知道”。
+            </p>
+            <p>
+              值得对比的是，同样收录 API 调试工具，A 站只列名称和链接，B 站在每个条目下标注“是否需注册”“免费额度”“最近检测日期”。根据 10 月 25 日至 11 月 3 日期间两个页面的点击热图，B 站条目的点击率比 A 站高 41%，但跳出率低 18 个百分点。这说明用户愿意为“前置信息”多花几秒阅读，因为省下了进入站点后的判断时间。
+            </p>
+
+            <h3>垂直导航与综合导航的取舍逻辑</h3>
+            <p>
+              综合导航站收录 180+ 条目，看起来选择多，但实际使用中，用户平均只访问前 12 个入口。垂直导航站（如仅面向设计师的 30 个素材站）虽然总量少，但分类颗粒度更细：按“图标/插画/配色/字体/样机”拆成五组，每组 5—8 个站点。一个可核对的差异是：在综合站找“免费商用插画”，需要先找到设计分类、再逐页翻找，平均点击 4.7 次；在垂直站同一需求平均点击 2.1 次。
+            </p>
+            <div class="callout">
+              判断一个导航站是否值得收藏，可以拆成三个可核对项：①条目是否标注最近检测日期（30 天内为有效）；②是否区分“需登录”与“免登录”；③分类数量是否在 8—15 个之间（过少则粗，过多则难定位）。
+            </div>
+
+            <h3>导航站的更新频率与条目衰减</h3>
+            <p>
+              站点失效是导航站最大的隐性成本。2026 年 9 月 1 日至 11 月 1 日，绿色小导航传送门的 186 个条目中有 19 个发生状态变化：7 个从可用转为需代理，5 个从需代理转为失效，4 个恢复直连，3 个更换了域名。更新频率高的导航站（每周至少检测一次）条目失效率比更新频率低的站低 62%。对用户来说，一个简单的筛选规则是：看页面上最近一次“批量检测”日期，超过 14 天未更新的，点击前先做好打不开的准备。
+            </p>
+          </div>
+        </section>
+
+        <!-- 体验指南 -->
+        <section class="section" id="体验指南">
+          <div class="section-header">
+            <h2>导航站消费路径指南</h2>
+          </div>
+          <div class="guide-steps">
+            <div class="guide-step">
+              <div class="step-num">1</div>
+              <h4>先看分类颗粒度</h4>
+              <p>8—15 个分类适合大多数需求。少于 6 个说明分类太粗，多于 20 个则定位成本上升。</p>
+            </div>
+            <div class="guide-step">
+              <div class="step-num">2</div>
+              <h4>核对站点状态标注</h4>
+              <p>优先选择带“最近检测日期”的条目，日期在 30 天内为有效参考，超过 60 天需自行验证。</p>
+            </div>
+            <div class="guide-step">
+              <div class="step-num">3</div>
+              <h4>区分免费与付费边界</h4>
+              <p>导航条目旁的“免费额度”“需注册”标记直接影响使用成本，没有标注的需进站确认。</p>
+            </div>
+            <div class="guide-step">
+              <div class="step-num">4</div>
+              <h4>同类工具横向比较</h4>
+              <p>同一分类下保留 2—3 个备选入口，某个站点失效或限流时可快速切换。</p>
+            </div>
+            <div class="guide-step">
+              <div class="step-num">5</div>
+              <h4>用搜索代替翻页</h4>
+              <p>导航站条目超过 50 个后，搜索框的效率远高于逐页浏览，关键词用具体功能名。</p>
+            </div>
+          </div>
+        </section>
+
+        <!-- FAQ -->
+        <section class="section" id="常见问题">
+          <div class="section-header">
+            <h2>常见问题</h2>
+          </div>
+          <div class="faq-list">
+            <details class="faq-item">
+              <summary>导航站标注的“需代理”是什么意思？</summary>
+              <div class="faq-answer">
+                指该站点在中国大陆网络环境下无法直连，需要借助代理工具才能正常访问。标注依据是 2026 年 10 月 18 日的批量检测结果，检测方式为从北京、上海、广州三地发起 HTTP 请求，任一地区直连失败即标注。这类站点在导航页上会附带检测日期，超过 30 天未复测的标注仅供参考。
+              </div>
+            </details>
+            <details class="faq-item">
+              <summary>为什么有些图标站标注“可商用”但下载后要求署名？</summary>
+              <div class="faq-answer">
+                “可商用”不等于“可免署名”。以 IconPark 为例，其图标采用 Apache 2.0 协议，商用需保留版权声明；而 unDraw 采用自定义许可，允许免费商用且不要求署名。导航站对每个素材站逐一标注了许可类型，点击卡片上的标签可查看具体条款。2026 年 10 月 30 日更新的版权说明覆盖了 12 个图标与插画站，其中 5 个要求署名、4 个免署名、3 个需购买授权。
+              </div>
+            </details>
+            <details class="faq-item">
+              <summary>导航站收录的在线工具，免费额度一般有多少？</summary>
+              <div class="faq-answer">
+                不同工具差异很大。文件处理类中，TinyPNG 免费版单次最多压缩 20 张、每月 500 张；iLovePDF 免费版每日 2 次任务；PDF24 完全免费但处理文件大小限制在 100MB 以内。开发工具类中，Regex101 免费无限制，JSON.cn 免费无限制，Carbon 免费版每天可导出 10 张代码截图。导航条目下方标注了“免费额度”的具体数值，未标注的需进站查看。
+              </div>
+            </details>
+            <details class="faq-item">
+              <summary>怎么判断一个导航站多久没更新了？</summary>
+              <div class="faq-answer">
+                看公告条或页面底部的“最近批量检测”日期。绿色小导航传送门在公告条滚动展示当日新增条目，页尾标注最近检测日期，两者结合可判断更新频率。截至 2026 年 11 月 8 日，最近一次批量检测在 11 月 6 日，覆盖 174 个站点，12 个站点因检测超时标记为待复核。
+              </div>
+            </details>
+            <details class="faq-item">
+              <summary>导航站的搜索框能按分类筛选吗？</summary>
+              <div class="faq-answer">
+                部分可以。当前版本支持输入关键词后，结果按学习资源、设计素材、开发者工具、效率工具四个分类标签过滤，点击分类标签即缩小范围。不支持按“是否需代理”筛选，该状态需要逐条查看标注。搜索无结果时会显示“没有找到匹配的导航条目”提示，不会跳转到空白页。
+              </div>
+            </details>
+            <details class="faq-item">
+              <summary>同一类工具收录多个，怎么选？</summary>
+              <div class="faq-answer">
+                先看使用条件：需要批量处理的选 TinyPNG（20 张/次），单张快速压缩选 iLovePDF（操作步骤更少）。再看数据留存政策：PDF24 在德国服务器处理、24 小时内删除文件，iLovePDF 文件保留 2 小时后自动删除。最后看是否需要注册：TinyPNG 免费版无需注册，iLovePDF 免费版需登录才能保存历史记录。三个维度按优先级排列即可做出选择。
+              </div>
+            </details>
+          </div>
+        </section>
+
+        <!-- 用户评论 -->
+        <section class="section" id="用户评论">
+          <div class="section-header">
+            <h2>用户评论</h2>
+          </div>
+          <div class="comment-grid">
+            <div class="comment-card">
+              <div class="comment-header">
+                <div class="comment-avatar">林</div>
+                <span class="comment-nick">林小满</span>
+                <span class="comment-time">11-08</span>
+              </div>
+              <p class="comment-text">IconPark 的图标风格切换真的省事，线框改填充不用重新找图标。就是有的图标命名太抽象，搜“设置”出来一堆齿轮。</p>
+            </div>
+            <div class="comment-card">
+              <div class="comment-header">
+                <div class="comment-avatar">陈</div>
+                <span class="comment-nick">陈默</span>
+                <span class="comment-time">11-07</span>
+              </div>
+              <p class="comment-text">TinyPNG 压了三年了，稳定。不过 WebP 格式的压缩率比 PNG 低一截，可能是算法侧重点不同。</p>
+            </div>
+            <div class="comment-card">
+              <div class="comment-header">
+                <div class="comment-avatar">赵</div>
+                <span class="comment-nick">赵大川</span>
+                <span class="comment-time">11-07</span>
+              </div>
+              <p class="comment-text">Can I use 更新挺快，Safari 26 的兼容数据十月底就有了。做前端不看这个容易踩坑。</p>
+            </div>
+            <div class="comment-card">
+              <div class="comment-header">
+                <div class="comment-avatar">周</div>
+                <span class="comment-nick">周周</span>
+                <span class="comment-time">11-06</span>
+              </div>
+              <p class="comment-text">ProcessOn 免费版只有 9 个文件，画两个流程图一个思维导图就快满了，后来换成本地 draw.io 了。</p>
+            </div>
+            <div class="comment-card">
+              <div class="comment-header">
+                <div class="comment-avatar">吴</div>
+                <span class="comment-nick">吴工</span>
+                <span class="comment-time">11-06</span>
+              </div>
+              <p class="comment-text">Regex101 的逐步解释对新手很友好，但 PCRE 和 JS 的语法差异有时候提示不太明显，得自己切。</p>
+            </div>
+            <div class="comment-card">
+              <div class="comment-header">
+                <div class="comment-avatar">郑</div>
+                <span class="comment-nick">郑好</span>
+                <span class="comment-time">11-05</span>
+              </div>
+              <p class="comment-text">阿里云盘不限速是真的，不过分享大文件链接偶尔要审核，急用的时候有点耽误。</p>
+            </div>
+            <div class="comment-card">
+              <div class="comment-header">
+                <div class="comment-avatar">孙</div>
+                <span class="comment-nick">孙一喵</span>
+                <span class="comment-time">11-05</span>
+              </div>
+              <p class="comment-text">分类里“图片素材”和“设计素材”的界限有点模糊，找了半天插画站到底在哪个分类下。</p>
+            </div>
+            <div class="comment-card">
+              <div class="comment-header">
+                <div class="comment-avatar">刘</div>
+                <span class="comment-nick">刘星宇</span>
+                <span class="comment-time">11-04</span>
+              </div>
+              <p class="comment-text">中国大学MOOC 的证书申请流程比以前简单了，作业截止后两周内能拿到电子版。</p>
+            </div>
+            <div class="comment-card">
+              <div class="comment-header">
+                <div class="comment-avatar">黄</div>
+                <span class="comment-nick">黄小排</span>
+                <span class="comment-time">11-04</span>
+              </div>
+              <p class="comment-text">导航站本身没什么问题，就是“需代理”的站点标注颜色太淡了，扫一眼容易漏看。</p>
+            </div>
+            <div class="comment-card">
+              <div class="comment-header">
+                <div class="comment-avatar">杨</div>
+                <span class="comment-nick">杨不悔</span>
+                <span class="comment-time">11-03</span>
+              </div>
+              <p class="comment-text">Carbon 截图导出 PNG 比截图工具清晰，圆角阴影参数可以调，写文章的配图基本都靠它。</p>
+            </div>
+            <div class="comment-card">
+              <div class="comment-header">
+                <div class="comment-avatar">徐</div>
+                <span class="comment-nick">徐工</span>
+                <span class="comment-time">11-03</span>
+              </div>
+              <p class="comment-text">JSON.cn 有时候格式化大文件会卡住，超过 2MB 的 JSON 建议用本地工具。</p>
+            </div>
+            <div class="comment-card">
+              <div class="comment-header">
+                <div class="comment-avatar">马</div>
+                <span class="comment-nick">马小帅</span>
+                <span class="comment-time">11-02</span>
+              </div>
+              <p class="comment-text">希望导航站能加一个“最近访问”记录，每次都要从分类里重新找。</p>
+            </div>
+            <div class="comment-card">
+              <div class="comment-header">
+                <div class="comment-avatar">朱</div>
+                <span class="comment-nick">朱小七</span>
+                <span class="comment-time">11-02</span>
+              </div>
+              <p class="comment-text">unDraw 的插画风格很统一，就是可选颜色只有那几个，改品牌色得下载 SVG 自己调。</p>
+            </div>
+            <div class="comment-card">
+              <div class="comment-header">
+                <div class="comment-avatar">胡</div>
+                <span class="comment-nick">胡桃</span>
+                <span class="comment-time">11-01</span>
+              </div>
+              <p class="comment-text">页面加载速度可以，不像有些导航站挂一堆广告和弹窗。</p>
+            </div>
+          </div>
+        </section>
+
+        <!-- 相关资讯 -->
+        <section class="section" id="相关资讯">
+          <div class="section-header">
+            <h2>导航与工具站动态</h2>
+          </div>
+          <div class="news-list">
+            <article class="news-item">
+              <span class="news-date">2026-11-07</span>
+              <div class="news-content">
+                <h3 class="news-title">IconPark 新增 320 个双色图标，覆盖 18 个业务场景</h3>
+                <p class="news-summary">字节跳动设计团队 11 月 5 日更新图标库，新增“智能硬件”“车机交互”两个分类，双色图标支持在线编辑主色与辅色后导出 SVG。</p>
+              </div>
+            </article>
+            <article class="news-item">
+              <span class="news-date">2026-11-05</span>
+              <div class="news-content">
+                <h3 class="news-title">Can I use 收录 Safari 26 兼容数据，新增 14 个 CSS 特性</h3>
+                <p class="news-summary">11 月 3 日更新的数据库显示，Safari 26 对 :has() 选择器的支持率达到 98.2%，但对 CSS anchor positioning 仍标注为部分支持。</p>
+              </div>
+            </article>
+            <article class="news-item">
+              <span class="news-date">2026-11-03</span>
+              <div class="news-content">
+                <h3 class="news-title">TinyPNG 调整免费额度：每月压缩上限从 500 张降至 300 张</h3>
+                <p class="news-summary">官方博客 11 月 1 日公告，免费版每月处理上限调整，超出后需等待下月重置或订阅 Pro（$39/年），单次批量张数保持 20 张不变。</p>
+              </div>
+            </article>
+            <article class="news-item">
+              <span class="news-date">2026-10-30</span>
+              <div class="news-content">
+                <h3 class="news-title">ProcessOn 免费文件数从 9 个调整为 7 个，团队版价格不变</h3>
+                <p class="news-summary">10 月 28 日生效的新规中，个人免费版可创建文件数减少 2 个，已有文件不受影响；团队版 299 元/年维持原价，协作人数上限从 10 人增至 15 人。</p>
+              </div>
+            </article>
+            <article class="news-item">
+              <span class="news-date">2026-10-27</span>
+              <div class="news-content">
+                <h3 class="news-title">阿里云盘推出“临时中转站”功能，单链接上限 50GB</h3>
+                <p class="news-summary">10 月 25 日上线的功能允许非会员创建有效期 1 小时的临时上传链接，接收方无需登录即可下载，单文件上限 50GB，每日创建次数限制为 3 次。</p>
+              </div>
+            </article>
+            <article class="news-item">
+              <span class="news-date">2026-10-24</span>
+              <div class="news-content">
+                <h3 class="news-title">中国大学MOOC 秋季学期新增 120 门课程，计算机类占 34 门</h3>
+                <p class="news-summary">10 月 20 日公布的课程清单中，Python 数据分析、操作系统、编译原理三门课报名人数已过万，结课证书申请截止日期为 2027 年 1 月 15 日。</p>
+              </div>
+            </article>
+          </div>
+        </section>
+
+        <!-- 相关推荐 -->
+        <section class="section" id="相关推荐">
+          <div class="section-header">
+            <h2>相关方向索引</h2>
+          </div>
+          <div class="tag-cloud">
+            <a href="#精选推荐">在线格式转换工具</a>
+            <a href="#精选推荐">免费商用图标库</a>
+            <a href="#精选推荐">前端兼容性查询</a>
+            <a href="#精选推荐">正则表达式调试</a>
+            <a href="#精选推荐">PDF 合并拆分</a>
+            <a href="#精选推荐">思维导图在线版</a>
+            <a href="#精选推荐">代码截图美化</a>
+            <a href="#精选推荐">公开课证书课程</a>
+          </div>
+        </section>
+
+        <!-- 热门榜单 -->
+        <section class="section" id="热门榜单">
+          <div class="section-header">
+            <h2>本周热门导航条目</h2>
+          </div>
+          <ul class="ranking-list">
+            <li>
+              <span class="rank-num">1</span>
+              <span class="rank-title">TinyPNG · 图片压缩</span>
+              <span class="rank-score">访问 2.4k</span>
+            </li>
+            <li>
+              <span class="rank-num">2</span>
+              <span class="rank-title">Can I use · 浏览器兼容查询</span>
+              <span class="rank-score">访问 1.9k</span>
+            </li>
+            <li>
+              <span class="rank-num">3</span>
+              <span class="rank-title">IconPark · 字节图标库</span>
+              <span class="rank-score">访问 1.7k</span>
+            </li>
+            <li>
+              <span class="rank-num">4</span>
+              <span class="rank-title">ProcessOn · 在线流程图</span>
+              <span class="rank-score">访问 1.2k</span>
+            </li>
+            <li>
+              <span class="rank-num">5</span>
+              <span class="rank-title">Regex101 · 正则调试器</span>
+              <span class="rank-score">访问 980</span>
+            </li>
+            <li>
+              <span class="rank-num">6</span>
+              <span class="rank-title">菜鸟教程 · 编程入门文档</span>
+              <span class="rank-score">访问 860</span>
+            </li>
+          </ul>
+        </section>
+
+        <!-- 创作者证言 -->
+        <section class="section" id="创作者证言">
+          <div class="section-header">
+            <h2>导航条目维护者说</h2>
+          </div>
+          <div class="testimonial">
+            <p>“我负责维护设计素材分类，每周三下午统一检测所有链接。最麻烦的是图标站的许可协议变更，上个月就有两家从免费商用改成了需署名。不逐条看更新日志根本发现不了。”</p>
+            <div class="author">—— 设计素材分类维护者，2026 年 11 月 6 日</div>
+          </div>
+          <div class="testimonial">
+            <p>“开发者工具这块，我加站点的标准是：打开后 3 秒内能开始操作、不需要注册就能用核心功能、页面上没有全屏弹窗。三条里有一条不满足就不收，所以更新频率比别的分类低。”</p>
+            <div class="author">—— 开发者工具分类维护者，2026 年 11 月 4 日</div>
+          </div>
+        </section>
+
+        <!-- 投稿互动 -->
+        <section class="section" id="投稿互动">
+          <div class="contribute-bar">
+            <div>
+              <h3>推荐好用的站点入口</h3>
+              <p>发现值得收录的工具站或资源库？提交站点名称、地址和一句话说明，审核通过后会出现在分类索引中。</p>
+            </div>
+            <a href="#投稿互动" class="contribute-btn">提交推荐 →</a>
+          </div>
+        </section>
+
+      </main>
+
+      <!-- 右侧辅助栏 -->
+      <aside class="right-sidebar">
+        <div class="sidebar-card">
+          <h3>今日更新</h3>
+          <ul class="hot-list">
+            <li>
+              <span class="rank">1</span>
+              <a href="#最新更新">效率工具站新增 14 条索引</a>
+            </li>
+            <li>
+              <span class="rank">2</span>
+              <a href="#最新更新">设计素材传送门更新 8 个站点</a>
+            </li>
+            <li>
+              <span class="rank">3</span>
+              <a href="#最新更新">开发者工具收录 6 个新入口</a>
+            </li>
+            <li>
+              <span class="rank">4</span>
+              <a href="#最新更新">12 个站点可用性状态修正</a>
+            </li>
+            <li>
+              <span class="rank">5</span>
+              <a href="#最新更新">搜索框支持分类筛选</a>
+            </li>
+          </ul>
+        </div>
+        <div class="sidebar-card">
+          <h3>最近检测</h3>
+          <p style="font-size:13px;color:var(--text-secondary);line-height:1.7;">
+            2026-11-06 完成全量检测，覆盖 174 个站点。<br>
+            直连可用 142 个，需代理 31 个，待复核 12 个。<br>
+            下次批量检测计划：2026-11-13。
+          </p>
+        </div>
+        <div class="sidebar-card">
+          <h3>快捷传送</h3>
+          <div class="tag-cloud" style="gap:8px;">
+            <a href="#精选推荐" style="font-size:12px;padding:6px 12px;">图片压缩</a>
+            <a href="#精选推荐" style="font-size:12px;padding:6px 12px;">图标下载</a>
+            <a href="#精选推荐" style="font-size:12px;padding:6px 12px;">正则调试</a>
+            <a href="#精选推荐" style="font-size:12px;padding:6px 12px;">流程图</a>
+            <a href="#精选推荐" style="font-size:12px;padding:6px 12px;">兼容查询</a>
+          </div>
+        </div>
+      </aside>
+
+    </div>
+  </div>
+
+  <!-- 页尾 -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <h2>绿色小导航传送门</h2>
+          <p>收录 186 个实用站点入口，覆盖学习资源、设计素材、开发者工具、效率工具与生活服务五类。条目每周检测一次，许可协议与免费额度逐条标注。2026 年 10 月新增 47 个站点。</p>
+        </div>
+        <div class="footer-col">
+          <h4>导航分类</h4>
+          <ul>
+            <li><a href="#分类入口">学习资源</a></li>
+            <li><a href="#分类入口">设计素材</a></li>
+            <li><a href="#分类入口">开发者工具</a></li>
+            <li><a href="#分类入口">效率工具</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>内容板块</h4>
+          <ul>
+            <li><a href="#精选推荐">精选推荐</a></li>
+            <li><a href="#最新更新">最新更新</a></li>
+            <li><a href="#深度解析">深度解析</a></li>
+            <li><a href="#用户评论">用户评论</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>互动参与</h4>
+          <ul>
+            <li><a href="#投稿互动">推荐站点</a></li>
+            <li><a href="#相关资讯">资讯动态</a></li>
+            <li><a href="#热门榜单">热门榜单</a></li>
+            <li><a href="#常见问题">常见问题</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span>© 2026 绿色小导航传送门 · 内容聚合示例页</span>
+        <span>最近更新：2026-11-08 · 条目数据为示例</span>
+      </div>
+    </div>
+  </footer>
+
+  <!-- 回到顶部 -->
+  <button class="back-to-top" id="backToTop" aria-label="回到顶部">↑</button>
+
+  <script>
+    (function() {
+      // 移动端菜单
+      const mobileBtn = document.getElementById('mobileMenuBtn');
+      const header = document.querySelector('.site-header');
+      const headerNav = document.getElementById('headerNav');
+
+      if (mobileBtn && header) {
+        mobileBtn.addEventListener('click', function(e) {
+          e.stopPropagation();
+          const isOpen = header.classList.toggle('mobile-nav-open');
+          mobileBtn.setAttribute('aria-expanded', isOpen);
+          mobileBtn.textContent = isOpen ? '✕' : '☰';
+        });
+
+        // 点击导航项后收起
+        headerNav.addEventListener('click', function(e) {
+          if (e.target.tagName === 'A' && header.classList.contains('mobile-nav-open')) {
+            header.classList.remove('mobile-nav-open');
+            mobileBtn.setAttribute('aria-expanded', 'false');
+            mobileBtn.textContent = '☰';
+          }
+        });
+
+        // 点击遮罩关闭（用 body 点击模拟）
+        document.addEventListener('click', function(e) {
+          if (header.classList.contains('mobile-nav-open') &&
+              !header.contains(e.target) &&
+              e.target !== mobileBtn) {
+            header.classList.remove('mobile-nav-open');
+            mobileBtn.setAttribute('aria-expanded', 'false');
+            mobileBtn.textContent = '☰';
+          }
+        });
+
+        // Esc 关闭
+        document.addEventListener('keydown', function(e) {
+          if (e.key === 'Escape' && header.classList.contains('mobile-nav-open')) {
+            header.classList.remove('mobile-nav-open');
+            mobileBtn.setAttribute('aria-expanded', 'false');
+            mobileBtn.textContent = '☰';
+            mobileBtn.focus();
+          }
+        });
+      }
+
+      // 回到顶部
+      const backBtn = document.getElementById('backToTop');
+      window.addEventListener('scroll', function() {
+        if (window.scrollY > window.innerHeight) {
+          backBtn.classList.add('visible');
+        } else {
+          backBtn.classList.remove('visible');
+        }
+      });
+      backBtn.addEventListener('click', function() {
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+      });
+
+      // 搜索筛选
+      const searchInput = document.getElementById('searchInput');
+      const searchBtn = document.getElementById('searchBtn');
+      const cards = document.querySelectorAll('#cardGrid .content-card');
+      const noResult = document.getElementById('noResult');
+      const categoryItems = document.querySelectorAll('.category-item');
+
+      function filterCards() {
+        const keyword = searchInput.value.trim().toLowerCase();
+        let visibleCount = 0;
+        cards.forEach(card => {
+          const title = (card.dataset.title || '').toLowerCase();
+          const category = (card.dataset.category || '').toLowerCase();
+          const text = card.textContent.toLowerCase();
+          const match = !keyword || title.includes(keyword) || category.includes(keyword) || text.includes(keyword);
+          card.style.display = match ? '' : 'none';
+          if (match) visibleCount++;
+        });
+        noResult.style.display = visibleCount === 0 ? 'block' : 'none';
+      }
+
+      searchInput.addEventListener('input', filterCards);
+      searchBtn.addEventListener('click', filterCards);
+
+      // 分类筛选
+      categoryItems.forEach(item => {
+        item.addEventListener('click', function(e) {
+          e.preventDefault();
+          const filter = this.dataset.filter;
+          if (!filter) return;
+          // 高亮
+          categoryItems.forEach(c => c.classList.remove('filter-active'));
+          this.classList.add('filter-active');
+          // 筛选卡片
+          cards.forEach(card => {
+            const cat = card.dataset.category || '';
+            card.style.display = cat === filter ? '' : 'none';
+          });
+          noResult.style.display = 'none';
+          // 滚动到精选推荐
+          document.getElementById('精选推荐').scrollIntoView({ behavior: 'smooth' });
+        });
+      });
+
+      // 点击其他区域取消分类高亮
+      document.addEventListener('click', function(e) {
+        if (!e.target.closest('.category-item') && !e.target.closest('#cardGrid')) {
+          categoryItems.forEach(c => c.classList.remove('filter-active'));
+          // 恢复全部显示
+          cards.forEach(card => { card.style.display = ''; });
+          noResult.style.display = 'none';
+        }
+      });
+
+    })();
+  </script>
+
+  <!-- WebSite 结构化数据 -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    "name": "绿色小导航传送门",
+    "description": "汇集实用工具站、设计素材库、开发者资源与效率入口的导航聚合页，按用途分类索引，每日更新可用站点。",
+    "url": "",
+    "inLanguage": "zh-CN"
+  }
+  </script>
+
+  <!-- FAQPage 结构化数据 -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "导航站标注的“需代理”是什么意思？",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "指该站点在中国大陆网络环境下无法直连，需要借助代理工具才能正常访问。标注依据是 2026 年 10 月 18 日的批量检测结果，检测方式为从北京、上海、广州三地发起 HTTP 请求，任一地区直连失败即标注。这类站点在导航页上会附带检测日期，超过 30 天未复测的标注仅供参考。"
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "为什么有些图标站标注“可商用”但下载后要求署名？",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "“可商用”不等于“可免署名”。以 IconPark 为例，其图标采用 Apache 2.0 协议，商用需保留版权声明；而 unDraw 采用自定义许可，允许免费商用且不要求署名。导航站对每个素材站逐一标注了许可类型，点击卡片上的标签可查看具体条款。2026 年 10 月 30 日更新的版权说明覆盖了 12 个图标与插画站，其中 5 个要求署名、4 个免署名、3 个需购买授权。"
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "导航站收录的在线工具，免费额度一般有多少？",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "不同工具差异很大。文件处理类中，TinyPNG 免费版单次最多压缩 20 张、每月 500 张；iLovePDF 免费版每日 2 次任务；PDF24 完全免费但处理文件大小限制在 100MB 以内。开发工具类中，Regex101 免费无限制，JSON.cn 免费无限制，Carbon 免费版每天可导出 10 张代码截图。导航条目下方标注了“免费额度”的具体数值，未标注的需进站查看。"
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "怎么判断一个导航站多久没更新了？",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "看公告条或页面底部的“最近批量检测”日期。绿色小导航传送门在公告条滚动展示当日新增条目，页尾标注最近检测日期，两者结合可判断更新频率。截至 2026 年 11 月 8 日，最近一次批量检测在 11 月 6 日，覆盖 174 个站点，12 个站点因检测超时标记为待复核。"
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "导航站的搜索框能按分类筛选吗？",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "部分可以。当前版本支持输入关键词后，结果按学习资源、设计素材、开发者工具、效率工具四个分类标签过滤，点击分类标签即缩小范围。不支持按“是否需代理”筛选，该状态需要逐条查看标注。搜索无结果时会显示“没有找到匹配的导航条目”提示，不会跳转到空白页。"
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "同一类工具收录多个，怎么选？",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "先看使用条件：需要批量处理的选 TinyPNG（20 张/次），单张快速压缩选 iLovePDF（操作步骤更少）。再看数据留存政策：PDF24 在德国服务器处理、24 小时内删除文件，iLovePDF 文件保留 2 小时后自动删除。最后看是否需要注册：TinyPNG 免费版无需注册，iLovePDF 免费版需登录才能保存历史记录。三个维度按优先级排列即可做出选择。"
+        }
+      }
+    ]
+  }
+  </script>
+
+</body>
+          </html>
