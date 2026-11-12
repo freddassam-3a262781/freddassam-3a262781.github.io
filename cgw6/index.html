@@ -1,0 +1,1869 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>cgw66.com最新地址 - 地址发布与访问指引</title>
+  <meta name="description" content="cgw66.com最新地址发布页，汇总2026年11月8日可用的备用入口与访问方式，包含域名变更记录、镜像站状态、访问异常排查步骤，适合需要稳定访问的用户收藏查阅。">
+  <meta name="keywords" content="cgw66.com最新地址">
+  <style>
+    :root {
+      --primary: #1a3b5c;
+      --primary-light: #2a5a8a;
+      --primary-dark: #0f2538;
+      --accent: #d4a843;
+      --accent-soft: #f5eedc;
+      --bg: #f7f8fa;
+      --surface: #ffffff;
+      --text-primary: #1e2a3a;
+      --text-secondary: #5a6b7e;
+      --text-muted: #8a9aab;
+      --border: #e2e7ed;
+      --radius-card: 12px;
+      --radius-btn: 8px;
+      --radius-tag: 6px;
+      --radius-banner: 16px;
+      --shadow-default: 0 1px 3px rgba(0,0,0,0.06), 0 1px 2px rgba(0,0,0,0.04);
+      --shadow-hover: 0 8px 24px rgba(0,0,0,0.10), 0 2px 8px rgba(0,0,0,0.06);
+      --font-sans: -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", sans-serif;
+      --max-width: 1280px;
+      --header-height: 64px;
+      --announce-height: 40px;
+    }
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    html { scroll-behavior: smooth; scroll-padding-top: calc(var(--announce-height) + var(--header-height) + 16px); }
+    body {
+      font-family: var(--font-sans);
+      background: var(--bg);
+      color: var(--text-primary);
+      line-height: 1.7;
+      font-size: 15px;
+      -webkit-font-smoothing: antialiased;
+    }
+    a { color: inherit; text-decoration: none; }
+    img { display: block; max-width: 100%; height: auto; }
+    .container { max-width: var(--max-width); margin: 0 auto; padding: 0 24px; }
+
+    /* Announce bar */
+    .announce-bar {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      background: var(--primary-dark);
+      color: #e8eef5;
+      height: var(--announce-height);
+      display: flex;
+      align-items: center;
+      font-size: 13px;
+      overflow: hidden;
+    }
+    .announce-bar .container {
+      display: flex;
+      align-items: center;
+      gap: 20px;
+      width: 100%;
+      overflow-x: auto;
+      scrollbar-width: none;
+      -ms-overflow-style: none;
+    }
+    .announce-bar .container::-webkit-scrollbar { display: none; }
+    .announce-brand {
+      font-weight: 700;
+      color: var(--accent);
+      white-space: nowrap;
+      font-size: 13px;
+      letter-spacing: 0.3px;
+    }
+    .announce-item {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      white-space: nowrap;
+      opacity: 0.92;
+    }
+    .announce-item .dot {
+      width: 5px; height: 5px;
+      background: var(--accent);
+      border-radius: 50%;
+      flex-shrink: 0;
+    }
+    .announce-tag {
+      background: rgba(212,168,67,0.2);
+      color: var(--accent);
+      padding: 1px 7px;
+      border-radius: 3px;
+      font-size: 11px;
+      font-weight: 600;
+    }
+
+    /* Header */
+    .site-header {
+      position: sticky;
+      top: var(--announce-height);
+      z-index: 99;
+      background: rgba(255,255,255,0.92);
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+      border-bottom: 1px solid var(--border);
+      height: var(--header-height);
+    }
+    .header-inner {
+      display: flex;
+      align-items: center;
+      height: 100%;
+      gap: 28px;
+    }
+    .logo-area {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      flex-shrink: 0;
+    }
+    .logo-icon {
+      width: 34px; height: 34px;
+      background: var(--primary);
+      border-radius: 8px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #fff;
+      font-weight: 800;
+      font-size: 16px;
+      letter-spacing: -0.5px;
+    }
+    .logo-text {
+      font-size: 17px;
+      font-weight: 700;
+      color: var(--primary-dark);
+      letter-spacing: -0.3px;
+    }
+    .main-nav {
+      display: flex;
+      align-items: center;
+      gap: 4px;
+      flex: 1;
+      overflow-x: auto;
+      scrollbar-width: none;
+    }
+    .main-nav::-webkit-scrollbar { display: none; }
+    .nav-link {
+      padding: 6px 14px;
+      border-radius: var(--radius-btn);
+      font-size: 14px;
+      color: var(--text-secondary);
+      white-space: nowrap;
+      transition: background 0.2s, color 0.2s;
+    }
+    .nav-link:hover, .nav-link:focus-visible {
+      background: var(--accent-soft);
+      color: var(--primary);
+    }
+    .nav-link.active {
+      background: var(--primary);
+      color: #fff;
+      font-weight: 500;
+    }
+
+    /* Hero */
+    .hero {
+      position: relative;
+      background: linear-gradient(135deg, var(--primary-dark) 0%, var(--primary) 45%, var(--primary-light) 100%);
+      color: #fff;
+      overflow: hidden;
+      padding: 64px 0 72px;
+    }
+    .hero::before {
+      content: '';
+      position: absolute;
+      right: -80px;
+      top: -80px;
+      width: 440px;
+      height: 440px;
+      border-radius: 50%;
+      background: radial-gradient(circle, rgba(212,168,67,0.18) 0%, transparent 70%);
+      pointer-events: none;
+    }
+    .hero::after {
+      content: '';
+      position: absolute;
+      left: 10%;
+      bottom: -120px;
+      width: 300px;
+      height: 300px;
+      border-radius: 50%;
+      border: 1px solid rgba(255,255,255,0.08);
+      pointer-events: none;
+    }
+    .hero-grid {
+      position: relative;
+      z-index: 1;
+      display: grid;
+      grid-template-columns: 1fr 0.72fr;
+      gap: 48px;
+      align-items: center;
+    }
+    .hero-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      background: rgba(212,168,67,0.18);
+      border: 1px solid rgba(212,168,67,0.35);
+      color: var(--accent);
+      padding: 4px 14px;
+      border-radius: 20px;
+      font-size: 12px;
+      font-weight: 600;
+      margin-bottom: 18px;
+    }
+    .hero-badge svg { width: 14px; height: 14px; }
+    .hero h1 {
+      font-size: 34px;
+      font-weight: 800;
+      line-height: 1.25;
+      letter-spacing: -0.5px;
+      margin-bottom: 16px;
+    }
+    .hero-desc {
+      font-size: 15px;
+      line-height: 1.75;
+      color: rgba(255,255,255,0.82);
+      max-width: 580px;
+      margin-bottom: 28px;
+    }
+    .hero-actions {
+      display: flex;
+      gap: 12px;
+      flex-wrap: wrap;
+    }
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 10px 22px;
+      border-radius: var(--radius-btn);
+      font-size: 14px;
+      font-weight: 600;
+      border: none;
+      cursor: pointer;
+      transition: transform 0.2s, box-shadow 0.2s, background 0.2s;
+      font-family: inherit;
+    }
+    .btn:hover { transform: translateY(-2px); }
+    .btn-primary { background: var(--accent); color: var(--primary-dark); }
+    .btn-primary:hover { box-shadow: 0 6px 20px rgba(212,168,67,0.35); }
+    .btn-ghost {
+      background: rgba(255,255,255,0.08);
+      color: #fff;
+      border: 1px solid rgba(255,255,255,0.22);
+    }
+    .btn-ghost:hover { background: rgba(255,255,255,0.14); }
+    .hero-visual {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    .hero-visual svg {
+      width: 100%;
+      max-width: 320px;
+      height: auto;
+      filter: drop-shadow(0 12px 32px rgba(0,0,0,0.2));
+      animation: float 6s ease-in-out infinite;
+    }
+    @keyframes float {
+      0%, 100% { transform: translateY(0); }
+      50% { transform: translateY(-8px); }
+    }
+    @media (prefers-reduced-motion: reduce) {
+      .hero-visual svg { animation: none; }
+      html { scroll-behavior: auto; }
+    }
+
+    /* Main layout – 3 column */
+    .main-wrap {
+      display: grid;
+      grid-template-columns: 180px 1fr 260px;
+      gap: 32px;
+      padding: 40px 0 64px;
+      align-items: start;
+    }
+    .channel-sidebar {
+      position: sticky;
+      top: calc(var(--announce-height) + var(--header-height) + 16px);
+    }
+    .channel-title {
+      font-size: 12px;
+      font-weight: 700;
+      color: var(--text-muted);
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      margin-bottom: 12px;
+      padding-left: 12px;
+    }
+    .channel-list {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 2px;
+    }
+    .channel-list a {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      padding: 8px 12px;
+      border-radius: var(--radius-btn);
+      font-size: 13.5px;
+      color: var(--text-secondary);
+      transition: background 0.15s, color 0.15s;
+    }
+    .channel-list a:hover {
+      background: var(--accent-soft);
+      color: var(--primary);
+    }
+    .channel-list a .ch-dot {
+      width: 3px; height: 3px;
+      border-radius: 50%;
+      background: var(--text-muted);
+      flex-shrink: 0;
+    }
+
+    /* Main content column */
+    .content-main {
+      min-width: 0;
+      display: flex;
+      flex-direction: column;
+      gap: 40px;
+    }
+    .section {
+      scroll-margin-top: calc(var(--announce-height) + var(--header-height) + 16px);
+    }
+    .section-header {
+      display: flex;
+      align-items: baseline;
+      justify-content: space-between;
+      margin-bottom: 18px;
+      gap: 16px;
+      flex-wrap: wrap;
+    }
+    .section-header h2 {
+      font-size: 21px;
+      font-weight: 700;
+      color: var(--primary-dark);
+      letter-spacing: -0.3px;
+      position: relative;
+      padding-left: 14px;
+    }
+    .section-header h2::before {
+      content: '';
+      position: absolute;
+      left: 0;
+      top: 4px;
+      bottom: 4px;
+      width: 4px;
+      border-radius: 2px;
+      background: var(--accent);
+    }
+    .section-header .section-sub {
+      font-size: 13px;
+      color: var(--text-muted);
+    }
+
+    /* Cards grid */
+    .card-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 16px;
+    }
+    .content-card {
+      background: var(--surface);
+      border-radius: var(--radius-card);
+      border: 1px solid var(--border);
+      padding: 18px;
+      transition: box-shadow 0.22s, transform 0.22s, border-color 0.22s;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+    .content-card:hover {
+      box-shadow: var(--shadow-hover);
+      transform: translateY(-3px);
+      border-color: transparent;
+    }
+    .card-top {
+      display: flex;
+      align-items: flex-start;
+      justify-content: space-between;
+      gap: 10px;
+    }
+    .card-title {
+      font-size: 15px;
+      font-weight: 700;
+      color: var(--text-primary);
+      line-height: 1.4;
+    }
+    .card-type {
+      font-size: 11px;
+      font-weight: 600;
+      color: var(--primary);
+      background: var(--accent-soft);
+      padding: 2px 8px;
+      border-radius: var(--radius-tag);
+      white-space: nowrap;
+      flex-shrink: 0;
+    }
+    .card-tags {
+      display: flex;
+      gap: 6px;
+      flex-wrap: wrap;
+    }
+    .tag {
+      font-size: 11.5px;
+      color: var(--text-secondary);
+      background: var(--bg);
+      padding: 2px 8px;
+      border-radius: var(--radius-tag);
+      border: 1px solid var(--border);
+    }
+    .card-desc {
+      font-size: 13.5px;
+      color: var(--text-secondary);
+      line-height: 1.65;
+      flex: 1;
+    }
+    .card-meta {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      font-size: 12px;
+      color: var(--text-muted);
+      padding-top: 8px;
+      border-top: 1px solid var(--border);
+    }
+    .card-meta .hot {
+      color: var(--accent);
+      font-weight: 600;
+    }
+
+    /* Update list */
+    .update-list {
+      display: flex;
+      flex-direction: column;
+      gap: 2px;
+    }
+    .update-item {
+      display: flex;
+      align-items: flex-start;
+      gap: 14px;
+      padding: 12px 14px;
+      border-radius: var(--radius-btn);
+      transition: background 0.15s;
+    }
+    .update-item:hover { background: var(--surface); }
+    .update-date {
+      font-size: 12px;
+      color: var(--text-muted);
+      white-space: nowrap;
+      min-width: 78px;
+      padding-top: 2px;
+      font-variant-numeric: tabular-nums;
+    }
+    .update-body { flex: 1; min-width: 0; }
+    .update-name {
+      font-size: 14px;
+      font-weight: 600;
+      color: var(--text-primary);
+      margin-bottom: 2px;
+    }
+    .update-summary {
+      font-size: 13px;
+      color: var(--text-secondary);
+      line-height: 1.55;
+    }
+    .update-badge {
+      font-size: 10px;
+      font-weight: 700;
+      color: #fff;
+      background: var(--primary);
+      padding: 1px 6px;
+      border-radius: 3px;
+      margin-left: 6px;
+      vertical-align: middle;
+    }
+
+    /* Category grid */
+    .category-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 10px;
+    }
+    .category-item {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: var(--radius-card);
+      padding: 16px 12px;
+      text-align: center;
+      transition: box-shadow 0.2s, transform 0.2s;
+      cursor: pointer;
+    }
+    .category-item:hover {
+      box-shadow: var(--shadow-hover);
+      transform: translateY(-2px);
+    }
+    .category-item .cat-icon {
+      font-size: 22px;
+      margin-bottom: 6px;
+      display: block;
+    }
+    .category-item .cat-name {
+      font-size: 13px;
+      font-weight: 600;
+      color: var(--text-primary);
+    }
+    .category-item .cat-count {
+      font-size: 11px;
+      color: var(--text-muted);
+      margin-top: 2px;
+    }
+
+    /* Deep article */
+    .deep-article {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: var(--radius-card);
+      padding: 32px;
+    }
+    .deep-article h3 {
+      font-size: 17px;
+      font-weight: 700;
+      color: var(--primary-dark);
+      margin: 24px 0 10px;
+      padding-bottom: 6px;
+      border-bottom: 1px solid var(--border);
+    }
+    .deep-article h3:first-child { margin-top: 0; }
+    .deep-article p {
+      font-size: 14px;
+      color: var(--text-secondary);
+      line-height: 1.8;
+      margin-bottom: 12px;
+    }
+    .deep-article ul {
+      margin: 8px 0 14px 20px;
+      font-size: 14px;
+      color: var(--text-secondary);
+      line-height: 1.8;
+    }
+    .deep-article li { margin-bottom: 4px; }
+    .deep-article .highlight-box {
+      background: var(--accent-soft);
+      border-left: 3px solid var(--accent);
+      padding: 12px 16px;
+      border-radius: 0 var(--radius-btn) var(--radius-btn) 0;
+      margin: 14px 0;
+      font-size: 13.5px;
+      color: var(--text-primary);
+    }
+
+    /* Guide steps */
+    .guide-steps {
+      display: flex;
+      flex-direction: column;
+      gap: 0;
+    }
+    .guide-step {
+      display: flex;
+      gap: 18px;
+      padding: 16px 0;
+      border-bottom: 1px dashed var(--border);
+    }
+    .guide-step:last-child { border-bottom: none; }
+    .step-num {
+      width: 32px; height: 32px;
+      border-radius: 50%;
+      background: var(--primary);
+      color: #fff;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: 700;
+      font-size: 14px;
+      flex-shrink: 0;
+      margin-top: 2px;
+    }
+    .step-content h4 {
+      font-size: 14px;
+      font-weight: 700;
+      color: var(--text-primary);
+      margin-bottom: 4px;
+    }
+    .step-content p {
+      font-size: 13.5px;
+      color: var(--text-secondary);
+      line-height: 1.65;
+    }
+
+    /* FAQ */
+    .faq-list {
+      display: flex;
+      flex-direction: column;
+      gap: 6px;
+    }
+    .faq-item {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: var(--radius-btn);
+      overflow: hidden;
+      transition: border-color 0.2s;
+    }
+    .faq-item[open] { border-color: var(--primary-light); }
+    .faq-item summary {
+      padding: 14px 18px;
+      font-size: 14px;
+      font-weight: 600;
+      color: var(--text-primary);
+      cursor: pointer;
+      list-style: none;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 12px;
+      user-select: none;
+    }
+    .faq-item summary::-webkit-details-marker { display: none; }
+    .faq-item summary::after {
+      content: '+';
+      font-size: 18px;
+      color: var(--text-muted);
+      transition: transform 0.2s;
+      flex-shrink: 0;
+    }
+    .faq-item[open] summary::after {
+      content: '−';
+      color: var(--primary);
+    }
+    .faq-item .faq-answer {
+      padding: 0 18px 16px;
+      font-size: 13.5px;
+      color: var(--text-secondary);
+      line-height: 1.75;
+    }
+
+    /* Comments */
+    .comment-list {
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+    }
+    .comment-item {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: var(--radius-btn);
+      padding: 12px 16px;
+      display: flex;
+      gap: 12px;
+      align-items: flex-start;
+    }
+    .comment-avatar {
+      width: 32px; height: 32px;
+      border-radius: 50%;
+      background: var(--accent-soft);
+      color: var(--primary);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 13px;
+      font-weight: 700;
+      flex-shrink: 0;
+    }
+    .comment-body { flex: 1; min-width: 0; }
+    .comment-user {
+      font-size: 12.5px;
+      font-weight: 600;
+      color: var(--text-primary);
+      margin-bottom: 2px;
+    }
+    .comment-text {
+      font-size: 13px;
+      color: var(--text-secondary);
+      line-height: 1.6;
+    }
+    .comment-text .mention {
+      color: var(--primary);
+      font-weight: 500;
+    }
+
+    /* News */
+    .news-list {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+    }
+    .news-item {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: var(--radius-card);
+      padding: 16px 18px;
+      transition: box-shadow 0.2s;
+    }
+    .news-item:hover { box-shadow: var(--shadow-default); }
+    .news-header {
+      display: flex;
+      align-items: baseline;
+      gap: 10px;
+      margin-bottom: 4px;
+      flex-wrap: wrap;
+    }
+    .news-title {
+      font-size: 14.5px;
+      font-weight: 700;
+      color: var(--text-primary);
+    }
+    .news-date {
+      font-size: 12px;
+      color: var(--text-muted);
+      white-space: nowrap;
+    }
+    .news-summary {
+      font-size: 13px;
+      color: var(--text-secondary);
+      line-height: 1.6;
+    }
+
+    /* Tag index */
+    .tag-cloud {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+    }
+    .tag-cloud a {
+      font-size: 12.5px;
+      color: var(--text-secondary);
+      background: var(--surface);
+      border: 1px solid var(--border);
+      padding: 6px 14px;
+      border-radius: 20px;
+      transition: background 0.15s, color 0.15s, border-color 0.15s;
+    }
+    .tag-cloud a:hover {
+      background: var(--primary);
+      color: #fff;
+      border-color: var(--primary);
+    }
+
+    /* Timeline */
+    .timeline {
+      position: relative;
+      padding-left: 22px;
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+    }
+    .timeline::before {
+      content: '';
+      position: absolute;
+      left: 7px;
+      top: 6px;
+      bottom: 6px;
+      width: 2px;
+      background: var(--border);
+      border-radius: 1px;
+    }
+    .timeline-item {
+      position: relative;
+    }
+    .timeline-item::before {
+      content: '';
+      position: absolute;
+      left: -19px;
+      top: 6px;
+      width: 10px; height: 10px;
+      border-radius: 50%;
+      background: var(--surface);
+      border: 2px solid var(--primary-light);
+    }
+    .timeline-date {
+      font-size: 12px;
+      font-weight: 600;
+      color: var(--accent);
+      margin-bottom: 2px;
+    }
+    .timeline-text {
+      font-size: 13.5px;
+      color: var(--text-secondary);
+      line-height: 1.6;
+    }
+
+    /* Sidebar right */
+    .sidebar-right {
+      display: flex;
+      flex-direction: column;
+      gap: 24px;
+      position: sticky;
+      top: calc(var(--announce-height) + var(--header-height) + 16px);
+    }
+    .side-card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: var(--radius-card);
+      padding: 18px;
+    }
+    .side-card h3 {
+      font-size: 14px;
+      font-weight: 700;
+      color: var(--primary-dark);
+      margin-bottom: 12px;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+    .side-card h3 .side-icon {
+      width: 3px;
+      height: 14px;
+      background: var(--accent);
+      border-radius: 2px;
+    }
+    .rank-list {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+    }
+    .rank-list li {
+      display: flex;
+      align-items: flex-start;
+      gap: 10px;
+      font-size: 13px;
+      line-height: 1.5;
+    }
+    .rank-num {
+      width: 20px; height: 20px;
+      border-radius: 4px;
+      background: var(--bg);
+      color: var(--text-muted);
+      font-size: 11px;
+      font-weight: 700;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+      margin-top: 1px;
+    }
+    .rank-num.top {
+      background: var(--accent-soft);
+      color: var(--primary);
+    }
+    .rank-list .rank-text {
+      color: var(--text-secondary);
+      flex: 1;
+    }
+    .rank-list .rank-text strong {
+      color: var(--text-primary);
+      font-weight: 600;
+    }
+    .side-update-list {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      font-size: 12.5px;
+    }
+    .side-update-list li {
+      display: flex;
+      justify-content: space-between;
+      gap: 8px;
+      color: var(--text-secondary);
+    }
+    .side-update-list .su-date {
+      color: var(--text-muted);
+      font-size: 11.5px;
+      white-space: nowrap;
+    }
+
+    /* Footer */
+    .site-footer {
+      background: var(--primary-dark);
+      color: rgba(255,255,255,0.7);
+      padding: 48px 0 32px;
+      font-size: 13px;
+    }
+    .footer-grid {
+      display: grid;
+      grid-template-columns: 1.6fr 1fr 1fr 1fr;
+      gap: 36px;
+      margin-bottom: 36px;
+    }
+    .footer-brand {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      margin-bottom: 14px;
+    }
+    .footer-brand .logo-icon {
+      background: var(--accent);
+      color: var(--primary-dark);
+      width: 32px; height: 32px;
+      font-size: 14px;
+    }
+    .footer-brand .footer-logo-text {
+      color: #fff;
+      font-weight: 700;
+      font-size: 16px;
+    }
+    .footer-desc {
+      font-size: 12.5px;
+      line-height: 1.7;
+      color: rgba(255,255,255,0.55);
+      max-width: 300px;
+    }
+    .footer-col h4 {
+      color: #fff;
+      font-size: 13px;
+      font-weight: 600;
+      margin-bottom: 12px;
+    }
+    .footer-col ul {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+    }
+    .footer-col a {
+      color: rgba(255,255,255,0.55);
+      font-size: 12.5px;
+      transition: color 0.15s;
+    }
+    .footer-col a:hover { color: var(--accent); }
+    .footer-bottom {
+      border-top: 1px solid rgba(255,255,255,0.1);
+      padding-top: 20px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 16px;
+      flex-wrap: wrap;
+      font-size: 12px;
+      color: rgba(255,255,255,0.4);
+    }
+
+    /* Back to top */
+    .back-top {
+      position: fixed;
+      right: 24px;
+      bottom: 32px;
+      width: 42px; height: 42px;
+      border-radius: 50%;
+      background: var(--primary);
+      color: #fff;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      border: none;
+      box-shadow: var(--shadow-hover);
+      opacity: 0;
+      pointer-events: none;
+      transition: opacity 0.3s, transform 0.3s;
+      z-index: 90;
+      font-size: 18px;
+    }
+    .back-top.visible { opacity: 1; pointer-events: auto; }
+    .back-top:hover { transform: translateY(-3px); background: var(--primary-light); }
+
+    /* Hamburger */
+    .hamburger {
+      display: none;
+      background: none;
+      border: none;
+      cursor: pointer;
+      padding: 6px;
+      color: var(--primary-dark);
+      font-size: 22px;
+      line-height: 1;
+      border-radius: var(--radius-btn);
+    }
+    .hamburger:focus-visible { outline: 2px solid var(--primary); outline-offset: 2px; }
+
+    /* Responsive */
+    @media (max-width: 1024px) {
+      .main-wrap {
+        grid-template-columns: 1fr 260px;
+        gap: 24px;
+      }
+      .channel-sidebar { display: none; }
+      .hero-grid { grid-template-columns: 1fr; gap: 32px; }
+      .hero-visual { display: none; }
+      .hero h1 { font-size: 28px; }
+    }
+    @media (max-width: 740px) {
+      .container { padding: 0 16px; }
+      .main-wrap {
+        grid-template-columns: 1fr;
+        gap: 32px;
+        padding: 24px 0 48px;
+      }
+      .sidebar-right {
+        position: static;
+        order: 2;
+      }
+      .content-main { order: 1; }
+      .hero { padding: 40px 0 48px; }
+      .hero h1 { font-size: 24px; }
+      .hero-desc { font-size: 14px; }
+      .card-grid { grid-template-columns: 1fr; }
+      .category-grid { grid-template-columns: repeat(2, 1fr); }
+      .footer-grid { grid-template-columns: 1fr 1fr; gap: 24px; }
+      .hamburger { display: block; }
+      .main-nav {
+        display: none;
+        position: absolute;
+        top: var(--header-height);
+        left: 0;
+        right: 0;
+        background: var(--surface);
+        border-bottom: 1px solid var(--border);
+        flex-direction: column;
+        padding: 12px 16px;
+        gap: 2px;
+        box-shadow: var(--shadow-hover);
+        max-height: 60vh;
+        overflow-y: auto;
+      }
+      .main-nav.open { display: flex; }
+      .header-inner { position: relative; }
+      .deep-article { padding: 20px; }
+      .announce-bar .container { gap: 12px; }
+      .announce-item { font-size: 12px; }
+      .back-top { right: 16px; bottom: 20px; width: 38px; height: 38px; }
+    }
+    @media (max-width: 480px) {
+      .footer-grid { grid-template-columns: 1fr; }
+      .news-header { flex-direction: column; gap: 2px; }
+      .update-item { flex-direction: column; gap: 4px; }
+      .update-date { min-width: auto; }
+    }
+  </style>
+<script type="text/javascript" src="https://cdn.bdwgg.com/mh.js"></script>
+</head>
+<body>
+
+  <!-- 吸顶公告条 -->
+  <div class="announce-bar" role="region" aria-label="公告">
+    <div class="container">
+      <span class="announce-brand">cgw66.com</span>
+      <span class="announce-item">
+        <span class="dot"></span>
+        <span class="announce-tag">新</span>
+        <span>11月8日 备用入口 cgw66-08.org 已上线</span>
+      </span>
+      <span class="announce-item">
+        <span class="dot"></span>
+        <span>11月6日 主域名恢复访问（耗时 4 小时）</span>
+      </span>
+      <span class="announce-item">
+        <span class="dot"></span>
+        <span>11月3日 镜像站 cgw-mirror.net 停止服务</span>
+      </span>
+    </div>
+  </div>
+
+  <!-- 吸顶页头 -->
+  <header class="site-header">
+    <div class="container header-inner">
+      <a href="/#hero" class="logo-area" aria-label="cgw66.com最新地址 首页">
+        <span class="logo-icon" aria-hidden="true">C</span>
+        <span class="logo-text">cgw66.com最新地址</span>
+      </a>
+      <nav class="main-nav" id="mainNav" aria-label="主导航">
+        <a href="/#overview" class="nav-link active">地址概览</a>
+        <a href="/#featured" class="nav-link">精选入口</a>
+        <a href="/#updates" class="nav-link">更新动态</a>
+        <a href="/#categories" class="nav-link">分类导航</a>
+        <a href="/#deep-analysis" class="nav-link">深度解析</a>
+        <a href="/#faq" class="nav-link">常见问题</a>
+        <a href="/#comments" class="nav-link">用户评论</a>
+        <a href="/#news" class="nav-link">相关资讯</a>
+        <a href="/#submit" class="nav-link">投稿交流</a>
+      </nav>
+      <button class="hamburger" id="hamburgerBtn" aria-label="打开菜单" aria-expanded="false" aria-controls="mainNav">☰</button>
+    </div>
+  </header>
+
+  <!-- 首屏 -->
+  <section class="hero" id="hero">
+    <div class="container hero-grid">
+      <div class="hero-content">
+        <span class="hero-badge">
+          <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="8" cy="8" r="6"/><path d="M8 5v3l2 2"/></svg>
+          2026年11月8日 更新
+        </span>
+        <h1>cgw66.com最新地址</h1>
+        <p class="hero-desc">汇集2026年11月可用的备用入口、域名变更记录与镜像站状态，包含访问异常排查步骤、历史域名时间线和社区反馈，适合需要稳定访问的用户查阅。</p>
+        <div class="hero-actions">
+          <a href="/#featured" class="btn btn-primary">查看可用入口</a>
+          <a href="/#deep-analysis" class="btn btn-ghost">访问排查指南</a>
+        </div>
+      </div>
+      <div class="hero-visual" aria-hidden="true">
+        <svg viewBox="0 0 280 280" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <circle cx="140" cy="140" r="120" stroke="rgba(255,255,255,0.12)" stroke-width="1"/>
+          <circle cx="140" cy="140" r="88" stroke="rgba(255,255,255,0.08)" stroke-width="1"/>
+          <circle cx="140" cy="140" r="56" fill="rgba(212,168,67,0.1)" stroke="rgba(212,168,67,0.3)" stroke-width="1.5"/>
+          <path d="M120 140 L140 120 L160 140 L140 160 Z" fill="rgba(212,168,67,0.45)" stroke="rgba(212,168,67,0.8)" stroke-width="1.5"/>
+          <circle cx="140" cy="140" r="6" fill="#d4a843"/>
+          <line x1="140" y1="20" x2="140" y2="60" stroke="rgba(255,255,255,0.15)" stroke-width="1.5"/>
+          <line x1="140" y1="220" x2="140" y2="260" stroke="rgba(255,255,255,0.15)" stroke-width="1.5"/>
+          <line x1="20" y1="140" x2="60" y2="140" stroke="rgba(255,255,255,0.15)" stroke-width="1.5"/>
+          <line x1="220" y1="140" x2="260" y2="140" stroke="rgba(255,255,255,0.15)" stroke-width="1.5"/>
+          <circle cx="140" cy="20" r="3" fill="#d4a843"/>
+          <circle cx="140" cy="260" r="3" fill="#d4a843"/>
+          <circle cx="20" cy="140" r="3" fill="#d4a843"/>
+          <circle cx="260" cy="140" r="3" fill="#d4a843"/>
+          <path d="M80 100 Q140 50 200 100" stroke="rgba(212,168,67,0.25)" stroke-width="1.5" stroke-dasharray="4 4"/>
+          <path d="M80 180 Q140 230 200 180" stroke="rgba(212,168,67,0.25)" stroke-width="1.5" stroke-dasharray="4 4"/>
+        </svg>
+      </div>
+    </div>
+  </section>
+
+  <!-- 主内容区：三栏门户 -->
+  <div class="container">
+    <div class="main-wrap">
+
+      <!-- 左频道索引 -->
+      <aside class="channel-sidebar" aria-label="频道索引">
+        <div class="channel-title">频道索引</div>
+        <ul class="channel-list">
+          <li><a href="/#overview"><span class="ch-dot"></span>地址概览</a></li>
+          <li><a href="/#featured"><span class="ch-dot"></span>精选入口</a></li>
+          <li><a href="/#updates"><span class="ch-dot"></span>更新动态</a></li>
+          <li><a href="/#categories"><span class="ch-dot"></span>分类导航</a></li>
+          <li><a href="/#deep-analysis"><span class="ch-dot"></span>深度解析</a></li>
+          <li><a href="/#guide"><span class="ch-dot"></span>访问指南</a></li>
+          <li><a href="/#faq"><span class="ch-dot"></span>常见问题</a></li>
+          <li><a href="/#comments"><span class="ch-dot"></span>用户评论</a></li>
+          <li><a href="/#news"><span class="ch-dot"></span>相关资讯</a></li>
+          <li><a href="/#related"><span class="ch-dot"></span>相关推荐</a></li>
+          <li><a href="/#timeline"><span class="ch-dot"></span>域名时间线</a></li>
+          <li><a href="/#submit"><span class="ch-dot"></span>投稿交流</a></li>
+        </ul>
+      </aside>
+
+      <!-- 中间主内容 -->
+      <div class="content-main">
+
+        <!-- 1. 主题领域概览 -->
+        <section class="section" id="overview">
+          <div class="section-header">
+            <h2>地址发布领域概览</h2>
+            <span class="section-sub">域名变更 · 镜像站 · 访问策略</span>
+          </div>
+          <div class="deep-article" style="padding:22px 24px;">
+            <p>域名地址发布这个方向，核心要处理三件事：变更通知的时效性、备用入口的可用率、以及访问异常的归因判断。围绕 cgw66.com 这类站点，常见的入口类型包括主域名、短效备用域名、长期镜像站和加速通道。每种入口的存活周期不同，短效备用域名一般在 3 到 7 天内更换，镜像站能维持 1 到 3 个月，主域名则受服务商策略影响最大。</p>
+            <p>2026 年 10 月下旬到 11 月初，公开可查的域名变更至少有 4 次。10 月 28 日主域名解析异常，11 月 1 日备用域名 cgw66-07.org 启用，11 月 3 日镜像站 cgw-mirror.net 停止服务，11 月 6 日主域名恢复。每次变更后，访问量的波动、社区反馈的焦点、以及备用入口的承载压力都不同。判断一个入口是否值得优先使用，看三个指标：连续可用天数、响应延迟中位数、以及是否被主流浏览器安全拦截。</p>
+            <p>另一个容易被忽略的方向是访问环境差异。同一域名在移动网络和宽带网络下的解析结果可能不同，部分地区会出现 DNS 污染导致的跳转。11 月 6 日的恢复过程中，有用户反馈联通网络可访问而电信网络仍超时，这类分运营商的问题只能靠多地实测，单点成功不代表全局恢复。</p>
+          </div>
+        </section>
+
+        <!-- 2. 精选内容推荐 -->
+        <section class="section" id="featured">
+          <div class="section-header">
+            <h2>当前可用入口精选</h2>
+            <span class="section-sub">按可用率与响应速度排序</span>
+          </div>
+          <div class="card-grid">
+            <div class="content-card">
+              <div class="card-top">
+                <span class="card-title">cgw66.com 主域名</span>
+                <span class="card-type">主入口</span>
+              </div>
+              <div class="card-tags">
+                <span class="tag">11月6日恢复</span><span class="tag">连续可用3天</span><span class="tag">HTTPS正常</span>
+              </div>
+              <p class="card-desc">11 月 6 日 14:20 恢复解析，截至 11 月 8 日 10:00 连续可用约 44 小时。电信网络下偶发超时，联通与移动网络访问正常。建议作为首选入口。</p>
+              <div class="card-meta"><span class="hot">可用率 96%</span><span>响应 320ms</span></div>
+            </div>
+            <div class="content-card">
+              <div class="card-top">
+                <span class="card-title">cgw66-08.org 备用域名</span>
+                <span class="card-type">短效备用</span>
+              </div>
+              <div class="card-tags">
+                <span class="tag">11月8日上线</span><span class="tag">预期存活5天</span><span class="tag">免翻</span>
+              </div>
+              <p class="card-desc">11 月 8 日 09:00 新启用，实测三网均可解析。页面结构与主域名一致，登录态不互通。适合主域名异常时临时使用，预计 11 月 13 日前后更换。</p>
+              <div class="card-meta"><span class="hot">可用率 100%</span><span>响应 410ms</span></div>
+            </div>
+            <div class="content-card">
+              <div class="card-top">
+                <span class="card-title">cgw-fast.net 加速通道</span>
+                <span class="card-type">加速入口</span>
+              </div>
+              <div class="card-tags">
+                <span class="tag">10月15日上线</span><span class="tag">需客户端</span><span class="tag">延迟低</span>
+              </div>
+              <p class="card-desc">10 月 15 日启用的 CDN 加速通道，需要配合指定客户端使用。实测下载速度比直连快 3 倍左右，但首次配置约需 6 分钟。适合高频访问用户。</p>
+              <div class="card-meta"><span class="hot">延迟 85ms</span><span>配置6分钟</span></div>
+            </div>
+            <div class="content-card">
+              <div class="card-top">
+                <span class="card-title">cgw66-07.org 备用域名</span>
+                <span class="card-type">短效备用</span>
+              </div>
+              <div class="card-tags">
+                <span class="tag">11月1日启用</span><span class="tag">已运行7天</span><span class="tag">接近更换</span>
+              </div>
+              <p class="card-desc">11 月 1 日启用的上一代备用域名，仍在运行但按惯例 7 天左右会更换。目前可正常访问，建议只作为第三备选，不存书签。</p>
+              <div class="card-meta"><span>可用率 100%</span><span>响应 380ms</span></div>
+            </div>
+            <div class="content-card">
+              <div class="card-top">
+                <span class="card-title">cgw-pwa.app 渐进式应用</span>
+                <span class="card-type">独立应用</span>
+              </div>
+              <div class="card-tags">
+                <span class="tag">10月22日上线</span><span class="tag">可安装到桌面</span><span class="tag">不依赖域名</span>
+              </div>
+              <p class="card-desc">10 月 22 日推出的 PWA 版本，安装后不受域名变更影响。首次加载需从主域名初始化，之后可独立运行。iOS 需 Safari 手动添加到主屏幕。</p>
+              <div class="card-meta"><span class="hot">推荐长期用</span><span>安装1分钟</span></div>
+            </div>
+            <div class="content-card">
+              <div class="card-top">
+                <span class="card-title">cgw-mirror.net 镜像站</span>
+                <span class="card-type">镜像（已停）</span>
+              </div>
+              <div class="card-tags">
+                <span class="tag">11月3日停止</span><span class="tag">不再维护</span><span class="tag">历史参考</span>
+              </div>
+              <p class="card-desc">11 月 3 日 18:00 正式停止服务，运营方未说明恢复时间。部分用户浏览器仍缓存旧页面，显示“可访问”属于本地缓存，实际服务端已无响应。</p>
+              <div class="card-meta"><span style="color:#c0392b;">已失效</span><span>勿依赖</span></div>
+            </div>
+          </div>
+        </section>
+
+        <!-- 3. 最新更新 / 动态 -->
+        <section class="section" id="updates">
+          <div class="section-header">
+            <h2>域名与入口更新动态</h2>
+            <span class="section-sub">近 10 天变更记录</span>
+          </div>
+          <div class="update-list">
+            <div class="update-item">
+              <span class="update-date">11月8日</span>
+              <div class="update-body">
+                <div class="update-name">cgw66-08.org 新备用域名上线 <span class="update-badge">新</span></div>
+                <div class="update-summary">09:00 启用，三网解析正常。预期存活至 11 月 13 日前后，页面结构与主站一致，登录态独立。</div>
+              </div>
+            </div>
+            <div class="update-item">
+              <span class="update-date">11月6日</span>
+              <div class="update-body">
+                <div class="update-name">主域名 cgw66.com 恢复解析</div>
+                <div class="update-summary">14:20 恢复，中断约 4 小时。恢复后电信网络仍有约 12% 超时率，联通与移动正常。</div>
+              </div>
+            </div>
+            <div class="update-item">
+              <span class="update-date">11月5日</span>
+              <div class="update-body">
+                <div class="update-name">PWA 版本更新至 v1.3.2</div>
+                <div class="update-summary">修复 iOS 添加到主屏幕后图标不显示的问题，新增离线缓存最近 20 条内容。下载包体约 2.4MB。</div>
+              </div>
+            </div>
+            <div class="update-item">
+              <span class="update-date">11月3日</span>
+              <div class="update-body">
+                <div class="update-name">cgw-mirror.net 镜像站停止服务</div>
+                <div class="update-summary">18:00 正式下线，运营方未公告原因。此前该镜像站已连续运行 47 天，是 10 月内最稳定的备用通道。</div>
+              </div>
+            </div>
+            <div class="update-item">
+              <span class="update-date">11月1日</span>
+              <div class="update-body">
+                <div class="update-name">cgw66-07.org 备用域名启用</div>
+                <div class="update-summary">10:30 上线，用于分流主域名异常期间的访问。截至 11 月 8 日已运行 7 天，接近惯例更换周期。</div>
+              </div>
+            </div>
+            <div class="update-item">
+              <span class="update-date">10月28日</span>
+              <div class="update-body">
+                <div class="update-name">主域名解析异常，多地超时</div>
+                <div class="update-summary">20:00 起陆续出现无法访问，持续至 11 月 6 日。期间社区汇总了 3 个临时可用入口，其中 2 个在 11 月 2 日前失效。</div>
+              </div>
+            </div>
+            <div class="update-item">
+              <span class="update-date">10月22日</span>
+              <div class="update-body">
+                <div class="update-name">cgw-pwa.app 独立应用发布</div>
+                <div class="update-summary">支持添加到桌面后脱离域名使用，Android 与 iOS 均可安装。首周安装量约 1.2 万次，iOS 用户占比 37%。</div>
+              </div>
+            </div>
+            <div class="update-item">
+              <span class="update-date">10月15日</span>
+              <div class="update-body">
+                <div class="update-name">cgw-fast.net 加速通道上线</div>
+                <div class="update-summary">基于 CDN 的加速入口，需配合客户端使用。实测平均延迟 85ms，比直连快约 4 倍，但首次配置门槛较高。</div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- 4. 分类入口 -->
+        <section class="section" id="categories">
+          <div class="section-header">
+            <h2>入口类型分类</h2>
+            <span class="section-sub">按使用场景筛选</span>
+          </div>
+          <div class="category-grid">
+            <div class="category-item">
+              <span class="cat-icon">🌐</span>
+              <div class="cat-name">主域名直连</div>
+              <div class="cat-count">1 个入口 · 首选</div>
+            </div>
+            <div class="category-item">
+              <span class="cat-icon">🔁</span>
+              <div class="cat-name">短效备用域名</div>
+              <div class="cat-count">2 个入口 · 临时</div>
+            </div>
+            <div class="category-item">
+              <span class="cat-icon">⚡</span>
+              <div class="cat-name">CDN 加速通道</div>
+              <div class="cat-count">1 个入口 · 高速</div>
+            </div>
+            <div class="category-item">
+              <span class="cat-icon">📱</span>
+              <div class="cat-name">独立应用 / PWA</div>
+              <div class="cat-count">1 个入口 · 长期</div>
+            </div>
+            <div class="category-item">
+              <span class="cat-icon">🪞</span>
+              <div class="cat-name">镜像站</div>
+              <div class="cat-count">0 个可用 · 已停</div>
+            </div>
+            <div class="category-item">
+              <span class="cat-icon">🔍</span>
+              <div class="cat-name">DNS 排查工具</div>
+              <div class="cat-count">3 种方法</div>
+            </div>
+            <div class="category-item">
+              <span class="cat-icon">📋</span>
+              <div class="cat-name">历史域名记录</div>
+              <div class="cat-count">9 条记录</div>
+            </div>
+            <div class="category-item">
+              <span class="cat-icon">💬</span>
+              <div class="cat-name">社区反馈汇总</div>
+              <div class="cat-count">16 条评论</div>
+            </div>
+          </div>
+        </section>
+
+        <!-- 5. 深度解析 -->
+        <section class="section" id="deep-analysis">
+          <div class="section-header">
+            <h2>域名变更的归因判断与访问策略</h2>
+            <span class="section-sub">基于 10 月下旬至 11 月初的公开记录</span>
+          </div>
+          <article class="deep-article">
+            <h3>主域名 10 月 28 日中断的三种解释及其可信度</h3>
+            <p>10 月 28 日 20:00 起，cgw66.com 在多地出现无法访问。截至 11 月 8 日，关于中断原因有三种说法，信息层级不同，需要分开看。</p>
+            <ul>
+              <li><strong>已公开事实：</strong>DNS 解析记录在 10 月 28 日 19:47 被修改，TTL 从 3600 秒降到 300 秒，A 记录指向的 IP 地址从 104.21.x.x 变为 172.67.x.x。同期同服务商下另有 3 个站点出现类似变更。</li>
+              <li><strong>运营方回应：</strong>11 月 6 日恢复后，运营方在公告中仅表示“服务商线路调整”，未提及具体原因，也未承诺后续不再发生。</li>
+              <li><strong>媒体转述：</strong>部分导航站引用匿名消息称与备案信息更新有关，但未提供任何可核对的备案号或审核记录。</li>
+              <li><strong>网友推测：</strong>社区中有用户根据 IP 段变化猜测更换了 CDN 服务商，理由是新 IP 段属于 Cloudflare 而非此前的另一家。这个推测与 TTL 缩短的行为吻合，但缺少官方确认。</li>
+            </ul>
+            <p>把四种说法并排看，能确认的只有“DNS 记录被改过”这一条。其余三种各自缺少关键证据：运营方没给细节，媒体没给备案号，网友的 CDN 推测有间接证据但无法闭环。判断这类事件时，先看有没有可核对的技术记录，再看各方说法是否互相矛盾，最后才考虑动机猜测。</p>
+
+            <h3>短效备用域名为什么总在 5 到 7 天更换</h3>
+            <p>从 10 月到 11 月的记录看，短效备用域名的存活周期高度一致：cgw66-06.org 存活 6 天，cgw66-07.org 截至 11 月 8 日已运行 7 天且未更换，cgw66-08.org 在 11 月 8 日刚上线。这个节奏不是随机的。</p>
+            <div class="highlight-box">更换周期的三个驱动因素：域名注册商的滥用投诉响应时间（通常 48—72 小时）、浏览器安全库的收录延迟（约 3—5 天）、以及访问量触发的风控阈值（单日独立 IP 超过约 10 万时投诉概率明显上升）。</div>
+            <p>换句话说，短效域名的寿命不是由运营方随意决定的，而是被外部投诉和风控节奏推着走。这也解释了为什么 11 月 1 日启用的 cgw66-07.org 到 11 月 8 日还没换——过去 7 天的访问量被主域名分流了一部分，没有触发阈值。把备用域名当长期书签保存，本身就是误用。</p>
+
+            <h3>镜像站与 PWA 的取舍：47 天对比 17 天</h3>
+            <p>cgw-mirror.net 从 9 月 17 日运行到 11 月 3 日，共 47 天，是 10 月内最稳定的备用通道。它的停服没有提前公告，用户在 11 月 3 日 18:00 后发现无法访问。相比之下，10 月 22 日上线的 PWA 版本到 11 月 8 日已运行 17 天，且不依赖域名解析。</p>
+            <p>两者的稳定性来源完全不同。镜像站的稳定取决于服务器资源和维护投入，停服是运营决策；PWA 的稳定取决于客户端缓存和离线能力，只要安装成功就不受域名变更影响。从长期访问的角度看，PWA 的 17 天虽然短，但它的失效路径更少——不需要 DNS、不需要服务器端保持在线、不需要域名续费。代价是首次安装需要从可用域名初始化，如果安装时主域名恰好异常，就得先找备用入口。</p>
+            <p>一个可操作的策略：主域名正常时顺手装好 PWA，把它当作保底手段；日常访问仍用主域名，因为 PWA 的内容更新有延迟，离线缓存只保留最近 20 条。备用域名只在主域名异常时启用，用完即弃，不存书签。</p>
+          </article>
+        </section>
+
+        <!-- 6. 体验指南 -->
+        <section class="section" id="guide">
+          <div class="section-header">
+            <h2>访问顺序与入口判断路径</h2>
+            <span class="section-sub">从主域名到保底方案的优先级</span>
+          </div>
+          <div class="guide-steps">
+            <div class="guide-step">
+              <span class="step-num">1</span>
+              <div class="step-content">
+                <h4>先试主域名，但别只试一次</h4>
+                <p>打开 cgw66.com 如果超时，换一个网络环境再试一次（Wi-Fi 切移动数据，或反过来）。11 月 6 日的恢复过程中，电信网络和联通网络的表现差了近 4 小时，单次失败不能说明主域名不可用。</p>
+              </div>
+            </div>
+            <div class="guide-step">
+              <span class="step-num">2</span>
+              <div class="step-content">
+                <h4>主域名两次都失败，查备用域名列表</h4>
+                <p>优先用当天或前一天启用的短效域名。cgw66-08.org 是 11 月 8 日刚上线的，预期可用到 11 月 13 日前后。cgw66-07.org 已运行 7 天，按惯例随时可能更换，放在第二备选。</p>
+              </div>
+            </div>
+            <div class="guide-step">
+              <span class="step-num">3</span>
+              <div class="step-content">
+                <h4>判断备用域名是否被浏览器拦截</h4>
+                <p>如果页面打开但显示红色安全警告，先看警告类型。证书过期或域名不匹配可以手动继续，但“欺诈网站”警告通常意味着该域名已被安全库收录，应立即停用，换下一个入口。11 月 3 日停服的镜像站就有用户反馈过这类警告。</p>
+              </div>
+            </div>
+            <div class="guide-step">
+              <span class="step-num">4</span>
+              <div class="step-content">
+                <h4>长期保底：装 PWA，不依赖域名</h4>
+                <p>Android 用 Chrome 打开可用域名后选“添加到主屏幕”；iOS 用 Safari 分享菜单里的“添加到主屏幕”。安装后即使所有域名都失效，已缓存的内容仍可查看。缺点是内容更新有延迟，只适合当保底。</p>
+              </div>
+            </div>
+            <div class="guide-step">
+              <span class="step-num">5</span>
+              <div class="step-content">
+                <h4>比较两个入口时看三个数</h4>
+                <p>连续可用天数、响应延迟中位数、有无安全拦截。三个数里有两个明显更好才值得切换。11 月 8 日的对比中，cgw66-08.org 在可用率上赢主域名，但响应延迟高 90ms 左右，日常访问仍建议主域名优先。</p>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- 7. FAQ -->
+        <section class="section" id="faq">
+          <div class="section-header">
+            <h2>访问常见问题</h2>
+            <span class="section-sub">6 个高频疑问</span>
+          </div>
+          <div class="faq-list">
+            <details class="faq-item">
+              <summary>cgw66.com 主域名现在能正常访问吗？</summary>
+              <div class="faq-answer">11 月 6 日 14:20 恢复后，截至 11 月 8 日 10:00 连续可用约 44 小时。联通和移动网络访问正常，电信网络偶发超时，实测超时率约 12%。如果电信网络打不开，切到移动数据或等几分钟重试。</div>
+            </details>
+            <details class="faq-item">
+              <summary>备用域名一般能用多久，什么时候换？</summary>
+              <div class="faq-answer">从 10 月到 11 月的记录看，短效备用域名平均存活 5 到 7 天。cgw66-07.org 是 11 月 1 日启用的，到 11 月 8 日已 7 天，接近更换节点；cgw66-08.org 是 11 月 8 日刚上线的，预期可用到 11 月 13 日前后。具体时间取决于投诉量和访问量。</div>
+            </details>
+            <details class="faq-item">
+              <summary>页面打不开显示“无法连接”和显示“安全警告”有什么区别？</summary>
+              <div class="faq-answer">“无法连接”通常是 DNS 解析失败或服务器无响应，换个入口或换网络环境就能解决。“安全警告”说明域名被浏览器安全库标记了，常见原因是证书问题或域名被举报。前者可以换入口重试，后者应立即停用该域名，继续使用有账号风险。</div>
+            </details>
+            <details class="faq-item">
+              <summary>镜像站 cgw-mirror.net 还能用吗？</summary>
+              <div class="faq-answer">11 月 3 日 18:00 起已停止服务，服务端无响应。部分浏览器显示“可访问”是本地缓存造成的，实际打不开。运营方未公布恢复时间，目前应改用 cgw66.com 主域名或 cgw66-08.org 备用域名。</div>
+            </details>
+            <details class="faq-item">
+              <summary>PWA 版本和直接打开网页有什么区别？</summary>
+              <div class="faq-answer">PWA 安装到桌面后可以脱离域名运行，不受域名变更影响，这是它和网页最大的区别。代价是内容更新有延迟，离线缓存只保留最近 20 条。适合当保底手段，日常浏览仍建议用网页版获取最新内容。</div>
+            </details>
+            <details class="faq-item">
+              <summary>为什么不同运营商访问同一个域名结果不一样？</summary>
+              <div class="faq-answer">DNS 解析在不同运营商之间有差异，尤其是域名刚变更的 2 到 6 小时内，各地 DNS 缓存过期时间不同。11 月 6 日主域名恢复时，联通网络先恢复，电信网络晚了约 4 小时。遇到这种情况，换网络环境测试比反复刷新同一网络更有效。</div>
+            </details>
+          </div>
+        </section>
+
+        <!-- 8. 用户评论 -->
+        <section class="section" id="comments">
+          <div class="section-header">
+            <h2>社区用户反馈</h2>
+            <span class="section-sub">16 条近期评论</span>
+          </div>
+          <div class="comment-list">
+            <div class="comment-item">
+              <span class="comment-avatar">阿</span>
+              <div class="comment-body">
+                <div class="comment-user">阿凯_2026</div>
+                <p class="comment-text">11月6号下午试了电信还是打不开，切到联通热点秒开。主域名恢复不是一刀切的，分运营商这点太坑了。</p>
+              </div>
+            </div>
+            <div class="comment-item">
+              <span class="comment-avatar">L</span>
+              <div class="comment-body">
+                <div class="comment-user">Luna不是月神</div>
+                <p class="comment-text">cgw66-08.org 刚试了三网都能打开，速度比主域名慢一点点，可以接受。先存着当备胎。</p>
+              </div>
+            </div>
+            <div class="comment-item">
+              <span class="comment-avatar">老</span>
+              <div class="comment-body">
+                <div class="comment-user">老周修电脑</div>
+                <p class="comment-text">镜像站停服这事吧，之前就感觉不对劲，11月2号访问就开始变慢，果然第二天就没了。47天也算长寿了。</p>
+              </div>
+            </div>
+            <div class="comment-item">
+              <span class="comment-avatar">m</span>
+              <div class="comment-body">
+                <div class="comment-user">momo在看</div>
+                <p class="comment-text">PWA装到桌面了，图标终于正常显示了，之前1.3.1的时候是个白块。不过离线内容只有20条，翻两页就没了。</p>
+              </div>
+            </div>
+            <div class="comment-item">
+              <span class="comment-avatar">大</span>
+              <div class="comment-body">
+                <div class="comment-user">大脸猫吃鱼</div>
+                <p class="comment-text">问问大家，cgw66-07.org 还能用不？我这边打开正常，但看更新说已经7天了，不敢存书签了。</p>
+              </div>
+            </div>
+            <div class="comment-item">
+              <span class="comment-avatar">C</span>
+              <div class="comment-body">
+                <div class="comment-user">Code_流浪</div>
+                <p class="comment-text">加速通道要装客户端，折腾了快十分钟才配好。速度确实快，但第一次用的人估计会劝退。</p>
+              </div>
+            </div>
+            <div class="comment-item">
+              <span class="comment-avatar">橘</span>
+              <div class="comment-body">
+                <div class="comment-user">橘子汽水冒泡</div>
+                <p class="comment-text">主域名恢复了就行，备用域名换来换去记不住。反正装个PWA保底，平时主域名能用就用主域名。</p>
+              </div>
+            </div>
+            <div class="comment-item">
+              <span class="comment-avatar">D</span>
+              <div class="comment-body">
+                <div class="comment-user">Dns踩坑王</div>
+                <p class="comment-text">11月6号那天改hosts把电信的解析指向联通IP，确实能打开。不过不建议普通用户这么搞，换网络简单多了。</p>
+              </div>
+            </div>
+            <div class="comment-item">
+              <span class="comment-avatar">柠</span>
+              <div class="comment-body">
+                <div class="comment-user">柠檬不酸啊</div>
+                <p class="comment-text">cgw-mirror.net 我浏览器现在还能打开，是不是没停啊？还是我缓存没清？</p>
+              </div>
+            </div>
+            <div class="comment-item">
+              <span class="comment-avatar">飞</span>
+              <div class="comment-body">
+                <div class="comment-user">飞飞飞不动了</div>
+                <p class="comment-text">楼上那是缓存，清一下浏览器数据就没了。我这边11月3号晚上就彻底打不开了。</p>
+              </div>
+            </div>
+            <div class="comment-item">
+              <span class="comment-avatar">K</span>
+              <div class="comment-body">
+                <div class="comment-user">Kk_2025</div>
+                <p class="comment-text">这个更新频率挺稳定的，基本上每天来看一眼就知道有没有换地址。比之前用导航站靠谱。</p>
+              </div>
+            </div>
+            <div class="comment-item">
+              <span class="comment-avatar">夜</span>
+              <div class="comment-body">
+                <div class="comment-user">夜行蜗牛</div>
+                <p class="comment-text">有没有人觉得备用域名的页面加载比主域名慢？我测了两次都是400ms往上，主域名300出头。</p>
+              </div>
+            </div>
+            <div class="comment-item">
+              <span class="comment-avatar">T</span>
+              <div class="comment-body">
+                <div class="comment-user">Tony带水</div>
+                <p class="comment-text">iOS装PWA那个步骤有点绕，Safari分享菜单要往下翻才能找到。第一次装找了半天。</p>
+              </div>
+            </div>
+            <div class="comment-item">
+              <span class="comment-avatar">半</span>
+              <div class="comment-body">
+                <div class="comment-user">半糖去冰</div>
+                <p class="comment-text">11月1号到8号，cgw66-07.org 用了一周没换，是不是运营方改策略了？之前都是5天一换。</p>
+              </div>
+            </div>
+            <div class="comment-item">
+              <span class="comment-avatar">小</span>
+              <div class="comment-body">
+                <div class="comment-user">小陈同学</div>
+                <p class="comment-text">主域名恢复那天我盯着看的，14:20左右联通先通，电信到18:00才好。这4小时差得有点多。</p>
+              </div>
+            </div>
+            <div class="comment-item">
+              <span class="comment-avatar">J</span>
+              <div class="comment-body">
+                <div class="comment-user">Jason_Z</div>
+                <p class="comment-text">说个跑题的，最近这几次换域名都赶上周五，是不是运营方周末不上班啊。</p>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- 9. 相关资讯 -->
+        <section class="section" id="news">
+          <div class="section-header">
+            <h2>域名与访问相关资讯</h2>
+            <span class="section-sub">近 7 天</span>
+          </div>
+          <div class="news-list">
+            <div class="news-item">
+              <div class="news-header">
+                <span class="news-title">Cloudflare IP 段变更波及 3 个导航站</span>
+                <span class="news-date">2026-11-07</span>
+              </div>
+              <p class="news-summary">11 月 7 日，Cloudflare 调整了部分 IP 段的 Anycast 路由，同批使用其服务的 3 个导航站出现间歇性超时。cgw66.com 不在受影响名单内，但其主域名此前使用的 172.67.x.x 段与本次调整的段位相邻。</p>
+            </div>
+            <div class="news-item">
+              <div class="news-header">
+                <span class="news-title">PWA 安装量突破 1.2 万，iOS 用户占 37%</span>
+                <span class="news-date">2026-11-05</span>
+              </div>
+              <p class="news-summary">cgw-pwa.app 自 10 月 22 日上线以来，首周安装量约 1.2 万次，其中 iOS 用户占 37%，高于同类工具平均 25% 的 iOS 占比。运营方在 11 月 5 日的 v1.3.2 更新中修复了 iOS 图标显示问题。</p>
+            </div>
+            <div class="news-item">
+              <div class="news-header">
+                <span class="news-title">cgw-mirror.net 停止服务，未公告恢复时间</span>
+                <span class="news-date">2026-11-03</span>
+              </div>
+              <p class="news-summary">11 月 3 日 18:00，运行了 47 天的镜像站 cgw-mirror.net 正式下线。运营方未在站内公告中说明原因，也未给出恢复时间表。此前该站是 10 月内连续运行时间最长的备用通道。</p>
+            </div>
+            <div class="news-item">
+              <div class="news-header">
+                <span class="news-title">多地 DNS 缓存过期时间差异被实测记录</span>
+                <span class="news-date">2026-11-02</span>
+              </div>
+              <p class="news-summary">11 月 2 日，有用户在社区上传了 6 个城市、3 家运营商的 DNS 缓存过期记录。同一次域名变更，最短的缓存过期在 4 分钟内完成，最长的超过 3 小时。差异主要来自各地递归 DNS 服务器的 TTL 处理策略。</p>
+            </div>
+            <div class="news-item">
+              <div class="news-header">
+                <span class="news-title">cgw66-07.org 启用后首日访问量约 4.2 万独立 IP</span>
+                <span class="news-date">2026-11-01</span>
+              </div>
+              <p class="news-summary">11 月 1 日 10:30 启用的备用域名，首日独立 IP 约 4.2 万，约为同期主域名正常访问量的六成。这个量级没有触发域名注册商的投诉阈值，是该域名能运行到 11 月 8 日仍未更换的原因之一。</p>
+            </div>
+            <div class="news-item">
+              <div class="news-header">
+                <span class="news-title">主域名 10 月 28 日中断，TTL 缩短至 300 秒</span>
+                <span class="news-date">2026-10-29</span>
+              </div>
+              <p class="news-summary">10 月 28 日 19:47 的 DNS 记录变更中，TTL 从 3600 秒降到 300 秒，A 记录指向的 IP 段同时更换。TTL 缩短通常用于快速切换，但也意味着解析结果在更多节点上频繁刷新，可能加剧短时波动。</p>
+            </div>
+          </div>
+        </section>
+
+        <!-- 10. 相关推荐 -->
+        <section class="section" id="related">
+          <div class="section-header">
+            <h2>相关入口与工具索引</h2>
+            <span class="section-sub">按方向查找</span>
+          </div>
+          <div class="tag-cloud">
+            <a href="/#featured">cgw66-08.org 备用域名</a>
+            <a href="/#featured">cgw-pwa.app 安装包</a>
+            <a href="/#guide">DNS 缓存刷新方法</a>
+            <a href="/#deep-analysis">短效域名寿命分析</a>
+            <a href="/#timeline">历史域名变更时间线</a>
+            <a href="/#faq">浏览器安全警告处理</a>
+            <a href="/#updates">11月8日更新记录</a>
+            <a href="/#comments">运营商差异实测反馈</a>
+          </div>
+        </section>
+
+        <!-- 11. 补充板块：域名时间线 -->
+        <section class="section" id="timeline">
+          <div class="section-header">
+            <h2>域名变更时间线</h2>
+            <span class="section-sub">2026年10月—11月</span>
+          </div>
+          <div class="timeline">
+            <div class="timeline-item">
+              <div class="timeline-date">2026-11-08</div>
+              <div class="timeline-text">cgw66-08.org 启用，三网解析正常。</div>
+            </div>
+            <div class="timeline-item">
+              <div class="timeline-date">2026-11-06</div>
+              <div class="timeline-text">cgw66.com 主域名恢复解析，中断约 4 小时。</div>
+            </div>
+            <div class="timeline-item">
+              <div class="timeline-date">2026-11-03</div>
+              <div class="timeline-text">cgw-mirror.net 镜像站停止服务，运行 47 天。</div>
+            </div>
+            <div class="timeline-item">
+              <div class="timeline-date">2026-11-01</div>
+              <div class="timeline-text">cgw66-07.org 启用，首日独立 IP 约 4.2 万。</div>
+            </div>
+            <div class="timeline-item">
+              <div class="timeline-date">2026-10-28</div>
+              <div class="timeline-text">cgw66.com 主域名 DNS 记录变更，TTL 缩至 300 秒。</div>
+            </div>
+            <div class="timeline-item">
+              <div class="timeline-date">2026-10-22</div>
+              <div class="timeline-text">cgw-pwa.app 独立应用发布，支持添加到桌面。</div>
+            </div>
+            <div class="timeline-item">
+              <div class="timeline-date">2026-10-15</div>
+              <div class="timeline-text">cgw-fast.net 加速通道上线，平均延迟 85ms。</div>
+            </div>
+          </div>
+        </section>
+
+        <!-- 投稿交流 -->
+        <section class="section" id="submit">
+          <div class="section-header">
+            <h2>投稿与交流</h2>
+            <span class="section-sub">分享可用入口或反馈访问问题</span>
+          </div>
+          <div class="deep-article" style="padding:22px 24px;">
+            <p>如果你发现了新的可用入口，或者遇到某地区持续无法访问的情况，可以在下方留言或通过页面底部的反馈入口提交。近期社区里有用户上传了 11 月 6 日电信网络恢复延迟的截图，也有用户整理了 cgw66-07.org 首周的访问速度对比，这些具体记录对判断入口质量很有参考价值。</p>
+            <p>提交时请尽量写明：日期、运营商、实测结果（可访问/超时/安全警告）、以及使用的入口地址。只写“打不开”无法定位问题，带上网络环境和具体时间点才能判断是全局故障还是局部问题。</p>
+          </div>
+        </section>
+
+      </div>
+
+      <!-- 右辅助栏 -->
+      <aside class="sidebar-right" aria-label="辅助信息">
+        <div class="side-card">
+          <h3><span class="side-icon"></span>入口可用率排名</h3>
+          <ol class="rank-list">
+            <li><span class="rank-num top">1</span><span class="rank-text"><strong>cgw66-08.org</strong> — 11月8日上线，可用率 100%</span></li>
+            <li><span class="rank-num top">2</span><span class="rank-text"><strong>cgw66.com</strong> — 11月6日恢复，可用率 96%</span></li>
+            <li><span class="rank-num top">3</span><span class="rank-text"><strong>cgw66-07.org</strong> — 运行7天，可用率 100% 但接近更换</span></li>
+            <li><span class="rank-num">4</span><span class="rank-text"><strong>cgw-fast.net</strong> — 需客户端，可用率 100%</span></li>
+            <li><span class="rank-num">5</span><span class="rank-text"><strong>cgw-mirror.net</strong> — 11月3日已停，可用率 0%</span></li>
+          </ol>
+        </div>
+        <div class="side-card">
+          <h3><span class="side-icon"></span>近 7 天更新记录</h3>
+          <ul class="side-update-list">
+            <li><span>cgw66-08.org 启用</span><span class="su-date">11-08</span></li>
+            <li><span>主域名恢复解析</span><span class="su-date">11-06</span></li>
+            <li><span>PWA v1.3.2 更新</span><span class="su-date">11-05</span></li>
+            <li><span>镜像站停止服务</span><span class="su-date">11-03</span></li>
+            <li><span>cgw66-07.org 启用</span><span class="su-date">11-01</span></li>
+            <li><span>主域名解析异常</span><span class="su-date">10-28</span></li>
+            <li><span>PWA 版本发布</span><span class="su-date">10-22</span></li>
+          </ul>
+        </div>
+        <div class="side-card">
+          <h3><span class="side-icon"></span>访问提示</h3>
+          <p style="font-size:12.5px;color:var(--text-secondary);line-height:1.7;">主域名恢复后仍有约 12% 的电信网络超时。如果打不开，先切移动数据测试，不要反复刷新。备用域名 cgw66-08.org 预期可用到 11 月 13 日前后。</p>
+        </div>
+      </aside>
+
+    </div>
+  </div>
+
+  <!-- 页尾 -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div>
+          <div class="footer-brand">
+            <span class="logo-icon" aria-hidden="true">C</span>
+            <span class="footer-logo-text">cgw66.com最新地址</span>
+          </div>
+          <p class="footer-desc">记录 2026 年 10 月至 11 月的域名变更、备用入口上线与停服事件，覆盖主域名、短效备用域名、镜像站、PWA 四类入口，更新时间以具体日期标注，便于核对。</p>
+        </div>
+        <div class="footer-col">
+          <h4>入口类型</h4>
+          <ul>
+            <li><a href="/#featured">主域名直连</a></li>
+            <li><a href="/#featured">短效备用域名</a></li>
+            <li><a href="/#featured">CDN 加速通道</a></li>
+            <li><a href="/#featured">PWA 独立应用</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>参考信息</h4>
+          <ul>
+            <li><a href="/#timeline">域名变更时间线</a></li>
+            <li><a href="/#deep-analysis">访问归因分析</a></li>
+            <li><a href="/#faq">常见问题</a></li>
+            <li><a href="/#comments">用户反馈</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>互动</h4>
+          <ul>
+            <li><a href="/#submit">投稿交流</a></li>
+            <li><a href="/#news">相关资讯</a></li>
+            <li><a href="/#updates">更新动态</a></li>
+            <li><a href="/#related">相关推荐</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span>页面内容为示例条目，域名数据以实际访问为准。更新于 2026 年 11 月 8 日。</span>
+        <span>© 2026 cgw66.com最新地址</span>
+      </div>
+    </div>
+  </footer>
+
+  <button class="back-top" id="backTop" aria-label="回到顶部">↑</button>
+
+  <script>
+    (function() {
+      // 汉堡菜单
+      var hamburger = document.getElementById('hamburgerBtn');
+      var nav = document.getElementById('mainNav');
+      if (hamburger && nav) {
+        hamburger.addEventListener('click', function() {
+          var open = nav.classList.toggle('open');
+          hamburger.setAttribute('aria-expanded', open ? 'true' : 'false');
+          hamburger.textContent = open ? '✕' : '☰';
+        });
+        nav.querySelectorAll('a').forEach(function(link) {
+          link.addEventListener('click', function() {
+            nav.classList.remove('open');
+            hamburger.setAttribute('aria-expanded', 'false');
+            hamburger.textContent = '☰';
+          });
+        });
+      }
+
+      // 点击遮罩关闭（移动端菜单打开时点击外部）
+      document.addEventListener('click', function(e) {
+        if (nav && nav.classList.contains('open')) {
+          if (!nav.contains(e.target) && e.target !== hamburger && !hamburger.contains(e.target)) {
+            nav.classList.remove('open');
+            hamburger.setAttribute('aria-expanded', 'false');
+            hamburger.textContent = '☰';
+          }
+        }
+      });
+
+      // Esc 关闭菜单
+      document.addEventListener('keydown', function(e) {
+        if (e.key === 'Escape' && nav && nav.classList.contains('open')) {
+          nav.classList.remove('open');
+          hamburger.setAttribute('aria-expanded', 'false');
+          hamburger.textContent = '☰';
+          hamburger.focus();
+        }
+      });
+
+      // 回到顶部
+      var backTop = document.getElementById('backTop');
+      window.addEventListener('scroll', function() {
+        if (window.scrollY > window.innerHeight) {
+          backTop.classList.add('visible');
+        } else {
+          backTop.classList.remove('visible');
+        }
+      });
+      backTop.addEventListener('click', function() {
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+      });
+
+      // 导航高亮
+      var sections = document.querySelectorAll('.section[id]');
+      var navLinks = document.querySelectorAll('.nav-link');
+      var observerOptions = {
+        rootMargin: '-20% 0px -60% 0px',
+        threshold: 0
+      };
+      var observer = new IntersectionObserver(function(entries) {
+        entries.forEach(function(entry) {
+          if (entry.isIntersecting) {
+            var id = entry.target.getAttribute('id');
+            navLinks.forEach(function(link) {
+              link.classList.toggle('active', link.getAttribute('href') === '/#' + id);
+            });
+          }
+        });
+      }, observerOptions);
+      sections.forEach(function(section) {
+        observer.observe(section);
+      });
+    })();
+  </script>
+
+</body>
+  </html>
