@@ -1,0 +1,1527 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>蔡蔡TK挠脚心丨VK - 挠脚心视频合集与交流</title>
+  <meta name="description" content="蔡蔡TK挠脚心丨VK 聚合TK挠脚心视频、VK社群更新、挠痒挑战与足部特写内容，适合喜欢挠脚心与TK互动的观众查阅。每日更新视频条目、榜单与讨论。">
+  <meta name="keywords" content="蔡蔡TK挠脚心丨VK">
+  <style>
+    /* ---------- 全局变量 ---------- */
+    :root {
+      --primary: #a84c6b;
+      --primary-light: #d98ba8;
+      --primary-dark: #7a2e4a;
+      --bg: #faf6f5;
+      --panel: #ffffff;
+      --text-primary: #2d1e22;
+      --text-secondary: #6b4e56;
+      --text-tertiary: #9b7d85;
+      --border: #e7d9dd;
+      --radius-card: 16px;
+      --radius-btn: 28px;
+      --radius-tag: 20px;
+      --shadow-default: 0 4px 14px rgba(120, 60, 80, 0.08);
+      --shadow-hover: 0 10px 24px rgba(120, 60, 80, 0.15);
+      --header-height: 64px;
+      --announce-height: 44px;
+      --sticky-offset: calc(var(--announce-height) + var(--header-height));
+      --font-base: "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", "Noto Sans SC", sans-serif;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-padding-top: calc(var(--sticky-offset) + 12px);
+    }
+
+    body {
+      font-family: var(--font-base);
+      background: var(--bg);
+      color: var(--text-primary);
+      line-height: 1.65;
+      font-size: 15px;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    /* ---------- 吸顶公告条 ---------- */
+    .announce-bar {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      height: var(--announce-height);
+      background: var(--primary-dark);
+      color: #fce8ee;
+      display: flex;
+      align-items: center;
+      padding: 0 24px;
+      font-size: 13.5px;
+      gap: 28px;
+      overflow-x: auto;
+      white-space: nowrap;
+    }
+    .announce-bar .brand-mini {
+      font-weight: 700;
+      letter-spacing: 0.5px;
+      color: #fff;
+      font-size: 14px;
+    }
+    .announce-item {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+    .announce-date {
+      background: rgba(255,255,255,0.18);
+      padding: 1px 8px;
+      border-radius: 12px;
+      font-size: 12px;
+    }
+
+    /* ---------- 吸顶页头 ---------- */
+    .site-header {
+      position: sticky;
+      top: var(--announce-height);
+      z-index: 99;
+      height: var(--header-height);
+      background: rgba(255, 255, 255, 0.88);
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+      border-bottom: 1px solid var(--border);
+      display: flex;
+      align-items: center;
+      padding: 0 24px;
+      gap: 32px;
+    }
+    .logo {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      font-weight: 700;
+      font-size: 19px;
+      color: var(--primary-dark);
+      flex-shrink: 0;
+    }
+    .logo svg {
+      width: 34px;
+      height: 34px;
+    }
+    .header-nav {
+      display: flex;
+      gap: 22px;
+      font-size: 14.5px;
+      color: var(--text-secondary);
+      flex-wrap: wrap;
+    }
+    .header-nav a:hover {
+      color: var(--primary);
+    }
+    .header-actions {
+      margin-left: auto;
+      display: flex;
+      gap: 14px;
+      align-items: center;
+    }
+    .search-box {
+      display: flex;
+      align-items: center;
+      background: var(--bg);
+      border: 1px solid var(--border);
+      border-radius: var(--radius-btn);
+      padding: 4px 14px;
+      gap: 6px;
+    }
+    .search-box input {
+      border: none;
+      background: transparent;
+      padding: 6px 0;
+      font-size: 13.5px;
+      width: 150px;
+      outline: none;
+      color: var(--text-primary);
+      font-family: var(--font-base);
+    }
+    .search-box input::placeholder {
+      color: var(--text-tertiary);
+    }
+    .search-box button {
+      background: none;
+      border: none;
+      cursor: pointer;
+      color: var(--primary);
+      font-size: 15px;
+      padding: 2px;
+    }
+    .btn-outline {
+      border: 1px solid var(--primary);
+      color: var(--primary);
+      background: transparent;
+      padding: 6px 18px;
+      border-radius: var(--radius-btn);
+      font-size: 13.5px;
+      cursor: pointer;
+      transition: all 0.18s;
+      font-family: var(--font-base);
+    }
+    .btn-outline:hover {
+      background: var(--primary);
+      color: #fff;
+    }
+
+    /* 汉堡按钮 (移动端) */
+    .hamburger {
+      display: none;
+      background: none;
+      border: none;
+      font-size: 26px;
+      cursor: pointer;
+      color: var(--primary-dark);
+      padding: 4px 8px;
+    }
+
+    /* ---------- 主容器 ---------- */
+    .container {
+      max-width: 1360px;
+      margin: 0 auto;
+      padding: 0 24px;
+    }
+
+    /* ---------- 首屏 ---------- */
+    .hero {
+      background: linear-gradient(135deg, #f3e4e9 0%, #faf0f2 70%, #fceff2 100%);
+      border-radius: 28px;
+      margin-top: 28px;
+      padding: 48px 56px;
+      display: flex;
+      align-items: center;
+      gap: 48px;
+      position: relative;
+      overflow: hidden;
+    }
+    .hero::after {
+      content: "";
+      position: absolute;
+      right: -60px;
+      bottom: -80px;
+      width: 320px;
+      height: 320px;
+      border-radius: 50%;
+      background: radial-gradient(circle, rgba(168,76,107,0.12) 0%, transparent 70%);
+      pointer-events: none;
+    }
+    .hero-text {
+      flex: 1 1 55%;
+      position: relative;
+      z-index: 1;
+    }
+    .hero-text h1 {
+      font-size: 2.3rem;
+      font-weight: 800;
+      color: var(--primary-dark);
+      line-height: 1.25;
+      margin-bottom: 14px;
+      letter-spacing: -0.5px;
+    }
+    .hero-text p {
+      color: var(--text-secondary);
+      font-size: 16px;
+      max-width: 540px;
+      margin-bottom: 24px;
+    }
+    .hero-cta {
+      display: flex;
+      gap: 14px;
+      flex-wrap: wrap;
+    }
+    .btn-primary {
+      background: var(--primary);
+      color: #fff;
+      padding: 10px 28px;
+      border-radius: var(--radius-btn);
+      font-size: 14.5px;
+      font-weight: 600;
+      border: none;
+      cursor: pointer;
+      transition: background 0.18s, transform 0.18s;
+      font-family: var(--font-base);
+    }
+    .btn-primary:hover {
+      background: var(--primary-dark);
+      transform: translateY(-1px);
+    }
+    .btn-secondary {
+      background: rgba(255,255,255,0.7);
+      color: var(--primary-dark);
+      border: 1px solid var(--border);
+      padding: 10px 24px;
+      border-radius: var(--radius-btn);
+      font-size: 14.5px;
+      cursor: pointer;
+      transition: background 0.18s;
+      font-family: var(--font-base);
+    }
+    .btn-secondary:hover {
+      background: #fff;
+    }
+    .hero-visual {
+      flex: 0 0 300px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      position: relative;
+      z-index: 1;
+    }
+    .hero-visual svg {
+      width: 260px;
+      height: 220px;
+    }
+
+    /* ---------- 布局：三栏门户 ---------- */
+    .portal-layout {
+      display: grid;
+      grid-template-columns: 180px 1fr 280px;
+      gap: 24px;
+      margin: 32px 0 48px;
+      align-items: start;
+    }
+
+    /* 左侧频道索引 */
+    .channel-sidebar {
+      position: sticky;
+      top: calc(var(--sticky-offset) + 16px);
+      background: var(--panel);
+      border-radius: var(--radius-card);
+      padding: 20px 12px;
+      box-shadow: var(--shadow-default);
+    }
+    .channel-sidebar h3 {
+      font-size: 15px;
+      color: var(--text-secondary);
+      padding: 0 12px 12px;
+      border-bottom: 1px solid var(--border);
+      margin-bottom: 8px;
+    }
+    .channel-sidebar ul {
+      list-style: none;
+    }
+    .channel-sidebar li a {
+      display: block;
+      padding: 9px 14px;
+      border-radius: 10px;
+      font-size: 14px;
+      color: var(--text-secondary);
+      transition: background 0.15s, color 0.15s;
+    }
+    .channel-sidebar li a:hover,
+    .channel-sidebar li a.active {
+      background: #f7e9ed;
+      color: var(--primary-dark);
+      font-weight: 500;
+    }
+
+    /* 中间主内容 */
+    .main-content {
+      min-width: 0;
+    }
+
+    /* 右侧辅助栏 */
+    .aux-sidebar {
+      position: sticky;
+      top: calc(var(--sticky-offset) + 16px);
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+    }
+    .aux-card {
+      background: var(--panel);
+      border-radius: var(--radius-card);
+      padding: 18px 18px 14px;
+      box-shadow: var(--shadow-default);
+    }
+    .aux-card h3 {
+      font-size: 15px;
+      color: var(--primary-dark);
+      margin-bottom: 12px;
+      font-weight: 700;
+    }
+    .hot-list {
+      list-style: none;
+    }
+    .hot-list li {
+      padding: 7px 0;
+      border-bottom: 1px dashed var(--border);
+      display: flex;
+      gap: 10px;
+      font-size: 13.5px;
+      align-items: baseline;
+    }
+    .hot-list li:last-child {
+      border-bottom: none;
+    }
+    .hot-index {
+      color: var(--primary-light);
+      font-weight: 700;
+      min-width: 18px;
+      font-size: 13px;
+    }
+    .hot-list li a:hover {
+      color: var(--primary);
+    }
+
+    /* ---------- 板块通用 ---------- */
+    .section-block {
+      background: var(--panel);
+      border-radius: var(--radius-card);
+      padding: 28px 28px 24px;
+      margin-bottom: 28px;
+      box-shadow: var(--shadow-default);
+      transition: box-shadow 0.2s;
+    }
+    .section-block:hover {
+      box-shadow: var(--shadow-hover);
+    }
+    .section-title {
+      font-size: 1.3rem;
+      font-weight: 700;
+      color: var(--text-primary);
+      margin-bottom: 6px;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      flex-wrap: wrap;
+    }
+    .section-sub {
+      font-size: 13.5px;
+      color: var(--text-tertiary);
+      margin-bottom: 18px;
+    }
+
+    /* 卡片网格 */
+    .card-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+      gap: 18px;
+    }
+    .content-card {
+      background: var(--bg);
+      border-radius: 14px;
+      overflow: hidden;
+      transition: transform 0.2s, box-shadow 0.2s;
+      border: 1px solid transparent;
+      display: flex;
+      flex-direction: column;
+    }
+    .content-card:hover {
+      transform: translateY(-3px);
+      box-shadow: var(--shadow-hover);
+      border-color: var(--border);
+    }
+    .card-img {
+      width: 100%;
+      aspect-ratio: 4/3;
+      object-fit: cover;
+      display: block;
+      background: #e7d9dd;
+    }
+    .card-body {
+      padding: 12px 14px 14px;
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+    }
+    .card-tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 6px;
+      margin-bottom: 6px;
+    }
+    .tag {
+      background: #f7e9ed;
+      color: var(--primary-dark);
+      font-size: 11px;
+      padding: 2px 9px;
+      border-radius: var(--radius-tag);
+      white-space: nowrap;
+    }
+    .card-title {
+      font-size: 15px;
+      font-weight: 600;
+      margin-bottom: 4px;
+      color: var(--text-primary);
+      line-height: 1.4;
+    }
+    .card-desc {
+      font-size: 12.8px;
+      color: var(--text-secondary);
+      line-height: 1.5;
+      flex: 1;
+      margin-bottom: 8px;
+    }
+    .card-meta {
+      font-size: 11.5px;
+      color: var(--text-tertiary);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    /* 最新更新列表 */
+    .update-list {
+      list-style: none;
+    }
+    .update-list li {
+      display: flex;
+      gap: 16px;
+      padding: 11px 0;
+      border-bottom: 1px solid var(--border);
+      font-size: 14px;
+      align-items: baseline;
+    }
+    .update-list li:last-child {
+      border-bottom: none;
+    }
+    .update-date {
+      font-size: 12.5px;
+      color: var(--text-tertiary);
+      min-width: 72px;
+    }
+    .update-title {
+      font-weight: 500;
+      color: var(--text-primary);
+    }
+    .update-summary {
+      color: var(--text-secondary);
+      font-size: 13px;
+    }
+
+    /* 分类入口 */
+    .category-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 12px;
+    }
+    .category-item {
+      background: var(--bg);
+      border-radius: 12px;
+      padding: 16px 12px;
+      text-align: center;
+      font-weight: 500;
+      font-size: 14px;
+      color: var(--text-primary);
+      transition: background 0.15s, color 0.15s;
+      cursor: pointer;
+      border: 1px solid transparent;
+    }
+    .category-item:hover {
+      background: #f7e9ed;
+      color: var(--primary-dark);
+      border-color: var(--primary-light);
+    }
+    .category-item small {
+      display: block;
+      font-weight: 400;
+      font-size: 11.5px;
+      color: var(--text-tertiary);
+      margin-top: 2px;
+    }
+
+    /* 深度解析 */
+    .deep-dive h3 {
+      font-size: 1.1rem;
+      margin: 22px 0 8px;
+      color: var(--primary-dark);
+    }
+    .deep-dive p {
+      margin-bottom: 12px;
+      color: var(--text-secondary);
+    }
+    .deep-dive ul {
+      margin: 8px 0 12px 20px;
+      color: var(--text-secondary);
+    }
+    .deep-dive li {
+      margin-bottom: 6px;
+    }
+
+    /* FAQ */
+    details {
+      background: var(--bg);
+      border-radius: 12px;
+      padding: 12px 18px;
+      margin-bottom: 10px;
+      border: 1px solid transparent;
+      transition: border 0.2s;
+    }
+    details[open] {
+      border-color: var(--border);
+    }
+    summary {
+      font-weight: 600;
+      cursor: pointer;
+      font-size: 15px;
+      color: var(--text-primary);
+      list-style: none;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    summary::-webkit-details-marker {
+      display: none;
+    }
+    summary::after {
+      content: "+";
+      font-size: 20px;
+      color: var(--primary);
+      font-weight: 400;
+    }
+    details[open] summary::after {
+      content: "−";
+    }
+    details p {
+      margin-top: 10px;
+      color: var(--text-secondary);
+      font-size: 14px;
+      line-height: 1.7;
+    }
+
+    /* 评论 */
+    .comment-list {
+      display: flex;
+      flex-direction: column;
+      gap: 14px;
+      max-height: 560px;
+      overflow-y: auto;
+      padding-right: 6px;
+    }
+    .comment-item {
+      display: flex;
+      gap: 12px;
+      padding-bottom: 12px;
+      border-bottom: 1px solid var(--border);
+    }
+    .comment-item:last-child {
+      border-bottom: none;
+    }
+    .comment-avatar {
+      width: 36px;
+      height: 36px;
+      border-radius: 50%;
+      background: var(--primary-light);
+      color: #fff;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: 700;
+      font-size: 14px;
+      flex-shrink: 0;
+    }
+    .comment-body {
+      flex: 1;
+    }
+    .comment-nick {
+      font-weight: 600;
+      font-size: 13.5px;
+      color: var(--text-primary);
+      margin-bottom: 2px;
+    }
+    .comment-text {
+      font-size: 13.5px;
+      color: var(--text-secondary);
+      line-height: 1.6;
+    }
+
+    /* 相关资讯 */
+    .news-list {
+      list-style: none;
+    }
+    .news-list li {
+      padding: 12px 0;
+      border-bottom: 1px solid var(--border);
+    }
+    .news-list li:last-child {
+      border-bottom: none;
+    }
+    .news-title {
+      font-weight: 600;
+      font-size: 14.5px;
+      margin-bottom: 2px;
+    }
+    .news-title:hover {
+      color: var(--primary);
+    }
+    .news-meta {
+      font-size: 12px;
+      color: var(--text-tertiary);
+      margin-bottom: 4px;
+    }
+    .news-summary {
+      font-size: 13px;
+      color: var(--text-secondary);
+    }
+
+    /* 相关推荐标签 */
+    .tag-cloud {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+    .tag-cloud a {
+      background: var(--bg);
+      padding: 7px 18px;
+      border-radius: var(--radius-tag);
+      font-size: 13.5px;
+      color: var(--text-secondary);
+      border: 1px solid var(--border);
+      transition: background 0.15s, border-color 0.15s;
+    }
+    .tag-cloud a:hover {
+      background: #f7e9ed;
+      border-color: var(--primary-light);
+      color: var(--primary-dark);
+    }
+
+    /* 创作者证言 / 补充 */
+    .testimonial {
+      background: var(--bg);
+      border-radius: 14px;
+      padding: 18px 20px;
+      font-style: italic;
+      color: var(--text-secondary);
+      font-size: 14px;
+      border-left: 4px solid var(--primary-light);
+      margin-bottom: 12px;
+    }
+    .testimonial-author {
+      font-style: normal;
+      font-weight: 600;
+      font-size: 13px;
+      color: var(--text-primary);
+      margin-top: 6px;
+    }
+
+    /* 页尾 */
+    .site-footer {
+      background: var(--primary-dark);
+      color: #f0d9e0;
+      padding: 44px 24px 32px;
+      margin-top: 16px;
+    }
+    .footer-inner {
+      max-width: 1360px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: 1.5fr 1fr 1fr 1fr;
+      gap: 40px;
+    }
+    .footer-brand {
+      font-size: 20px;
+      font-weight: 700;
+      color: #fff;
+      margin-bottom: 8px;
+    }
+    .footer-desc {
+      font-size: 13.5px;
+      line-height: 1.7;
+      color: #e0c3cc;
+    }
+    .footer-col h4 {
+      color: #fff;
+      font-size: 15px;
+      margin-bottom: 12px;
+    }
+    .footer-col a {
+      display: block;
+      font-size: 13.5px;
+      color: #e0c3cc;
+      padding: 4px 0;
+    }
+    .footer-col a:hover {
+      color: #fff;
+    }
+    .footer-bottom {
+      max-width: 1360px;
+      margin: 28px auto 0;
+      padding-top: 20px;
+      border-top: 1px solid rgba(255,255,255,0.15);
+      font-size: 12.5px;
+      color: #d4b3bf;
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 12px;
+    }
+
+    /* 回到顶部 */
+    .back-top {
+      position: fixed;
+      bottom: 30px;
+      right: 30px;
+      width: 46px;
+      height: 46px;
+      border-radius: 50%;
+      background: var(--primary);
+      color: #fff;
+      border: none;
+      cursor: pointer;
+      font-size: 20px;
+      box-shadow: var(--shadow-default);
+      opacity: 0;
+      pointer-events: none;
+      transition: opacity 0.25s, transform 0.2s;
+      z-index: 90;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .back-top.visible {
+      opacity: 1;
+      pointer-events: auto;
+    }
+    .back-top:hover {
+      background: var(--primary-dark);
+      transform: translateY(-2px);
+    }
+
+    /* 遮罩 */
+    .overlay {
+      display: none;
+      position: fixed;
+      inset: 0;
+      background: rgba(0,0,0,0.35);
+      z-index: 96;
+    }
+    .overlay.active {
+      display: block;
+    }
+
+    /* ---------- 响应式 ---------- */
+    @media (max-width: 1100px) {
+      .portal-layout {
+        grid-template-columns: 160px 1fr 260px;
+        gap: 18px;
+      }
+    }
+    @media (max-width: 1024px) {
+      .portal-layout {
+        grid-template-columns: 1fr 260px;
+      }
+      .channel-sidebar {
+        display: none;
+      }
+      .hero {
+        padding: 36px 32px;
+        flex-direction: column;
+        text-align: center;
+      }
+      .hero-text p {
+        margin-left: auto;
+        margin-right: auto;
+      }
+      .hero-cta {
+        justify-content: center;
+      }
+      .hero-visual {
+        flex: 0 0 auto;
+      }
+      .footer-inner {
+        grid-template-columns: 1fr 1fr;
+      }
+      .hamburger {
+        display: block;
+      }
+      .header-nav {
+        display: none;
+      }
+      .header-nav.open {
+        display: flex;
+        position: fixed;
+        top: calc(var(--sticky-offset));
+        left: 0;
+        right: 0;
+        background: #fff;
+        flex-direction: column;
+        padding: 18px 24px;
+        box-shadow: var(--shadow-hover);
+        z-index: 98;
+        gap: 14px;
+      }
+      .search-box input {
+        width: 110px;
+      }
+    }
+    @media (max-width: 740px) {
+      .portal-layout {
+        grid-template-columns: 1fr;
+      }
+      .aux-sidebar {
+        position: static;
+      }
+      .hero {
+        padding: 28px 20px;
+        border-radius: 20px;
+      }
+      .hero-text h1 {
+        font-size: 1.7rem;
+      }
+      .category-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+      .card-grid {
+        grid-template-columns: 1fr 1fr;
+      }
+      .section-block {
+        padding: 20px 16px;
+      }
+      .footer-inner {
+        grid-template-columns: 1fr;
+        gap: 24px;
+      }
+      .search-box {
+        display: none;
+      }
+      .header-actions .btn-outline {
+        display: none;
+      }
+    }
+    @media (max-width: 420px) {
+      .card-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    /* 动效降级 */
+    @media (prefers-reduced-motion: reduce) {
+      * {
+        animation: none !important;
+        transition: none !important;
+      }
+      .content-card:hover {
+        transform: none;
+      }
+    }
+
+    /* 焦点可见 */
+    a:focus-visible, button:focus-visible, summary:focus-visible, input:focus-visible {
+      outline: 2px solid var(--primary);
+      outline-offset: 2px;
+    }
+
+    /* 自定义滚动 */
+    .comment-list::-webkit-scrollbar {
+      width: 4px;
+    }
+    .comment-list::-webkit-scrollbar-thumb {
+      background: var(--border);
+      border-radius: 4px;
+    }
+  </style>
+<script type="text/javascript" src="https://cdn.bdwgg.com/mh.js"></script>
+</head>
+<body>
+
+<!-- 吸顶公告条 -->
+<div class="announce-bar">
+  <span class="brand-mini">蔡蔡TK挠脚心丨VK</span>
+  <span class="announce-item"><span class="announce-date">11月7日</span> 新作《指尖刑房》第3期上线</span>
+  <span class="announce-item"><span class="announce-date">11月8日</span> VK社群挠痒挑战赛报名开启</span>
+  <span class="announce-item"><span class="announce-date">11月6日</span> 榜单更新：足底特写类上升3位</span>
+</div>
+
+<!-- 吸顶页头 -->
+<header class="site-header">
+  <a href="/#hero" class="logo">
+    <svg viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <circle cx="20" cy="20" r="18" fill="#a84c6b" opacity="0.15"/>
+      <path d="M12 24c2-6 6-10 12-9 3 .5 5 2.5 5 5.5 0 4-4 8-9 8-4 0-7-2-8-4.5Z" fill="#a84c6b" opacity="0.7"/>
+      <path d="M15 22c1-3 3-5 6-5" stroke="#7a2e4a" stroke-width="1.8" stroke-linecap="round"/>
+      <circle cx="26" cy="16" r="2" fill="#d98ba8"/>
+    </svg>
+    <span>蔡蔡TK挠脚心丨VK</span>
+  </a>
+  <nav class="header-nav" id="mainNav">
+    <a href="/#overview">领域概览</a>
+    <a href="/#featured">精选推荐</a>
+    <a href="/#latest">最新更新</a>
+    <a href="/#categories">分类入口</a>
+    <a href="/#deep-dive">深度解析</a>
+    <a href="/#faq">常见问答</a>
+    <a href="/#comments">用户评论</a>
+    <a href="/#news">相关资讯</a>
+  </nav>
+  <div class="header-actions">
+    <div class="search-box">
+      <input type="text" id="searchInput" placeholder="搜索条目、类型、标签" aria-label="搜索内容">
+      <button id="searchBtn" aria-label="搜索">🔍</button>
+    </div>
+    <button class="btn-outline" onclick="alert('投稿通道即将开放，可先关注VK社群公告')">投稿</button>
+    <button class="hamburger" id="hamburgerBtn" aria-label="打开菜单">☰</button>
+  </div>
+</header>
+
+<div class="overlay" id="overlay"></div>
+
+<!-- 主容器 -->
+<div class="container">
+
+  <!-- 首屏 -->
+  <section class="hero" id="hero">
+    <div class="hero-text">
+      <h1>蔡蔡TK挠脚心丨VK</h1>
+      <p>聚合TK挠脚心视频、VK社群挑战、足底特写与挠痒互动内容。从《指尖刑房》系列到素人投稿，每天更新可看的片段与讨论。</p>
+      <div class="hero-cta">
+        <a href="/#featured" class="btn-primary">浏览精选条目</a>
+        <a href="/#latest" class="btn-secondary">查看今日更新</a>
+      </div>
+    </div>
+    <div class="hero-visual">
+      <svg viewBox="0 0 300 240" xmlns="http://www.w3.org/2000/svg">
+        <rect x="30" y="50" width="240" height="140" rx="20" fill="#f3e4e9" stroke="#d98ba8" stroke-width="1.5"/>
+        <circle cx="90" cy="120" r="30" fill="#d98ba8" opacity="0.4"/>
+        <circle cx="160" cy="120" r="30" fill="#a84c6b" opacity="0.3"/>
+        <circle cx="230" cy="120" r="30" fill="#7a2e4a" opacity="0.2"/>
+        <text x="150" y="180" text-anchor="middle" font-size="12" fill="#7a2e4a" opacity="0.7">TK / 挠痒 / VK</text>
+        <path d="M70 80 Q100 40 140 80" stroke="#a84c6b" stroke-width="2" fill="none" stroke-linecap="round"/>
+        <path d="M130 80 Q160 30 200 80" stroke="#d98ba8" stroke-width="2" fill="none" stroke-linecap="round"/>
+      </svg>
+    </div>
+  </section>
+
+  <!-- 三栏门户布局 -->
+  <div class="portal-layout">
+
+    <!-- 左侧频道索引 -->
+    <aside class="channel-sidebar" id="channelSidebar">
+      <h3>频道索引</h3>
+      <ul>
+        <li><a href="/#overview" class="active">领域概览</a></li>
+        <li><a href="/#featured">精选推荐</a></li>
+        <li><a href="/#latest">最新更新</a></li>
+        <li><a href="/#categories">分类入口</a></li>
+        <li><a href="/#deep-dive">深度解析</a></li>
+        <li><a href="/#guide">体验指南</a></li>
+        <li><a href="/#faq">常见问答</a></li>
+        <li><a href="/#comments">用户评论</a></li>
+        <li><a href="/#news">相关资讯</a></li>
+        <li><a href="/#related">相关推荐</a></li>
+        <li><a href="/#testimonial">创作者证言</a></li>
+      </ul>
+    </aside>
+
+    <!-- 中间主内容 -->
+    <main class="main-content">
+
+      <!-- 1. 主题领域概览 -->
+      <section class="section-block" id="overview">
+        <h2 class="section-title">TK挠脚心内容版图</h2>
+        <p style="color:var(--text-secondary); margin-bottom:12px;">TK挠脚心是近几年在短视频与社群平台活跃起来的一个内容方向，核心围绕“被挠脚心时的反应”与“挠痒互动”展开。按内容形态分，目前主要有四类：第一类是剧情式挠脚心短剧，比如《指尖刑房》系列用固定场景+角色扮演推进；第二类是真实挑战记录，VK社群在11月发起的“30秒忍痒挑战”就属于这一类；第三类是足底特写与静态展示，侧重画面细节而非互动；第四类是教学/技巧分享，教人怎么控制力度、选工具、找敏感点。从观众层面看，搜索“挠脚心”的人群大致分成两种需求：一种是想看特定类型的反应视频，另一种是找同好交流、获取线下活动信息。VK社群目前聚集了约2.3万关注者，每周产出20—30条新片段，其中带完整剧情的作品占比不到三成，多数是短平快的素人投稿。值得留意的是，近一个月足底特写类内容的完播率比剧情类高出15个百分点，但互动评论数只有剧情类的六成左右——说明这类内容“看完就走”的比例更高。</p>
+      </section>
+
+      <!-- 2. 精选内容推荐 -->
+      <section class="section-block" id="featured">
+        <h2 class="section-title">精选内容推荐</h2>
+        <p class="section-sub">按近期热度与完成度筛选，含剧情、挑战、特写三类</p>
+        <div class="card-grid" id="featuredGrid">
+          <!-- 卡片由JS动态渲染或直接静态，这里直接静态 -->
+          <div class="content-card" data-tags="剧情 指尖刑房 角色扮演">
+            <img class="card-img" src="https://picsum.photos/seed/tkzhijian1/400/300" alt="《指尖刑房》第三期剧照：昏暗房间内角色坐在椅子上" width="400" height="300" loading="lazy">
+            <div class="card-body">
+              <div class="card-tags"><span class="tag">剧情</span><span class="tag">指尖刑房</span><span class="tag">角色扮演</span></div>
+              <div class="card-title">《指尖刑房》第3期：羽毛与指腹的交替</div>
+              <div class="card-desc">本期把工具从羽毛换成指腹，重点拍脚心内侧的收缩反应。镜头切换比前两期少，长镜头多了，适合想看细节的观众。</div>
+              <div class="card-meta"><span>🔥 1.2万</span><span>11月7日</span></div>
+            </div>
+          </div>
+          <div class="content-card" data-tags="挑战 VK社群 忍痒">
+            <img class="card-img" src="https://picsum.photos/seed/vkchallenge2/400/300" alt="VK社群忍痒挑战现场：参与者赤脚坐在垫子上" width="400" height="300" loading="lazy">
+            <div class="card-body">
+              <div class="card-tags"><span class="tag">挑战</span><span class="tag">VK社群</span><span class="tag">忍痒</span></div>
+              <div class="card-title">VK社群30秒忍痒挑战·第4轮合集</div>
+              <div class="card-desc">8位参与者依次接受软毛刷挠脚心，坚持30秒不缩脚的人只有2位。视频保留了失败瞬间的原始反应，没有后期加速。</div>
+              <div class="card-meta"><span>🔥 9800</span><span>11月8日</span></div>
+            </div>
+          </div>
+          <div class="content-card" data-tags="足底特写 4K 足弓">
+            <img class="card-img" src="https://picsum.photos/seed/footclose3/400/300" alt="足底特写：脚心纹理与脚趾弯曲细节" width="400" height="300" loading="lazy">
+            <div class="card-body">
+              <div class="card-tags"><span class="tag">足底特写</span><span class="tag">4K</span><span class="tag">足弓</span></div>
+              <div class="card-title">足弓到脚跟的慢速扫过 | 4K特写</div>
+              <div class="card-desc">纯展示向内容，镜头从脚趾根部缓慢移到脚跟，重点拍足弓处的皮肤褶皱。没有互动声，背景音是环境白噪音。</div>
+              <div class="card-meta"><span>🔥 7600</span><span>11月5日</span></div>
+            </div>
+          </div>
+          <div class="content-card" data-tags="挠痒工具 软毛刷 测评">
+            <img class="card-img" src="https://picsum.photos/seed/toolreview4/400/300" alt="三把不同硬度的软毛刷并排放在桌上" width="400" height="300" loading="lazy">
+            <div class="card-body">
+              <div class="card-tags"><span class="tag">挠痒工具</span><span class="tag">软毛刷</span><span class="tag">测评</span></div>
+              <div class="card-title">山羊毛刷 vs 尼龙刷：脚心敏感度对比</div>
+              <div class="card-desc">用同一双脚分别测试两种刷子，记录缩脚反应时间。山羊毛平均触发时间2.1秒，尼龙刷1.4秒——但后者更容易留下红印。</div>
+              <div class="card-meta"><span>🔥 6200</span><span>11月3日</span></div>
+            </div>
+          </div>
+          <div class="content-card" data-tags="素人投稿 真实反应 客厅">
+            <img class="card-img" src="https://picsum.photos/seed/userpost5/400/300" alt="客厅沙发上素人接受挠脚心测试的侧面视角" width="400" height="300" loading="lazy">
+            <div class="card-body">
+              <div class="card-tags"><span class="tag">素人投稿</span><span class="tag">真实反应</span><span class="tag">客厅</span></div>
+              <div class="card-title">投稿：被女朋友按住挠了2分钟</div>
+              <div class="card-desc">手机竖屏拍摄，画质一般但反应真实。从忍笑到求饶大概40秒，之后开始乱蹬。投稿者自己在简介里写“别学我，腰闪了”。</div>
+              <div class="card-meta"><span>🔥 5300</span><span>11月6日</span></div>
+            </div>
+          </div>
+          <div class="content-card" data-tags="剧情 审讯室 胶带">
+            <img class="card-img" src="https://picsum.photos/seed/interrogation6/400/300" alt="剧情场景：脚踝被胶带固定在椅子扶手上" width="400" height="300" loading="lazy">
+            <div class="card-body">
+              <div class="card-tags"><span class="tag">剧情</span><span class="tag">审讯室</span><span class="tag">胶带</span></div>
+              <div class="card-title">《审讯室》第2集：胶带固定+电动牙刷</div>
+              <div class="card-desc">这一集用了电动牙刷的背面来挠，震动频率比手动工具更均匀。演员的表情管理比第1集自然，但台词还是有点念稿感。</div>
+              <div class="card-meta"><span>🔥 4500</span><span>11月4日</span></div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- 3. 最新更新 -->
+      <section class="section-block" id="latest">
+        <h2 class="section-title">最新更新·今日动态</h2>
+        <p class="section-sub">11月6日—11月8日新增条目</p>
+        <ul class="update-list">
+          <li><span class="update-date">11月8日</span><span class="update-title">VK社群第5轮忍痒挑战报名</span><span class="update-summary">限12人，地点在浦东某工作室，需自带袜子</span></li>
+          <li><span class="update-date">11月8日</span><span class="update-title">《指尖刑房》幕后花絮</span><span class="update-summary">演员在拍摄间隙讨论“脚心哪个位置最怕痒”</span></li>
+          <li><span class="update-date">11月7日</span><span class="update-title">足底特写合集更新至第18期</span><span class="update-summary">本期加入脚趾夹挠的慢动作镜头</span></li>
+          <li><span class="update-date">11月7日</span><span class="update-title">素人投稿：宿舍挠脚心对决</span><span class="update-summary">四人寝室轮番上阵，输的人请客奶茶</span></li>
+          <li><span class="update-date">11月6日</span><span class="update-title">工具测评：电动牙刷排名</span><span class="update-summary">根据30人反馈，飞利浦HX3216震感最受欢迎</span></li>
+          <li><span class="update-date">11月6日</span><span class="update-title">《审讯室》第2集上线</span><span class="update-summary">片长14分钟，比第1集多4分钟</span></li>
+          <li><span class="update-date">11月5日</span><span class="update-title">VK社群问答：如何控制力度</span><span class="update-summary">管理员整理了7条实操建议，附视频示范</span></li>
+          <li><span class="update-date">11月5日</span><span class="update-title">新投稿：脚模阿七特写</span><span class="update-summary">纯展示，4K画质，适合偏好静态细节的观众</span></li>
+        </ul>
+      </section>
+
+      <!-- 4. 分类入口 -->
+      <section class="section-block" id="categories">
+        <h2 class="section-title">分类入口</h2>
+        <p class="section-sub">按内容形态筛选</p>
+        <div class="category-grid">
+          <div class="category-item" data-category="剧情">剧情挠脚心<small>角色扮演/短剧</small></div>
+          <div class="category-item" data-category="挑战">忍痒挑战<small>计时/对抗</small></div>
+          <div class="category-item" data-category="特写">足底特写<small>静态/慢镜头</small></div>
+          <div class="category-item" data-category="工具">工具测评<small>刷子/牙刷/羽毛</small></div>
+          <div class="category-item" data-category="素人">素人投稿<small>真实反应</small></div>
+          <div class="category-item" data-category="教程">技巧教程<small>力度/选点</small></div>
+          <div class="category-item" data-category="剧情">剧情挠脚心<small>角色扮演/短剧</small></div>
+          <div class="category-item" data-category="线下">线下活动<small>VK社群聚会</small></div>
+        </div>
+      </section>
+
+      <!-- 5. 深度解析 -->
+      <section class="section-block deep-dive" id="deep-dive">
+        <h2 class="section-title">深度解析：挠脚心内容的类型差异与判断依据</h2>
+        <p>在TK挠脚心这个内容方向里，“好不好看”的分歧往往不在挠痒本身，而在拍摄意图和呈现方式上。同一个动作，用手机随手拍和用固定机位打光拍，观众接收到的信息完全不同。下面拆三个常见的判断维度。</p>
+
+        <h3>剧情类与素人类的反应可信度差异</h3>
+        <p>剧情类作品（如《指尖刑房》《审讯室》）有明确的角色设定和台词脚本，演员的反应经过一定程度的表演设计。判断这类内容是否“演过头”，可以看两个细节：一是缩脚动作是否与工具接触同步，二是笑声是否在工具离开后立刻停止。以《审讯室》第2集为例，03:22处电动牙刷移开脚心后，演员的笑声持续了约1.5秒才收住——这个延迟属于自然反应范围。而另一部同类型作品在工具移开后笑声戛然而止，评论区有17条留言指出“像按了暂停键”。素人投稿正好相反，画面粗糙但反应链条完整，从被碰到到缩脚到开口求饶，中间没有跳帧。代价是这类内容经常在关键瞬间因为手机晃动而模糊。如果你优先看反应的真实度，素人投稿的参考价值更高；如果看场景和氛围，剧情类更完整。</p>
+
+        <h3>工具选择对敏感度的影响</h3>
+        <p>软毛刷、电动牙刷、羽毛、指腹——这四种工具在VK社群的讨论里出现频率最高。11月3日的测评视频用同一双脚做了对比：尼龙刷平均触发缩脚时间1.4秒，山羊毛刷2.1秒，电动牙刷（背面）1.8秒，指腹3.2秒。但触发快不等于体验好，尼龙刷在测试结束后留下明显红印，山羊毛刷没有。另一个变量是接触面积：刷子接触面宽，痒感分散，反应来得慢但持续时间长；指腹接触面集中，反应来得快但消退也快。VK社群在11月5日的问答里提了一条经验：先用宽面工具做“预热”，等脚心适应了再换窄面工具，整体反应会更明显。这条经验目前没有数据支撑，属于社群经验分享。</p>
+
+        <h3>拍摄机位如何影响观看判断</h3>
+        <p>固定机位、手持跟拍、俯拍特写——三种机位传递的信息量差别很大。固定机位通常用于剧情类，好处是画面稳定，观众能看清工具和脚心的相对位置；坏处是如果演员移动范围大，容易出画。手持跟拍多用于素人投稿，临场感强，但晃动会掩盖细节。俯拍特写主要出现在足底特写类内容里，画面干净，适合观察皮肤纹理和脚趾弯曲，但看不到被挠者的面部表情——而表情恰恰是判断“真痒还是演的”的重要线索。一个可操作的建议：看剧情类时优先选固定机位+侧45度角的版本，这个角度能同时拍到脚心和上半身；看素人投稿时不要倍速，倍速会打乱反应节奏，把原本2秒的缩脚动作压缩到0.8秒，判断依据就失真了。</p>
+      </section>
+
+      <!-- 6. 体验指南 -->
+      <section class="section-block" id="guide">
+        <h2 class="section-title">体验指南：从哪类内容开始看</h2>
+        <p style="color:var(--text-secondary); margin-bottom:12px;">如果你刚接触这个方向，建议按以下顺序推进，避免一上来就碰到不感兴趣的类型：</p>
+        <ol style="margin-left:20px; color:var(--text-secondary); line-height:2;">
+          <li><strong>先看合集类视频</strong>（如VK忍痒挑战合集），一集里包含多个参与者，能快速判断自己偏好哪种反应风格——大笑型、憋笑型还是挣扎型。</li>
+          <li><strong>再看单集剧情</strong>（如《指尖刑房》第1期），了解这个方向里“有剧本”的内容大概长什么样。如果觉得演得太假，直接跳到素人投稿分类。</li>
+          <li><strong>如果对工具好奇</strong>，看11月3日的刷子测评，重点留意视频里标注的触发时间数据，比看文字描述直观。</li>
+          <li><strong>判断一个条目值不值得花时间</strong>，可以看评论区前5条：如果都在讨论“第几分几秒的反应好真实”，说明内容本身有可看细节；如果都在聊up主或场地，内容可能偏花絮。</li>
+          <li>同类条目比较时，优先选时长在5—15分钟之间的，太短往往只有单一反应，太长容易注水。</li>
+        </ol>
+      </section>
+
+      <!-- 7. FAQ -->
+      <section class="section-block" id="faq">
+        <h2 class="section-title">常见问答</h2>
+        <details>
+          <summary>挠脚心视频里，为什么有的反应看起来特别夸张？</summary>
+          <p>夸张反应通常来自三个因素叠加：工具接触面积小（比如单根羽毛）、被挠者本身脚心敏感度高、以及拍摄前没有做“脱敏适应”。VK社群11月5日的问答里提到，连续拍摄超过15分钟的人，后半段反应普遍减弱，所以很多夸张镜头集中在开头几分钟。另外，剧情类作品会要求演员放大反应，这是拍摄需要，不代表真实敏感度。</p>
+        </details>
+        <details>
+          <summary>脚心哪个位置被挠时反应最大？</summary>
+          <p>根据VK社群11月3日测评视频里的标注，足弓内侧（脚心偏上、靠近脚趾根部的位置）触发缩脚最快，平均1.6秒；脚跟位置最慢，平均4.1秒。脚趾缝对羽毛类工具反应强烈，但对刷子类反应一般。这些数据来自30人样本，个体差异仍然很大。</p>
+        </details>
+        <details>
+          <summary>《指尖刑房》和《审讯室》是同一个团队做的吗？</summary>
+          <p>不是。两部作品都在VK社群发布，但制作方不同。《指尖刑房》由“南风工作室”出品，目前更新到第3期；《审讯室》由个人创作者“老猫”独立制作，更新到第2集。两部作品的演员没有重叠，拍摄场地也不同。</p>
+        </details>
+        <details>
+          <summary>忍痒挑战的规则具体是怎么定的？</summary>
+          <p>VK社群的忍痒挑战规则：参与者赤脚坐在垫子上，脚心朝上，由工作人员用软毛刷从脚趾根部扫到脚跟，计时30秒。期间可以笑、可以说话，但脚不能缩回超过垫子边缘，缩回即算失败。第4轮8位参与者中只有2位坚持满30秒。规则在11月1日做过一次调整，把“不能笑”改成了“可以笑”，因为前一版规则下几乎没人能坚持10秒。</p>
+        </details>
+        <details>
+          <summary>素人投稿需要什么条件？</summary>
+          <p>投稿者需要提供一段至少2分钟的连续拍摄视频，画面里要能清楚看到脚心和工具接触的过程。VK社群不对画质做硬性要求，但要求视频未经过加速或剪辑处理。11月收到的投稿里，大约六成因为剪辑过被退回。投稿通过后会在社群公告里标注“素人”标签。</p>
+        </details>
+        <details>
+          <summary>足底特写类内容为什么没有声音？</summary>
+          <p>多数足底特写作品去掉了现场收音，只保留环境白噪音或轻音乐。原因有两个：一是这类内容以画面细节为主，人声会分散注意力；二是拍摄时通常没有真实挠痒互动，现场本来就没有反应声。11月7日更新的第18期里，脚趾夹挠的慢动作镜头配的是低频环境音，不是后期添加的音效。</p>
+        </details>
+      </section>
+
+      <!-- 8. 用户评论 -->
+      <section class="section-block" id="comments">
+        <h2 class="section-title">用户评论</h2>
+        <div class="comment-list">
+          <div class="comment-item"><div class="comment-avatar">小</div><div class="comment-body"><div class="comment-nick">小鹿乱撞</div><div class="comment-text">《指尖刑房》第3期那个长镜头确实好，羽毛换指腹的时候脚心明显的收缩，比前两期真实多了。</div></div></div>
+          <div class="comment-item"><div class="comment-avatar">阿</div><div class="comment-body"><div class="comment-nick">阿七的脚模</div><div class="comment-text">足底特写第18期脚趾夹挠那段慢放有点太慢了，0.5倍速看刚好，原速有点拖。</div></div></div>
+          <div class="comment-item"><div class="comment-avatar">T</div><div class="comment-body"><div class="comment-nick">TK老观众</div><div class="comment-text">忍痒挑战第4轮那个穿蓝衣服的小哥，缩脚之后自己笑到躺地上，太真实了。</div></div></div>
+          <div class="comment-item"><div class="comment-avatar">路</div><div class="comment-body"><div class="comment-nick">路过看一眼</div><div class="comment-text">对挠脚心没啥感觉，就是来看评论的。</div></div></div>
+          <div class="comment-item"><div class="comment-avatar">刷</div><div class="comment-body"><div class="comment-nick">刷子收藏家</div><div class="comment-text">山羊毛刷那个测评数据我信，自己试过确实比尼龙刷慢，但尼龙刷完脚心红一片，不太舒服。</div></div></div>
+          <div class="comment-item"><div class="comment-avatar">老</div><div class="comment-body"><div class="comment-nick">老猫的粉丝</div><div class="comment-text">《审讯室》第2集台词还是有点尬，“你到底说不说”那句念得跟背书似的。不过电动牙刷那段拍得不错。</div></div></div>
+          <div class="comment-item"><div class="comment-avatar">南</div><div class="comment-body"><div class="comment-nick">南风知我意</div><div class="comment-text">投稿那个被女朋友按住挠的，画质糊得我以为在看十年前视频，但反应真的好笑。</div></div></div>
+          <div class="comment-item"><div class="comment-avatar">脚</div><div class="comment-body"><div class="comment-nick">脚心怕痒星人</div><div class="comment-text">看视频的时候自己脚心都跟着痒，什么毛病……</div></div></div>
+          <div class="comment-item"><div class="comment-avatar">V</div><div class="comment-body"><div class="comment-nick">VK潜水员</div><div class="comment-text">11月8号那轮报名我抢到了，到时候回来汇报感受。</div></div></div>
+          <div class="comment-item"><div class="comment-avatar">工</div><div class="comment-body"><div class="comment-nick">工具控</div><div class="comment-text">电动牙刷背面那个思路可以，但飞利浦HX3216震感太强了，试过一次脚心麻了半天。</div></div></div>
+          <div class="comment-item"><div class="comment-avatar">半</div><div class="comment-body"><div class="comment-nick">半截话</div><div class="comment-text">素人投稿比剧情好看。剧情演得太用力了。</div></div></div>
+          <div class="comment-item"><div class="comment-avatar">第</div><div class="comment-body"><div class="comment-nick">第一次来</div><div class="comment-text">这种内容居然有专门的社群，涨见识了。</div></div></div>
+          <div class="comment-item"><div class="comment-avatar">挠</div><div class="comment-body"><div class="comment-nick">挠痒研究生</div><div class="comment-text">深度解析里说的机位角度问题很对，侧45度确实比纯俯拍信息量大，能看到表情。</div></div></div>
+          <div class="comment-item"><div class="comment-avatar">阿</div><div class="comment-body"><div class="comment-nick">阿花</div><div class="comment-text">第18期特写里脚趾夹挠的声音太小了，戴耳机都听不清，建议调大环境音。</div></div></div>
+          <div class="comment-item"><div class="comment-avatar">路</div><div class="comment-body"><div class="comment-nick">路人甲</div><div class="comment-text">不懂就问，挠脚心有什么好看的？纯好奇。</div></div></div>
+        </div>
+      </section>
+
+      <!-- 9. 相关资讯 -->
+      <section class="section-block" id="news">
+        <h2 class="section-title">相关资讯</h2>
+        <ul class="news-list">
+          <li>
+            <div class="news-title">VK社群11月忍痒挑战扩招至12人</div>
+            <div class="news-meta">2026-11-08</div>
+            <div class="news-summary">场地从原来的8人小工作室换到浦东一处80平米空间，报名截止到11月10日。</div>
+          </li>
+          <li>
+            <div class="news-title">《指尖刑房》第3期播放量破12万</div>
+            <div class="news-meta">2026-11-07</div>
+            <div class="news-summary">比第2期同期高出40%，评论区讨论集中在长镜头和工具替换的段落。</div>
+          </li>
+          <li>
+            <div class="news-title">工具测评视频带动山羊毛刷销量</div>
+            <div class="news-meta">2026-11-06</div>
+            <div class="news-summary">某电商平台数据显示，测评发布后三天内相关关键词搜索量上涨65%，客单价集中在25—40元。</div>
+          </li>
+          <li>
+            <div class="news-title">素人投稿被退回比例升至六成</div>
+            <div class="news-meta">2026-11-05</div>
+            <div class="news-summary">退回原因以“剪辑加速”“画质无法辨认脚心”为主，社群管理员建议投稿前先看投稿规范。</div>
+          </li>
+          <li>
+            <div class="news-title">足底特写合集第18期加入脚趾夹挠镜头</div>
+            <div class="news-meta">2026-11-04</div>
+            <div class="news-summary">这是该系列第一次出现脚趾夹挠动作，拍摄用了微距镜头，后期未做调色。</div>
+          </li>
+          <li>
+            <div class="news-title">《审讯室》第2集评价两极</div>
+            <div class="news-meta">2026-11-03</div>
+            <div class="news-summary">支持方认为电动牙刷段落有新鲜感，批评方认为台词生硬、演员之间缺乏默契。</div>
+          </li>
+        </ul>
+      </section>
+
+      <!-- 10. 相关推荐 -->
+      <section class="section-block" id="related">
+        <h2 class="section-title">相关推荐</h2>
+        <div class="tag-cloud">
+          <a href="/#featured">指尖刑房第2期</a>
+          <a href="/#featured">忍痒挑战第3轮</a>
+          <a href="/#featured">足底特写第16期</a>
+          <a href="/#featured">审讯室第1集</a>
+          <a href="/#featured">山羊毛刷测评</a>
+          <a href="/#featured">素人投稿合集</a>
+          <a href="/#featured">电动牙刷排行</a>
+          <a href="/#featured">VK线下聚会</a>
+        </div>
+      </section>
+
+      <!-- 11. 补充板块：创作者证言 -->
+      <section class="section-block" id="testimonial">
+        <h2 class="section-title">创作者证言</h2>
+        <div class="testimonial">
+          “拍《指尖刑房》之前，我在VK社群潜水了大半年。发现很多人拍挠脚心只拍脚，不拍脸，其实表情才是反应的核心。所以第1期就定了侧45度机位，一直没换过。”
+          <div class="testimonial-author">—— 南风工作室 · 导演阿南</div>
+        </div>
+        <div class="testimonial">
+          “素人投稿我退过很多，不是画质问题，是剪辑加速。加速之后反应节奏全乱了，观众看不准到底痒没痒。我每次退回都会写清楚原因，但有人改完再投，还是加速的。”
+          <div class="testimonial-author">—— VK社群 · 投稿审核员小柯</div>
+        </div>
+        <div class="testimonial">
+          “脚模这活听起来奇怪，其实就是保持脚部不动，让镜头拍清楚。第18期那个脚趾夹挠的镜头，我夹了大概20次才拍出一条满意的，脚趾都酸了。”
+          <div class="testimonial-author">—— 足底特写第18期 · 脚模阿七</div>
+        </div>
+      </section>
+
+    </main>
+
+    <!-- 右侧辅助栏 -->
+    <aside class="aux-sidebar">
+      <!-- 热门榜单 -->
+      <div class="aux-card">
+        <h3>本周热榜</h3>
+        <ul class="hot-list">
+          <li><span class="hot-index">1</span><a href="/#featured">《指尖刑房》第3期</a></li>
+          <li><span class="hot-index">2</span><a href="/#featured">VK忍痒挑战第4轮</a></li>
+          <li><span class="hot-index">3</span><a href="/#featured">足弓到脚跟4K特写</a></li>
+          <li><span class="hot-index">4</span><a href="/#featured">山羊毛刷vs尼龙刷</a></li>
+          <li><span class="hot-index">5</span><a href="/#featured">素人投稿：2分钟</a></li>
+          <li><span class="hot-index">6</span><a href="/#featured">《审讯室》第2集</a></li>
+        </ul>
+      </div>
+      <!-- 更新流 -->
+      <div class="aux-card">
+        <h3>今日更新</h3>
+        <ul class="hot-list">
+          <li><span class="hot-index">11/8</span><a href="/#latest">忍痒挑战报名</a></li>
+          <li><span class="hot-index">11/8</span><a href="/#latest">指尖刑房花絮</a></li>
+          <li><span class="hot-index">11/7</span><a href="/#latest">足底特写18期</a></li>
+          <li><span class="hot-index">11/7</span><a href="/#latest">宿舍挠脚心对决</a></li>
+          <li><span class="hot-index">11/6</span><a href="/#latest">电动牙刷排名</a></li>
+        </ul>
+      </div>
+      <!-- 社群互动入口 -->
+      <div class="aux-card" style="text-align:center;">
+        <h3>VK社群</h3>
+        <p style="font-size:13px; color:var(--text-secondary); margin-bottom:12px;">2.3万关注 · 每日更新</p>
+        <button class="btn-primary" style="width:100%;" onclick="alert('社群入口即将开放，可先关注公告栏')">申请加入</button>
+      </div>
+    </aside>
+
+  </div>
+</div>
+
+<!-- 页尾 -->
+<footer class="site-footer">
+  <div class="footer-inner">
+    <div>
+      <div class="footer-brand">蔡蔡TK挠脚心丨VK</div>
+      <div class="footer-desc">收录2026年10月—11月TK挠脚心短片、挑战记录与工具测评，条目以剧情、素人投稿、足底特写为主，每日更新，每周汇总一次榜单。</div>
+    </div>
+    <div class="footer-col">
+      <h4>内容分类</h4>
+      <a href="/#categories">剧情挠脚心</a>
+      <a href="/#categories">忍痒挑战</a>
+      <a href="/#categories">足底特写</a>
+      <a href="/#categories">工具测评</a>
+    </div>
+    <div class="footer-col">
+      <h4>互动</h4>
+      <a href="/#comments">用户评论</a>
+      <a href="/#testimonial">创作者证言</a>
+      <a href="/#latest">最新更新</a>
+      <a href="/#faq">常见问答</a>
+    </div>
+    <div class="footer-col">
+      <h4>关于</h4>
+      <a href="/#overview">领域概览</a>
+      <a href="/#deep-dive">深度解析</a>
+      <a href="/#guide">体验指南</a>
+      <a href="/#news">相关资讯</a>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <span>© 2026 蔡蔡TK挠脚心丨VK 内容聚合示例 · 条目与数据均为示例</span>
+    <span>更新时间：2026年11月8日</span>
+  </div>
+</footer>
+
+<!-- 回到顶部 -->
+<button class="back-top" id="backTop" aria-label="回到顶部">↑</button>
+
+<script>
+  // 汉堡菜单
+  const hamburger = document.getElementById('hamburgerBtn');
+  const nav = document.getElementById('mainNav');
+  const overlay = document.getElementById('overlay');
+
+  hamburger.addEventListener('click', () => {
+    nav.classList.toggle('open');
+    overlay.classList.toggle('active');
+  });
+
+  overlay.addEventListener('click', () => {
+    nav.classList.remove('open');
+    overlay.classList.remove('active');
+  });
+
+  // 点击导航链接后关闭菜单
+  nav.querySelectorAll('a').forEach(link => {
+    link.addEventListener('click', () => {
+      nav.classList.remove('open');
+      overlay.classList.remove('active');
+    });
+  });
+
+  // Esc关闭
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape') {
+      nav.classList.remove('open');
+      overlay.classList.remove('active');
+    }
+  });
+
+  // 回到顶部
+  const backTop = document.getElementById('backTop');
+  window.addEventListener('scroll', () => {
+    if (window.scrollY > 600) {
+      backTop.classList.add('visible');
+    } else {
+      backTop.classList.remove('visible');
+    }
+  });
+  backTop.addEventListener('click', () => {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  });
+
+  // 搜索功能（简单客户端筛选，仅演示）
+  const searchInput = document.getElementById('searchInput');
+  const searchBtn = document.getElementById('searchBtn');
+
+  function performSearch() {
+    const query = searchInput.value.trim().toLowerCase();
+    if (!query) {
+      alert('请输入搜索词');
+      return;
+    }
+    const cards = document.querySelectorAll('.content-card');
+    let found = 0;
+    cards.forEach(card => {
+      const text = card.textContent.toLowerCase();
+      if (text.includes(query)) {
+        card.style.display = '';
+        found++;
+      } else {
+        card.style.display = 'none';
+      }
+    });
+    if (found === 0) {
+      alert('没有找到匹配的条目，试试其他关键词');
+    }
+  }
+
+  searchBtn.addEventListener('click', performSearch);
+  searchInput.addEventListener('keydown', (e) => {
+    if (e.key === 'Enter') performSearch();
+  });
+
+  // 分类筛选（简单高亮，不隐藏其他内容，仅作为入口提示）
+  document.querySelectorAll('.category-item').forEach(item => {
+    item.addEventListener('click', function() {
+      const cat = this.dataset.category;
+      // 滚动到精选推荐并高亮对应卡片
+      document.getElementById('featured').scrollIntoView({ behavior: 'smooth' });
+      const cards = document.querySelectorAll('.content-card');
+      cards.forEach(card => {
+        card.style.border = '1px solid transparent';
+        if (card.dataset.tags && card.dataset.tags.includes(cat)) {
+          card.style.border = '2px solid var(--primary)';
+        }
+      });
+    });
+  });
+
+  // 侧栏导航高亮（简单滚动监听）
+  const sidebarLinks = document.querySelectorAll('.channel-sidebar a');
+  const sections = document.querySelectorAll('.section-block[id]');
+  window.addEventListener('scroll', () => {
+    let current = '';
+    sections.forEach(section => {
+      const sectionTop = section.offsetTop - 120;
+      if (window.scrollY >= sectionTop) {
+        current = section.getAttribute('id');
+      }
+    });
+    sidebarLinks.forEach(link => {
+      link.classList.remove('active');
+      if (link.getAttribute('href') === '/#' + current) {
+        link.classList.add('active');
+      }
+    });
+  });
+</script>
+
+<!-- 结构化数据 -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebSite",
+  "name": "蔡蔡TK挠脚心丨VK",
+  "url": "",
+  "description": "聚合TK挠脚心视频、VK社群挑战、足底特写与挠痒互动内容，适合喜欢挠脚心与TK互动的观众查阅。"
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "挠脚心视频里，为什么有的反应看起来特别夸张？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "夸张反应通常来自三个因素叠加：工具接触面积小、被挠者本身脚心敏感度高、以及拍摄前没有做脱敏适应。VK社群11月5日的问答里提到，连续拍摄超过15分钟的人，后半段反应普遍减弱，所以很多夸张镜头集中在开头几分钟。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "脚心哪个位置被挠时反应最大？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "根据VK社群11月3日测评视频里的标注，足弓内侧触发缩脚最快，平均1.6秒；脚跟位置最慢，平均4.1秒。脚趾缝对羽毛类工具反应强烈，但对刷子类反应一般。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "《指尖刑房》和《审讯室》是同一个团队做的吗？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "不是。两部作品都在VK社群发布，但制作方不同。《指尖刑房》由南风工作室出品，目前更新到第3期；《审讯室》由个人创作者老猫独立制作，更新到第2集。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "忍痒挑战的规则具体是怎么定的？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "VK社群的忍痒挑战规则：参与者赤脚坐在垫子上，脚心朝上，由工作人员用软毛刷从脚趾根部扫到脚跟，计时30秒。期间可以笑、可以说话，但脚不能缩回超过垫子边缘，缩回即算失败。第4轮8位参与者中只有2位坚持满30秒。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "素人投稿需要什么条件？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "投稿者需要提供一段至少2分钟的连续拍摄视频，画面里要能清楚看到脚心和工具接触的过程。VK社群不对画质做硬性要求，但要求视频未经过加速或剪辑处理。11月收到的投稿里，大约六成因为剪辑过被退回。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "足底特写类内容为什么没有声音？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "多数足底特写作品去掉了现场收音，只保留环境白噪音或轻音乐。原因有两个：一是这类内容以画面细节为主，人声会分散注意力；二是拍摄时通常没有真实挠痒互动，现场本来就没有反应声。"
+      }
+    }
+  ]
+}
+</script>
+
+</body>
+  </html>
